@@ -1,0 +1,38 @@
+Weapon Skill
+
+Ballistic Skill
+
+Strength
+
+Toughness
+
+Agility
+
+Intelligence
+
+Perception
+
+Willpower
+
+Fellowship
+
+Done:
+	Talent Class
+	Skills Class
+	CSV parser
+	Class to XML parser
+TBA:
+	Player class
+	Regiment Class
+	Specialty Class
+	Experience Calculations
+	XML to class parser
+
+Problems Solved:
+	Skill tracking
+	Talent tracking
+	Characteristics tracking
+
+Problems to be solved:
+	Prerequisite calculation
+	XP calculation

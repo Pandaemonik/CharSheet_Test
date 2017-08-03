@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Talents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TalentList>
+    <Talent>
+      <Name>Air of Authority</Name>
+      <Prerequisites>Fel 30</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Affect more targets with Command.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Ambidextrous</Name>
+      <Prerequisites>Ag 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Ballistic Skill</Aptitude2>
+      <Benefit>Use either hand equally well—reduce penalties for using two weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Berserk Charge</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Gain an extra bonus to hit when charging.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Blind Fighting</Name>
+      <Prerequisites>Per 30</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Suffer half usual penalties for obscured vision.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Catfall</Name>
+      <Prerequisites>Ag 30</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Reduce falling damage.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Cold Hearted</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Immune to Seduction, resistant to Charm.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Combat Formation</Name>
+      <Prerequisites>Int 40</Prerequisites>
+      <Aptitude1>Leadership</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Use intelligence bonus for Initiative.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Combat Sense</Name>
+      <Prerequisites>Per 30</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Use Per bonus instead of Ag bonus for Initiative.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Deadeye Shot</Name>
+      <Prerequisites>BS 30</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reduce penalties for ranged called shots.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Die Hard</Name>
+      <Prerequisites>WP 40</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Improves chances of surviving Blood Loss.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Disarm</Name>
+      <Prerequisites>Ag 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Force opponent to drop weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Disturbing Voice</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>+10 to Intimidate, –10 to Charm.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Double Team</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>General</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Gain additional +10 for outnumbering opponent.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Enemy</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>General</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>An organization or group particularly despises the character.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Ferric Summons</Name>
+      <Prerequisites>Ferric Lure Implant, Mechanicus Implant</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Can summon larger metallic objects. </Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Frenzy</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Enter psychotic rage to gain combat bonuses.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Heightened Senses†</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Gain +10 bonus to particular sense.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Iron Jaw</Name>
+      <Prerequisites>T 40</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Test Toughness to overcome Stunning.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Jaded</Name>
+      <Prerequisites>WP 40</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Ignore mundane horrors.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Leap Up</Name>
+      <Prerequisites>Ag 30</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Stand as a Free Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Light Sleeper</Name>
+      <Prerequisites>Per 30</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Count as awake even when sleeping.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Lightning Reflexes</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Roll twice and take the highest for Initiative rolls.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Meditation</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Character may enter a trance to ignore Fatigue.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Mimic</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Character can copy voices.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Orthoproxy</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>+20 bonus to resist mind control or interrogation.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Peer</Name>
+      <Prerequisites>Fel 30</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Character has good reputation amongst chosen group.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Polyglot</Name>
+      <Prerequisites>Int 40, Fel 30</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Character has innate grasp of languages.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Psychic Power†</Name>
+      <Prerequisites>Psyker</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>May take one psychic power.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Quick Draw</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Draw weapon as Free Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Radiant Presence</Name>
+      <Prerequisites>Fel 40</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Character has an inspiring aura.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Rapid Reload</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Reduce reload time.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Resistance†</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Gain +10 bonus to particular resistance Test.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sound Constitution</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Gain an additional Wound.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Street Fighting</Name>
+      <Prerequisites>WS 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Add half WS to Critical Damage.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sure Strike</Name>
+      <Prerequisites>WS 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reduce penalties for melee Called Shots.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Takedown</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Make special attack to stun opponent.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Technical Knock</Name>
+      <Prerequisites>Int 30</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Un-jam gun as Half Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Total Recall</Name>
+      <Prerequisites>Int 30</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Character can remember trivial facts and minor details.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Unarmed Warrior</Name>
+      <Prerequisites>WS 35, Ag 35</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Improves unarmed attacks.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Unremarkable</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>General</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Character is easily forgettable.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Warp Sense</Name>
+      <Prerequisites>Psy Rating, Psyniscience, Per 30</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>Allows Psyniscience Test as Free Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Weapon-Tech</Name>
+      <Prerequisites>Tech Use +10, Int 40</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Increase potency of advanced weaponry. </Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Weapon Training†</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>General</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Use Weapon Group without penalty.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Ambush</Name>
+      <Prerequisites>Stealth</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Inflict additional Damage on Unaware targets.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Calculated Barrage</Name>
+      <Prerequisites>Int 35</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Pin targets with Indirect Fire.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Drop Trooper</Name>
+      <Prerequisites>Operate (Aeronautica)</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Bonus to Operate Test for grav-chutes.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Duelist</Name>
+      <Prerequisites>WS 35,Sure Strike</Prerequisites>
+      <Aptitude1>Finesse</Aptitude1>
+      <Aptitude2>Weapon Skill</Aptitude2>
+      <Benefit>Bonus to engaging single opponents.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Excellent Cook</Name>
+      <Prerequisites>Trade (Cook)+10</Prerequisites>
+      <Aptitude1>Fieldcraft</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Fix a hearty meal to provide squad mates with a bonus to resist Fear and Pinning.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Heroic Inspiration</Name>
+      <Prerequisites>Fel 35,Command</Prerequisites>
+      <Aptitude1>Leadership</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Use Inspire Special Use of the Command Skill as a Half Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Lasgun Volley</Name>
+      <Prerequisites>BS 30,Weapon Training (Las)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Inflict extra Damage with Ranged Volley Order when wielding a Las weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Modify Payload</Name>
+      <Prerequisites>Tech-Use</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Increase Damage, Blast Quality, and Smoke Quality of explosives.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Pugilist</Name>
+      <Prerequisites>S 30</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Strength</Aptitude2>
+      <Benefit>Feint as a Free Action with Unarmed Standard Attack and Called Shot Actions.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Push the Limit</Name>
+      <Prerequisites>Operate (Any),Technical Knock</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Bonus to Vehicle Manoeuvre Tests with Structural Integrity loss on a Failed Test.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Swift Suture</Name>
+      <Prerequisites>Medicae</Prerequisites>
+      <Aptitude1>Finesse</Aptitude1>
+      <Aptitude2>Intelligence</Aptitude2>
+      <Benefit>End Blood Loss condition when performing First Aid.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Vigilant</Name>
+      <Prerequisites>Per 35</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Perception</Aptitude2>
+      <Benefit>Use Perception instead of Agility for Overwatch.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Wrestler</Name>
+      <Prerequisites>S 30, Athletics</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Use Athletics Skill instead of Strength Characteristic while</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Armour-Monger</Name>
+      <Prerequisites>Int 35,Tech-Use,Trade(Armourer)</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Increase the efficacy of physical armour.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Battle Rage</Name>
+      <Prerequisites>Frenzy</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Parry while frenzied.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Bulging Biceps</Name>
+      <Prerequisites>S 45</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Remove bracing requirement from certain weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Combat Master</Name>
+      <Prerequisites>WS 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Opponents get no bonus for outnumbering the character.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Counter Attack</Name>
+      <Prerequisites>WS 40</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>May attack after successful Parry.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Crack Shot</Name>
+      <Prerequisites>BS 50</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Add +2 to ranged Crit Damage.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Crippling Strike</Name>
+      <Prerequisites>WS 50</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Add +2 to melee Crit Damage.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Deflect Shot</Name>
+      <Prerequisites>Ag 50</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Add WS Bonus to AP against Primitive ranged attacks.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Exotic Weapon Tr.</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Gain proficiency with one exotic weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Foresight</Name>
+      <Prerequisites>Int 30</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Contemplate to gain +10 bonus to next Test.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Furious Assault</Name>
+      <Prerequisites>WS 35</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>On a successful WS Test, gain a free second attack.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hard Target</Name>
+      <Prerequisites>Ag 40</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>–20 to hit character when he Charges or Runs.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hardy</Name>
+      <Prerequisites>T 40</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Character always heals as if lightly wounded.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hatred†</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Gain +10 bonus to attack hated creatures.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hip Shooting</Name>
+      <Prerequisites>BS 40, Ag 40</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Characters may shoot when moving.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hotshot Pilot</Name>
+      <Prerequisites>Ag 40,Operate (any)</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Character can drive or fly anything.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Independent Target</Name>
+      <Prerequisites>BS 40</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Fire at multiple targets more than 10 metres apart.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Inspire Wrath</Name>
+      <Prerequisites>Air of Authorit</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Inspire crowd to hatred and anger.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Iron Discipline</Name>
+      <Prerequisites>Fel 30</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Comrades resist Pinning and Fear.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Killing Strike</Name>
+      <Prerequisites>WS 50</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Spend Fate Point to make melee attacks unavoidable.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Luminen Shock</Name>
+      <Prerequisites>Luminen Capacitors,Mechanicus Implants</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Character can discharge energy in melee attack.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Maglev Transcend.</Name>
+      <Prerequisites>Maglev Coils,Mechanicus Implants</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Character can hover for longer periods of time.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Marksman</Name>
+      <Prerequisites>BS 35</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>No penalties for firing at long or extreme range.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Mechadendrite Use†</Name>
+      <Prerequisites>Mechanicus Implants</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Gain ability to use certain Mechadendrites.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Munitorum Influence —</Name>
+      <Prerequisites>Fellowship</Prerequisites>
+      <Aptitude1>Social</Aptitude1>
+      <Aptitude2>+5 Bonus to Squad Logistics Rating.</Aptitude2>
+      <Benefit>Detals</Benefit>
+      <Details>Tier</Details>
+      <Tier>Source</Tier>
+      <Source>EoS(Null)</Source>
+    </Talent>
+    <Talent>
+      <Name>Nerves of Steel</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Reroll Pinning Tests.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Paranoia</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Character is always alert for danger.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Precise Blow</Name>
+      <Prerequisites>WS 40,Sure Strike</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reduce penalty for melee called shots.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Prosanguine</Name>
+      <Prerequisites>Autosanguine,Mechanicus Implants</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Test to heal 1d5 Damage.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Rapid Reaction</Name>
+      <Prerequisites>Ag 40</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Test Ag to ignore surprise.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sharpshooter</Name>
+      <Prerequisites>BS 40,Deadeye Shot</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Decrease penalty for ranged called shots.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Strong Minded</Name>
+      <Prerequisites>WP 30,Resistance(Psychic Powers)</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>May reroll failed WP Tests to resist Psychic Powers.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Storm of Iron</Name>
+      <Prerequisites>BS 45,Weapon Training (any one ranged)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Allocate extra full-auto and semi-auto hits to additional targets within five metres.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Swift Attack</Name>
+      <Prerequisites>WS 30</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>May make multiple melee attacks.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Two-Weapon Wielder†</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Weapon Skill or Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>May fight with two weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Unarmed Master</Name>
+      <Prerequisites>WS 45, Ag 40,Unarmed Warrior</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Deadly fighter while unarmed.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Unshakable Faith</Name>
+      <Prerequisites>WP 35</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>May reroll failed Fear Tests.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Warp Conduit</Name>
+      <Prerequisites>Psy Rating,Strong Minded,WP 50</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>Spend Fate Point to get +1d5 to Psy Rating.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Whirlwind of Death</Name>
+      <Prerequisites>WS 40</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Make one attack for each melee opponent.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Ace Operator</Name>
+      <Prerequisites>Operate(Any)+10</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Reduce Degrees of Failure on failed Operate Tests by Agility Bonus.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Chain Expertise</Name>
+      <Prerequisites>WS 40,Weapon Training (Chain)</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Add additional Damage die for Tearing with Chain weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Cleanse and Purify</Name>
+      <Prerequisites>WP 35,Weapon Training (Flame)</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Willpower</Aptitude2>
+      <Benefit>Increase chance to ignite foes with Flame weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Creative Killer</Name>
+      <Prerequisites>Street Fighting</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Deal improved Damage with Improvised Weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Cybernetic Boost</Name>
+      <Prerequisites>Cybernetic(s),Tech-Use</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Gain Unnatural Strength or Agility Traits by overcharging cybernetic limbs or mechadendrites.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Guardian</Name>
+      <Prerequisites>Ag 40</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Spend a Fate Point to trade places with an ally targeted by an attack</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Las Expertise</Name>
+      <Prerequisites>BS 35,Lasgun Volley</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Impose a penalty on opponents attempting to Dodge attacks with Las weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Melta Expertise</Name>
+      <Prerequisites>BS 40,Weapon Training (Melta)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Increase the Range of Melta weapons by a number of metres equal to Ballistic Skill Bonus.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Methodical Care</Name>
+      <Prerequisites>Int 40,Swift Suture</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Reduce Damage suffered by patients for failed Medicae Extended Care Tests by Intelligence Bonus</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Persuasive Charm</Name>
+      <Prerequisites>Fel 35,Charm</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Use Charm Skill to gain a bonus to Logistics Tests.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Plasma Expertise</Name>
+      <Prerequisites>BS 40,Weapon Training (Plasma)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Reduce the chance of the Overheats Quality triggering when wielding a Plasma weapon</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Rite of Static Overload</Name>
+      <Prerequisites>Cybernetic(s),Tech-Use +10</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Gain Shocking Quality on melee attacks with a Cybernetic limb or mechadendrite.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Skilled Rider</Name>
+      <Prerequisites>Survival +10</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Avoid being thrown from mounts and Mount/Dismount as a Half Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>SP Expertise</Name>
+      <Prerequisites>BS 35,Weapon Training (Solid Projectile)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reload as a Free Action after successfully clearing a Jammed Solid Projectile weapon</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Stealth Sniper</Name>
+      <Prerequisites>Stealth +10</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Chance to remain hidden after making a ranged attack. </Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Tank Hunter</Name>
+      <Prerequisites>BS 40</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Add BS Bonus to weapon Penetration against vehicles.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Tireless</Name>
+      <Prerequisites>T 40, WP 35</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Willpower</Aptitude2>
+      <Benefit>Ignore Fatigue penalty.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Unstoppable Charge</Name>
+      <Prerequisites>WS 40,Survival +10</Prerequisites>
+      <Aptitude1>Fieldcraft</Aptitude1>
+      <Aptitude2>Weapon Skill</Aptitude2>
+      <Benefit>Improve Charge Action and Crushing</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Arms Master</Name>
+      <Prerequisites>WS 40,BS 40,Weapon Training (any two)</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Ballistic Skill</Aptitude2>
+      <Benefit>Less penalty for using weapons untrained.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Assassin Strike</Name>
+      <Prerequisites>Ag 40,Acrobatics</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>After making melee attack, test Acrobatics to move.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Bastion of Iron Will</Name>
+      <Prerequisites>Psy Rating,Strong Minded,WP 40</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>Gain bonus to Opposed Tests when defending against psychic powers.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Blademaster</Name>
+      <Prerequisites>WS 30,Weapon Training (any melee)</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reroll missed attack, once per Round.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Blade Dancer</Name>
+      <Prerequisites>WS 40,Two-Weapon Wielder (Melee)</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reduced penalties for fighting with two melee weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Crushing Blow</Name>
+      <Prerequisites>WS 40</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Add half WS Bonus to Damage inflflicted in melee.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Eye of Vengeance</Name>
+      <Prerequisites>BS 50</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Adds Damage and Pen to ranged attack.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Favoure by the Warp</Name>
+      <Prerequisites>WP 35</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>Roll twice for Psychic Phenomena and choose.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Fearless</Name>
+      <Prerequisites>Nerves of Steel</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Immune to Fear and Pinning.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Gunslinger</Name>
+      <Prerequisites>BS 40,Two-Weapon Wielder(Ballistic)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Reduce penalties for fifighting with two pistols.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Hammer Blow</Name>
+      <Prerequisites>Crushing Blow</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Make a thunderous strike with a melee weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Infused Knowledge</Name>
+      <Prerequisites>Int 40,Lore (any one)</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Know a little bit about everything.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Into the Jaws of Hell</Name>
+      <Prerequisites>Iron Discipline,Fel 50</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Comrades ignore Fear and Pinning. </Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Lasgun Barrage</Name>
+      <Prerequisites>Weapon Training (Las),BS 40</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Additional DoS when firing Las weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Lightning Attack</Name>
+      <Prerequisites>Swift Attack</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Character may make many melee attacks with single roll.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Luminen Blast</Name>
+      <Prerequisites>Luminen Shock,Luminen Capacitors,Mechanicus Implants</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>May discharge stored energy as a ranged attack.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Master Chirurgeon</Name>
+      <Prerequisites>Medicae +10</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Perform advanced medical procedures.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Master Enginseer</Name>
+      <Prerequisites>Tech-Use +20,Mechanicus Implants</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Gain +10 to Tech-Use Tests, and spend Fate Points to automatically succeed on Tech-Use Tests. </Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Master Orator</Name>
+      <Prerequisites>Inspire Wrath</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Affect larger groups with Charm and Intimidate.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Mastery†</Name>
+      <Prerequisites>Rank 4</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>May spend Fate Point to succeed on Test.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Mighty Shot</Name>
+      <Prerequisites>BS 40</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Add half BS Bonus to ranged Damage rolls.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Never Die</Name>
+      <Prerequisites>WP 50, T 50</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Ignore penalties from Critical Damage by spending Fate Point.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Preternatural Speed</Name>
+      <Prerequisites>WS 40, Ag 50</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Double speed when charging.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sidearm</Name>
+      <Prerequisites>WS 40, BS 40,Two-Weapon Wielder (Ballistic, Melee)</Prerequisites>
+      <Aptitude1>Weapon Skill</Aptitude1>
+      <Aptitude2>Ballistic Skill</Aptitude2>
+      <Benefit>Reduce penalties for fighting with pistol and melee weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sprint</Name>
+      <Prerequisites>—</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Fieldcraft</Aptitude2>
+      <Benefit>Move more quickly in combat.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Step Aside</Name>
+      <Prerequisites>Agility 40,Dodge or Parry</Prerequisites>
+      <Aptitude1>Agility</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>May make additional Dodge or Parry attempt.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Target Selection</Name>
+      <Prerequisites>BS 50</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>May shoot into melee without penalty.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Thunder Charge</Name>
+      <Prerequisites>S 50</Prerequisites>
+      <Aptitude1>Strength</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Break enemies with armoured charge.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>True Grit</Name>
+      <Prerequisites>T 40</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Reduce Critical Damage taken.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Warp Lock</Name>
+      <Prerequisites>Psy Rating,Strong Minded,WP 50</Prerequisites>
+      <Aptitude1>Willpower</Aptitude1>
+      <Aptitude2>Psyker</Aptitude2>
+      <Benefit>Ignore Psychic Phenomenon once per session.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Abiding Resilience</Name>
+      <Prerequisites>Toughness 40</Prerequisites>
+      <Aptitude1>Toughness</Aptitude1>
+      <Aptitude2>Defence</Aptitude2>
+      <Benefit>Regain additional Wounds and Fatigue when spending a Fate Point.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Bombardier</Name>
+      <Prerequisites>BS 40,Weapon Training (Launcher),Tech-Use</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Bonus to attack with launchers and explosives, improved scatter.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Cybernetic Calibrations</Name>
+      <Prerequisites>2+ Cybernetics,Tech-Use +10,Cybernetic Boost</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Improves Craftsmanship of all implanted cybernetics.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Death Serves the Righteous</Name>
+      <Prerequisites>BS 50,Deadeye Shot,Sharpshooter</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Spend Fate Point to change Damage die result of 1 to 10 once per combat.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Don’t YouDie On Me!</Name>
+      <Prerequisites>Master Chirurgeon,Methodical Care</Prerequisites>
+      <Aptitude1>Intelligence</Aptitude1>
+      <Aptitude2>Knowledge</Aptitude2>
+      <Benefit>Resuscitate allies who have recently died from Blood Loss or failed Toughness Tests.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Feat of Strength</Name>
+      <Prerequisites>S 45,Bulging Biceps</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Strength</Aptitude2>
+      <Benefit>Temporarily gain or increase Unnatural Strength Trait.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Final Judgement</Name>
+      <Prerequisites>Fel 45,Air of Authority,Deadeye Shot</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>Motivate allies with Command Skill after messily executing an enemy.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Las Weapon Mastery</Name>
+      <Prerequisites>BS 45,Las Weapon Expertise</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>General</Aptitude2>
+      <Benefit>Deal increased Damage with Las weapons based on Degrees of Success.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Lock On</Name>
+      <Prerequisites>Per 40,Vigilant</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Perception</Aptitude2>
+      <Benefit>Dodge while maintaining an Aim or Overwatch Action.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Melta Mastery</Name>
+      <Prerequisites>BS 50,Melta Weapon Expertise</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Increase Penetration of Melta Weapons based on Degrees of Success.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Mental Maze</Name>
+      <Prerequisites>Int 35,Strong Minded</Prerequisites>
+      <Aptitude1>Defence</Aptitude1>
+      <Aptitude2>Intelligence</Aptitude2>
+      <Benefit>Spend a Fate Point to add Intelligence Bonus to Degrees of Success on Opposed Willpower Tests.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Overkill</Name>
+      <Prerequisites>Per 40,Bulging Biceps</Prerequisites>
+      <Aptitude1>Perception</Aptitude1>
+      <Aptitude2>Offence</Aptitude2>
+      <Benefit>Once per combat encounter, Aim as a Free Action with a chosen ranged weapon type.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Plasma Mastery</Name>
+      <Prerequisites>BS 50,Plasma Weapon Expertise</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Tech</Aptitude2>
+      <Benefit>Increase Damage and Penetration when firing Plasma weapons on Maximal setting.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Ranged Expert</Name>
+      <Prerequisites>BS 50,Weapon Training (Chosen Group)</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Once per combat, Aim as a Free Action and roll twice for Damage with a chosen ranged weapon.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Righteous Blow</Name>
+      <Prerequisites>BS 45 or WS 45 or WP 45</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Willpower</Aptitude2>
+      <Benefit>Roll twice for Righteous Fury and choose result.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Sacred Flame</Name>
+      <Prerequisites>WP 40,Cleanse and Purify</Prerequisites>
+      <Aptitude1>Offence</Aptitude1>
+      <Aptitude2>Willpower</Aptitude2>
+      <Benefit>Inflict Righteous Fury on a 9 or 10 with Flame Weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>SP Weapon Mastery</Name>
+      <Prerequisites>BS 45,Solid Projectile Weapon Expertise</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Solid Projectile Weapons gain Proven (X) Quality equal to half of Ballistic Skill Bonus.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Stirring Rhetoric</Name>
+      <Prerequisites>Fel 45,Heroic Inspiration</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Once per session, spend a Fate Point to improve the Inspire Special Use of the Command Skill.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>The Flesh is Weak</Name>
+      <Prerequisites>2+ Cybernetics,Tech-Use +10</Prerequisites>
+      <Aptitude1>Tech</Aptitude1>
+      <Aptitude2>Toughness</Aptitude2>
+      <Benefit>Gain Machine Trait equal to half the number of Cybernetic implants.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Trademark Item</Name>
+      <Prerequisites>Fel 40,Command +10</Prerequisites>
+      <Aptitude1>Fellowship</Aptitude1>
+      <Aptitude2>Social</Aptitude2>
+      <Benefit>Item grants bonus to Interaction Tests and allows extra Sweeping Order.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Versatile Shooter</Name>
+      <Prerequisites>Sharpshooter,Target Selection</Prerequisites>
+      <Aptitude1>Ballistic Skill</Aptitude1>
+      <Aptitude2>Finesse</Aptitude2>
+      <Benefit>Gain the full benefit of the Accurate Quality on Pistol, Heavy, and Vehicle Weapons.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+    <Talent>
+      <Name>Veteran Comrade</Name>
+      <Prerequisites>Character Speciality with at least one Comrade</Prerequisites>
+      <Aptitude1>General</Aptitude1>
+      <Aptitude2>Leadership</Aptitude2>
+      <Benefit>One Comrade grants extra bonuses and can participate in Veteran Orders.</Benefit>
+      <Details>Detals</Details>
+      <Tier>Tier</Tier>
+      <Source>Source</Source>
+    </Talent>
+  </TalentList>
+</Talents>
