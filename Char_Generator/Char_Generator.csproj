@@ -99,6 +99,8 @@
     <Compile Include="Skills.cs" />
     <Compile Include="Attribute.cs" />
     <Compile Include="Attributes.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Aptitude.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

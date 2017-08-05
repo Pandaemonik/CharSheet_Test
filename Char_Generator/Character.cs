@@ -1,11 +1,10 @@
 ﻿using System;
 namespace Char_Generator
 {
-	public class Skills
+	public class Character
 	{
-		public Skills()
+		public Character()
 		{
-			//get;
 		}
 	}
 }

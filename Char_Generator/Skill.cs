@@ -5,23 +5,28 @@ namespace Char_Generator
 {
     class Skill
     {
-        public String Name { get; set; }
-        public String Attribute { get; set; }
-        public int Tier { get; set; }
-		public enum Aptitude { agi,wepSkill,ballSkill};
-
-        public Skill(String name, String attribute)
+        public int tier { get; set; }
+		public String name { get; set; }
+		public Aptitude primary { get; set; }
+		public Aptitude secondary { get; set; }
+		public Attribute attribute { get; set; }
+		
+        public Skill(String name, Aptitude primary, Aptitude secondary, Attribute attribute, int tier)
         {
-            Name = name;
-            Attribute = attribute;
-            Tier = -1;
+            this.name = name;
+			this.primary = primary;
+			this.secondary = secondary;
+            this.attribute = attribute;
+            this.tier = tier;
         }
 
-        public Skill(String name, String attribute, int tier)
+        public Skill()
         {
-            Name = name;
-            Attribute = attribute;
-            Tier = tier;
-        }
+			name = "N/A";
+			primary = Aptitude.general;
+			secondary = Aptitude.agility;
+			tier = -1;
+			attribute = new Attribute();
+		}
     }
 }
