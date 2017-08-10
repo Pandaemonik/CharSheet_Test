@@ -48,7 +48,16 @@ namespace Char_Generator
 					if (!bufferArray[i].Contains("<VOID>"))
 					{
 						iterbuffer = i;
-						SkillList.Add(new Skill(bufferArray[i]));//TODO:Validate input and use proper constructor
+						String[] csvSplit = bufferArray[i].Split('|');
+						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
+							|| csvSplit[4] != null)
+						{
+							SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
+						}
+						else
+						{
+							SkillList.Add(new Skill());
+						}
 					}
 				}
 			}
@@ -72,7 +81,16 @@ namespace Char_Generator
 					if (!bufferArray[i].Contains("<VOID>"))
 					{
 						iterbuffer = i;
-						SkillList.Add(new Skill(bufferArray[i]));
+						String[] csvSplit = bufferArray[i].Split('|');
+						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
+							|| csvSplit[4] != null)
+						{
+							SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
+						}
+						else
+						{
+							SkillList.Add(new Skill());
+						}
 					}
 				}
 			}

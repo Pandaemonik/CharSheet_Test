@@ -5,8 +5,6 @@ namespace Char_Generator
 {
 	public class Skill
 	{
-		string v;
-
 		public int tier { get; set; }
 		public String name { get; set; }
 		public Aptitude primary { get; set; }
@@ -31,27 +29,12 @@ namespace Char_Generator
 			attribute = new Attribute();
 		}
 
-		public Skill(string csvLineRead)
+		public Skill(string[] csvSplit)
 		{
-			String[] csvSplit = csvLineRead.Split('|');
-			if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null || csvSplit[4] != null ||
-				csvSplit[5] != null || csvSplit[6] != null || csvSplit[7] != null)
-			{
-				Name = csvSplit[0];
-
-				Prerequisites = csvSplit[1];
-				Aptitude1 = csvSplit[2];
-				Aptitude2 = csvSplit[3];
-				Benefit = csvSplit[4];
-				Details = csvSplit[5];
-				Tier = csvSplit[6];
-				Source = csvSplit[7];
-			}
-
-			else
-			{
-				Name = Prerequisites = Aptitude1 = Aptitude2 = Benefit = Details = "N/A";
-			}
+			name = csvSplit[1];
+			//secsvLineRead= csvSplit[2];
+			//attribute = csvSplit[3];
+			//tier = csvSplit[4];
 		}
 	}
 }
