@@ -606,6 +606,7 @@
 			this.MaximizeBox = false;
 			this.Name = "charGenMain";
 			this.Text = "Character Generator";
+			this.Shown += new System.EventHandler(this.charGenMain_Shown);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPageMain.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);

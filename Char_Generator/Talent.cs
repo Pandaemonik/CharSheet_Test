@@ -13,11 +13,10 @@ namespace Char_Generator
         public string Details { get; set; }
         public string Tier { get; set; }
         public string Source { get; set; }
-
+		public Boolean custom { get; set; }
 
         public Talent(String csvLineRead)
         {
-
             String[] csvSplit = csvLineRead.Split('|');
             if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null || csvSplit[4] != null ||
                 csvSplit[5] != null || csvSplit[6] != null || csvSplit[7] != null)
