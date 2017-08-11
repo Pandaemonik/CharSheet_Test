@@ -7,8 +7,8 @@ namespace Char_Generator
 
         public string Name { get; set; }
         public string Prerequisites { get; set; }
-        public string Aptitude1 { get; set; }
-        public string Aptitude2 { get; set; }
+        public string primary { get; set; }
+        public string secondary { get; set; }
         public string Benefit { get; set; }
         public string Details { get; set; }
         public string Tier { get; set; }

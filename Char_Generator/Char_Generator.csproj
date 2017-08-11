@@ -99,7 +99,7 @@
     <Compile Include="Attribute.cs" />
     <Compile Include="Attributes.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Aptitude.cs" />
+    <Compile Include="Aptitudes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
