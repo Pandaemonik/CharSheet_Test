@@ -6,6 +6,8 @@ namespace Char_Generator
 	public partial class charGenMain : Form
 	{
 		Talents testTalents;
+		Skills testSkills;
+		Aptitudes testAptitudes;
 
 		public charGenMain()
 		{
@@ -15,6 +17,7 @@ namespace Char_Generator
 		private void loadTalantsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			testTalents = new Talents();
+			testSkills = new Skills();
 			displayInDetailsToolStripMenuItem.Enabled = true;
 			displayInLabelToolStripMenuItem.Enabled = true;
 		}
@@ -32,6 +35,7 @@ namespace Char_Generator
 
 		private void displayInDetailsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			testSkills.SkillList.ForEach(x => listBoxTalantDetails.Items.Add(x.name));
 			testTalents.TalentList.ForEach(x => listBoxTalantDetails.Items.Add(x.Name));
 		}
 
@@ -45,7 +49,7 @@ namespace Char_Generator
 			Talent curSelected = testTalents.Find(listBoxTalantDetails.Text);
 			richTextBoxName.Text = curSelected.Name;
 			richTextBoxTier.Text = curSelected.Tier;
-			richTextBoxAptitudes.Text = curSelected.Aptitude1 + ", " + curSelected.Aptitude2;
+			richTextBoxAptitudes.Text = curSelected.primary + ", " + curSelected.secondary;
 			richTextBoxPrerequisites.Text = curSelected.Prerequisites;
 			richTextBoxBenefit.Text = curSelected.Benefit;
 			richTextBoxDetails.Text = curSelected.Details;
@@ -66,8 +70,12 @@ namespace Char_Generator
 		private void charGenMain_Shown(object sender, EventArgs e)
 		{
 			testTalents = new Talents();
-			testTalents.TalentList.ForEach(x => listBoxTalantDetails.Items.Add(x.Name));
-			testTalents.TalentList.ForEach(x => richTextBoxCurrentlyKnown.Text += x.ToString() + "\n");
+			testSkills = new Skills();
+			testAptitudes = new Aptitudes();
+			richTextBoxCurrentlyKnown.Text = testAptitudes.ToString();
+			//testSkills.SkillList.ForEach(x => richTextBoxCurrentlyKnown.Text += x + "\n");
+			//testTalents.TalentList.ForEach(x => listBoxTalantDetails.Items.Add(x.Name));
+			//testTalents.TalentList.ForEach(x => richTextBoxCurrentlyKnown.Text += x.ToString() + "\n");
 		}
 	}
 }

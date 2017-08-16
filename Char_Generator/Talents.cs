@@ -14,75 +14,26 @@ namespace Char_Generator
 	{
 		[XmlArray("TalentList")]
 		[XmlArrayItem("Talent", typeof(Talent))]
-		//public List<Talent> TalentList = new List<Talent>();
 		public List<Talent> TalentList = new List<Talent>();
 
 		public Talents()
 		{
-			String buffer = String.Empty;
-			try
-			{
-				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory, 
-					"TextFiles\\Talents_CSV.csv")))
-				{
-					if (myStream != null)
-					{
-						using (StreamReader csvFile = new StreamReader(myStream))
-						{
-							buffer = csvFile.ReadToEnd();
-						}
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
-			}
-			// }
+			List<string> csvLines = FileIO.readCsv("TextFiles\\Talents_CSV.csv");
 
-			String[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-
-			int iterbuffer = 0;
-			try
+			foreach (string csvLine in csvLines)
 			{
-				for (int i = 0; i < bufferArray.Length; i++)
-				{
-					if (!bufferArray[i].Contains("<VOID>"))
-					{
-						iterbuffer = i;
-						TalentList.Add(new Talent(bufferArray[i]));
-					}
-				}
+				TalentList.Add(new Talent(csvLine));
 			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: Failed to add new Talents at iteration : " + iterbuffer + " Buffer Size: " + bufferArray.Length + "\n" + ex.Message);
-			}
-
 		}
 
 		public Talents(StreamReader csvFile)
 		{
-			String buffer = csvFile.ReadToEnd();
-			String[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			List<string> csvLines = FileIO.readCsv(csvFile);
 
-			int iterbuffer = 0;
-			try
+			foreach (string csvLine in csvLines)
 			{
-				for (int i = 0; i < bufferArray.Length; i++)
-				{
-					if (!bufferArray[i].Contains("<VOID>"))
-					{
-						iterbuffer = i;
-						TalentList.Add(new Talent(bufferArray[i]));
-					}
-				}
+				TalentList.Add(new Talent(csvLine));
 			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: Failed to add new Talents at iteration : " + iterbuffer + " Buffer Size: " + bufferArray.Length + "\n" + ex.Message);
-			}
-
 		}
 
 		public Talent Find(String toBeFound)

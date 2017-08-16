@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Char_Generator
 {
@@ -10,7 +12,7 @@ namespace Char_Generator
 
 		static Aptitudes()
 		{
-
+			available = FileIO.readCsv("TextFiles\\Aptitudes_CSV.csv");
 		}
 
 		public Aptitudes()
@@ -18,14 +20,30 @@ namespace Char_Generator
 
 		}
 
-		public Aptitudes(string[])
+		public Aptitudes(string[] FILL_ME_UP)
 		{
 
 		}
 
-		public override string ToString()
+		public string getAvailable()
 		{
-			return string.Format("[Aptitudes]");
+			string toBeReturned = "";
+			foreach (string aptitude in available)
+			{
+				toBeReturned += aptitude + "\n";
+			}
+			return toBeReturned;
 		}
+
+		public string getPossesed()
+		{
+			string toBeReturned = "";
+			foreach (string aptitude in possessed)
+			{
+				toBeReturned += aptitude + "\n";
+			}
+			return toBeReturned;
+		}
+
 	}
 }

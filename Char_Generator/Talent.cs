@@ -13,7 +13,6 @@ namespace Char_Generator
         public string Details { get; set; }
         public string Tier { get; set; }
         public string Source { get; set; }
-		public Boolean custom { get; set; }
 
         public Talent(String csvLineRead)
         {
@@ -21,11 +20,12 @@ namespace Char_Generator
             if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null || csvSplit[4] != null ||
                 csvSplit[5] != null || csvSplit[6] != null || csvSplit[7] != null)
             {
+				//TODO: Move this to container class
                 Name = csvSplit[0];
 
                 Prerequisites = csvSplit[1];
-                Aptitude1 = csvSplit[2];
-                Aptitude2 = csvSplit[3];
+                primary = csvSplit[2];
+                secondary = csvSplit[3];
                 Benefit = csvSplit[4];
                 Details = csvSplit[5];
                 Tier = csvSplit[6];
@@ -34,13 +34,13 @@ namespace Char_Generator
 
             else
             {
-                Name = Prerequisites = Aptitude1 = Aptitude2 = Benefit = Details = "N/A";
+                Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
             }
         }
 
         public Talent()
         {
-            Name = Prerequisites = Aptitude1 = Aptitude2 = Benefit = Details = "N/A";
+            Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
         }
 
         public override String ToString()
@@ -49,8 +49,8 @@ namespace Char_Generator
                 "Name: " + Name + "\n"
                 + "Tier: " + Tier + "\n"
                 + "Prerequisites: " + Prerequisites + "\n"
-                + "Aptitude 1: " + Aptitude1 + "\n"
-                + "Aptitude 2: " + Aptitude2 + "\n"
+                + "Aptitude 1: " + primary + "\n"
+                + "Aptitude 2: " + secondary + "\n"
                 + "Benefit: " + Benefit + "\n"
                 + "Details: " + Details + "\n"
                 + "Source: " + Source + "\n";

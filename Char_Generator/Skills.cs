@@ -18,54 +18,21 @@ namespace Char_Generator
 
 		public Skills()
 		{
-			String buffer = String.Empty;
-			try
+			List<string> csvLines = FileIO.readCsv("TextFiles\\Skills_CSV.csv");
+				
+			foreach (string csvLine in csvLines)
 			{
-				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory,
-					"TextFiles\\Skills_CSV.csv")))
+				String[] csvSplit = csvLine.Split('|');
+				if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
+					|| csvSplit[4] != null)
 				{
-					if (myStream != null)
-					{
-						using (StreamReader csvFile = new StreamReader(myStream))
-						{
-							buffer = csvFile.ReadToEnd();
-						}
-					}
+					SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
+				}
+				else
+				{
+					SkillList.Add(new Skill());
 				}
 			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
-			}
-
-			String[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-
-			int iterbuffer = 0;
-			try
-			{
-				for (int i = 0; i < bufferArray.Length; i++)
-				{
-					if (!bufferArray[i].Contains("<VOID>"))
-					{
-						iterbuffer = i;
-						String[] csvSplit = bufferArray[i].Split('|');
-						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
-							|| csvSplit[4] != null)
-						{
-							SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
-						}
-						else
-						{
-							SkillList.Add(new Skill());
-						}
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Error: Failed to add new Skills at iteration : " + iterbuffer + " Buffer Size: " + bufferArray.Length + "\n" + ex.Message);
-			}
-
 		}
 
 		public Skills(StreamReader csvFile)
@@ -115,7 +82,7 @@ namespace Char_Generator
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Error: Failed to insert talent. Original error is : \n" + ex.Message);
+				MessageBox.Show("Error: Failed to insert skill. Original error is : \n" + ex.Message);
 			}
 		}
 

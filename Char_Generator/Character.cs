@@ -6,6 +6,7 @@ namespace Char_Generator
 		public Attributes attributes { get; set; }
 		public Skills skills { get; set; }
 		public Talents talents { get; set; }
+		public Aptitudes aptitudes { get; set; }
 		public int experience { get; set; }
 		public string campaignId { get; set; }
 
@@ -14,8 +15,10 @@ namespace Char_Generator
 			attributes = null;
 			skills = null;
 			talents = null;
+			aptitudes = null;
 			experience = 0;
 			campaignId = null;
+
 		}
 	}
 }

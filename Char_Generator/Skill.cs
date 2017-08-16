@@ -1,40 +1,49 @@
 using System;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Char_Generator
 {
 	public class Skill
 	{
 		public int tier { get; set; }
-		public String name { get; set; }
-		public Aptitude primary { get; set; }
-		public Aptitude secondary { get; set; }
-		public Attribute attribute { get; set; }
+		public string name { get; set; }
+		public string primary { get; set; }
+		public string secondary { get; set; }
+		public string specialist { get; set; }
 
-		public Skill(String name, Aptitude primary, Aptitude secondary, Attribute attribute, int tier)
+		public Skill(String name, string primary, string secondary, Attribute attribute, int tier)
 		{
 			this.name = name;
 			this.primary = primary;
 			this.secondary = secondary;
-			this.attribute = attribute;
 			this.tier = tier;
 		}
 
 		public Skill()
 		{
-			name = "N/A";
-			primary = Aptitude.general;
-			secondary = Aptitude.agility;
+			name = primary = secondary = "N/A";
 			tier = -1;
-			attribute = new Attribute();
+			//attribute = new Attribute();
 		}
 
 		public Skill(string[] csvSplit)
 		{
-			name = csvSplit[1];
-			//secsvLineRead= csvSplit[2];
-			//attribute = csvSplit[3];
-			//tier = csvSplit[4];
+			name = csvSplit[0].Trim();
+			primary = csvSplit[1].Trim();
+			secondary = csvSplit[2].Trim();
+			tier = Int32.Parse(csvSplit[3].Trim());
+			specialist = csvSplit[4].Trim();
+			//attribute = csvSplit[4];
+		}
+
+		public override String ToString()
+		{
+			return
+				"Name: " + name + "\n"
+				+ "Tier: " + tier + "\n"
+				+ "Aptitude 1: " + primary + "\n"
+				+ "Aptitude 2: " + secondary + "\n"
+				+ "Specialty: " + specialist + "\n";
 		}
 	}
 }
