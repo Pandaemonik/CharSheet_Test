@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+
 namespace Char_Generator
 {
 	public class Character
@@ -12,13 +13,24 @@ namespace Char_Generator
 
 		public Character()
 		{
-			attributes = null;
-			skills = null;
-			talents = null;
-			aptitudes = null;
+			attributes = new Attributes();
+			skills = new Skills();
+			talents = new Talents();
+			aptitudes = new Aptitudes("General");
 			experience = 0;
-			campaignId = null;
+			campaignId = "RFF_ID_7";
 
+		}
+
+		public override string ToString()
+		{
+			return string.Format("Character:\n\tAttributes\n{0} \n\tSkills\n{1} \n\tTalents\n{2} \n\tAptitudes\n{3}\n\texperience\n{4}, \n\tcampaignId\n{5}", attributes, skills, talents, aptitudes, experience, campaignId);
+		}
+
+		public string SerializeJSON()
+		{
+			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
+			return json;
 		}
 	}
 }

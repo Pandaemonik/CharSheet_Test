@@ -9,8 +9,8 @@ namespace Char_Generator
 	{
 		public static List<string> readCsv(string csvLocation)
 		{
-			List<string> toBeReturned = new List<string>();
-			string buffer = string.Empty;
+			var toBeReturned = new List<string>();
+			var buffer = string.Empty;
 
 			try
 			{
@@ -31,7 +31,7 @@ namespace Char_Generator
 				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
 			}
 
-			string[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			var bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
 			int iterbuffer = 0;
 			try
@@ -55,9 +55,9 @@ namespace Char_Generator
 
 		public static List<string> readCsv(StreamReader csvFile)
 		{
-			string buffer = csvFile.ReadToEnd();
-			string[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-			List<string> toBeReturned = new List<string>();
+			var buffer = csvFile.ReadToEnd();
+			var bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			var toBeReturned = new List<string>();
 
 			int iterbuffer = 0;
 			try

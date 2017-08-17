@@ -18,7 +18,7 @@ namespace Char_Generator
 
 		public Talents()
 		{
-			List<string> csvLines = FileIO.readCsv("TextFiles\\Talents_CSV.csv");
+			var csvLines = FileIO.readCsv("TextFiles\\Talents_CSV.csv");
 
 			foreach (string csvLine in csvLines)
 			{
@@ -28,7 +28,7 @@ namespace Char_Generator
 
 		public Talents(StreamReader csvFile)
 		{
-			List<string> csvLines = FileIO.readCsv(csvFile);
+			var csvLines = FileIO.readCsv(csvFile);
 
 			foreach (string csvLine in csvLines)
 			{
@@ -36,9 +36,9 @@ namespace Char_Generator
 			}
 		}
 
-		public Talent Find(String toBeFound)
+		public Talent Find(string toBeFound)
 		{
-			Talent temp = TalentList.Find(x => x.Name == toBeFound);
+			var temp = TalentList.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
@@ -56,9 +56,9 @@ namespace Char_Generator
 
 		public string SerializeXML()
 		{
-			XmlSerializer s = new XmlSerializer(this.GetType());
-			StringBuilder sb = new StringBuilder();
-			TextWriter w = new StringWriter(sb);
+			var s = new XmlSerializer(GetType());
+			var sb = new StringBuilder();
+			var w = new StringWriter(sb);
 			s.Serialize(w, this);
 			w.Flush();
 			return sb.ToString();
@@ -66,7 +66,7 @@ namespace Char_Generator
 
 		public string SerializeJSON()
 		{
-			string json = JsonConvert.SerializeObject(this);
+			var json = JsonConvert.SerializeObject(this,Formatting.Indented);
 			return json;
 		}
 	}

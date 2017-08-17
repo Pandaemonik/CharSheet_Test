@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Char_Generator
 {
@@ -15,17 +14,35 @@ namespace Char_Generator
 			available = FileIO.readCsv("TextFiles\\Aptitudes_CSV.csv");
 		}
 
-		public Aptitudes()
+		public Aptitudes(string toBeAdded)
 		{
-
+			if (available.Contains(toBeAdded))
+			{
+				possessed.Add(toBeAdded);
+			}
+			else
+			{
+				MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
+			}
 		}
 
-		public Aptitudes(string[] FILL_ME_UP)
+		public Aptitudes(string[] arrayToBeAdded)
 		{
+			foreach (string toBeAdded in arrayToBeAdded)
+			{
+				if (available.Contains(toBeAdded))
+				{
+					possessed.Add(toBeAdded);
+				}
+				else
+				{
+					MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
+				}
 
+			}
 		}
 
-		public string getAvailable()
+		public string GetAvailable()
 		{
 			string toBeReturned = "";
 			foreach (string aptitude in available)
@@ -35,7 +52,7 @@ namespace Char_Generator
 			return toBeReturned;
 		}
 
-		public string getPossesed()
+		public string GetPossesed()
 		{
 			string toBeReturned = "";
 			foreach (string aptitude in possessed)
@@ -45,5 +62,29 @@ namespace Char_Generator
 			return toBeReturned;
 		}
 
+		public void Add(string toBeAdded)
+		{
+			if (available.Contains(toBeAdded))
+			{
+				possessed.Add(toBeAdded);
+			}
+			else
+			{
+				MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
+			}
+		}
+
+		public static bool CheckAvailable(string toBeChecked)
+		{
+			if (toBeChecked == "1")
+				return true;
+			return false;
+		}
+
+		public string SerializeJSON()
+		{
+			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
+			return json;
+		}
 	}
 }

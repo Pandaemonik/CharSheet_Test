@@ -14,7 +14,6 @@ namespace Char_Generator
 			this.secondary = secondary;
 			this.tier = tier;
 			this.value = value;
-
 		}
 
 		public Attribute()
@@ -22,6 +21,23 @@ namespace Char_Generator
 			name = secondary = "N/A";
 			tier = 0;
 			value = 0;
+		}
+
+		public Attribute(string[] csvSplit)
+		{
+			name = csvSplit[0].Trim();
+			secondary = csvSplit[1].Trim();
+			tier = int.Parse(csvSplit[2].Trim());
+			value = int.Parse(csvSplit[3].Trim());
+		}
+
+		public override string ToString()
+		{
+			return
+				"Name: " + name + "\n"
+				+ "Aptitude: " + secondary + "\n"
+				+ "Tier: " + tier + "\n"
+				+ "Details: " + value + "\n";
 		}
 	}
 }

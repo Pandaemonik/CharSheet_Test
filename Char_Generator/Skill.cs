@@ -1,5 +1,3 @@
-using System;
-using System.Windows.Forms;
 
 namespace Char_Generator
 {
@@ -11,7 +9,7 @@ namespace Char_Generator
 		public string secondary { get; set; }
 		public string specialist { get; set; }
 
-		public Skill(String name, string primary, string secondary, Attribute attribute, int tier)
+		public Skill(string name, string primary, string secondary, int tier)
 		{
 			this.name = name;
 			this.primary = primary;
@@ -23,7 +21,6 @@ namespace Char_Generator
 		{
 			name = primary = secondary = "N/A";
 			tier = -1;
-			//attribute = new Attribute();
 		}
 
 		public Skill(string[] csvSplit)
@@ -31,12 +28,11 @@ namespace Char_Generator
 			name = csvSplit[0].Trim();
 			primary = csvSplit[1].Trim();
 			secondary = csvSplit[2].Trim();
-			tier = Int32.Parse(csvSplit[3].Trim());
+			tier = int.Parse(csvSplit[3].Trim());
 			specialist = csvSplit[4].Trim();
-			//attribute = csvSplit[4];
 		}
 
-		public override String ToString()
+		public override string ToString()
 		{
 			return
 				"Name: " + name + "\n"

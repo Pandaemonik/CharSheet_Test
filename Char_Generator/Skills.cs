@@ -18,11 +18,11 @@ namespace Char_Generator
 
 		public Skills()
 		{
-			List<string> csvLines = FileIO.readCsv("TextFiles\\Skills_CSV.csv");
-				
+			var csvLines = FileIO.readCsv("TextFiles\\Skills_CSV.csv");
+
 			foreach (string csvLine in csvLines)
 			{
-				String[] csvSplit = csvLine.Split('|');
+				var csvSplit = csvLine.Split('|');
 				if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
 					|| csvSplit[4] != null)
 				{
@@ -37,8 +37,8 @@ namespace Char_Generator
 
 		public Skills(StreamReader csvFile)
 		{
-			String buffer = csvFile.ReadToEnd();
-			String[] bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			var buffer = csvFile.ReadToEnd();
+			var bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
 			int iterbuffer = 0;
 			try
@@ -48,7 +48,7 @@ namespace Char_Generator
 					if (!bufferArray[i].Contains("<VOID>"))
 					{
 						iterbuffer = i;
-						String[] csvSplit = bufferArray[i].Split('|');
+						var csvSplit = bufferArray[i].Split('|');
 						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
 							|| csvSplit[4] != null)
 						{
@@ -70,7 +70,7 @@ namespace Char_Generator
 
 		public Skill Find(string toBeFound)
 		{
-			Skill temp = SkillList.Find(x => x.name == toBeFound);
+			var temp = SkillList.Find(x => x.name == toBeFound);
 			return temp;
 		}
 
@@ -88,9 +88,9 @@ namespace Char_Generator
 
 		public string SerializeXML()
 		{
-			XmlSerializer s = new XmlSerializer(this.GetType());
-			StringBuilder sb = new StringBuilder();
-			TextWriter w = new StringWriter(sb);
+			var s = new XmlSerializer(GetType());
+			var sb = new StringBuilder();
+			var w = new StringWriter(sb);
 			s.Serialize(w, this);
 			w.Flush();
 			return sb.ToString();
@@ -98,7 +98,7 @@ namespace Char_Generator
 
 		public string SerializeJSON()
 		{
-			string json = JsonConvert.SerializeObject(this);
+			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
 			return json;
 		}
 	}
