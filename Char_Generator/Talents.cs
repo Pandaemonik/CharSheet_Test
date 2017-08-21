@@ -9,20 +9,20 @@ using Newtonsoft.Json;
 
 namespace Char_Generator
 {
-	[XmlRoot(Namespace = "", IsNullable = false)]
 	public class Talents
 	{
-		[XmlArray("TalentList")]
-		[XmlArrayItem("Talent", typeof(Talent))]
-		public List<Talent> TalentList = new List<Talent>();
+		public List<Talent> talent = new List<Talent>();
 
-		public Talents()
+		[JsonConstructor]
+		public Talents() { }
+
+		public Talents(string csvPath)
 		{
-			var csvLines = FileIO.readCsv("TextFiles\\Talents_CSV.csv");
+			var csvLines = FileIO.readCsv(csvPath);
 
 			foreach (string csvLine in csvLines)
 			{
-				TalentList.Add(new Talent(csvLine));
+				talent.Add(new Talent(csvLine));
 			}
 		}
 
@@ -32,13 +32,13 @@ namespace Char_Generator
 
 			foreach (string csvLine in csvLines)
 			{
-				TalentList.Add(new Talent(csvLine));
+				talent.Add(new Talent(csvLine));
 			}
 		}
 
 		public Talent Find(string toBeFound)
 		{
-			var temp = TalentList.Find(x => x.Name == toBeFound);
+			var temp = talent.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
@@ -46,7 +46,7 @@ namespace Char_Generator
 		{
 			try
 			{
-				TalentList.Add(talent);
+				this.talent.Add(talent);
 			}
 			catch (Exception ex)
 			{
@@ -66,8 +66,23 @@ namespace Char_Generator
 
 		public string SerializeJSON()
 		{
-			var json = JsonConvert.SerializeObject(this,Formatting.Indented);
+			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
 			return json;
 		}
+
+		public override string ToString()
+		{
+			var toBeReturned = string.Empty;
+			talent.ForEach(x => toBeReturned += x + "\n");
+			return toBeReturned;
+		}
+
+		public string[] getNames()
+		{
+			var toBeReturned = new List<string>();			talent.ForEach(x => toBeReturned.Add(x.Name));
+
+			return toBeReturned.ToArray();
+		}
+
 	}
 }

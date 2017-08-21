@@ -38,7 +38,7 @@
 
 		public Talent()
 		{
-			Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
+			//Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
 		}
 
 		public override string ToString()

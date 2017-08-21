@@ -3,43 +3,43 @@ namespace Char_Generator
 {
 	public class Skill
 	{
-		public int tier { get; set; }
-		public string name { get; set; }
-		public string primary { get; set; }
-		public string secondary { get; set; }
-		public string specialist { get; set; }
+		public int Tier { get; set; }
+		public string Name { get; set; }
+		public string Primary { get; set; }
+		public string Secondary { get; set; }
+		public string Specialist { get; set; }
 
 		public Skill(string name, string primary, string secondary, int tier)
 		{
-			this.name = name;
-			this.primary = primary;
-			this.secondary = secondary;
-			this.tier = tier;
+			Name = name;
+			Primary = primary;
+			Secondary = secondary;
+			Tier = tier;
 		}
 
 		public Skill()
 		{
-			name = primary = secondary = "N/A";
-			tier = -1;
+			Name = Primary = Secondary = "N/A";
+			Tier = -1;
 		}
 
 		public Skill(string[] csvSplit)
 		{
-			name = csvSplit[0].Trim();
-			primary = csvSplit[1].Trim();
-			secondary = csvSplit[2].Trim();
-			tier = int.Parse(csvSplit[3].Trim());
-			specialist = csvSplit[4].Trim();
+			Name = csvSplit[0].Trim();
+			Primary = csvSplit[1].Trim();
+			Secondary = csvSplit[2].Trim();
+			Tier = int.Parse(csvSplit[3].Trim());
+			Specialist = csvSplit[4].Trim();
 		}
 
 		public override string ToString()
 		{
 			return
-				"Name: " + name + "\n"
-				+ "Tier: " + tier + "\n"
-				+ "Aptitude 1: " + primary + "\n"
-				+ "Aptitude 2: " + secondary + "\n"
-				+ "Specialty: " + specialist + "\n";
+				"Name: " + Name + "\n"
+				+ "Tier: " + Tier + "\n"
+				+ "Aptitude 1: " + Primary + "\n"
+				+ "Aptitude 2: " + Secondary + "\n"
+				+ "Specialty: " + Specialist + "\n";
 		}
 	}
 }

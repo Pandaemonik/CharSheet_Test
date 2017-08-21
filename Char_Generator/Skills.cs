@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace Char_Generator
 {
-	[XmlRoot(Namespace = "", IsNullable = false)]
 	public class Skills
 	{
-		[XmlArray("SkillList")]
-		[XmlArrayItem("Skill", typeof(Skill))]
-		public List<Skill> SkillList = new List<Skill>();
+		public List<Skill> skill = new List<Skill>();
 
-		public Skills()
+		[JsonConstructor]
+		public Skills() { }
+
+		public Skills(string csvPath)
 		{
 			var csvLines = FileIO.readCsv("TextFiles\\Skills_CSV.csv");
 
@@ -26,51 +24,45 @@ namespace Char_Generator
 				if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
 					|| csvSplit[4] != null)
 				{
-					SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
+					skill.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
 				}
 				else
 				{
-					SkillList.Add(new Skill());
+					skill.Add(new Skill());
 				}
 			}
 		}
 
 		public Skills(StreamReader csvFile)
 		{
-			var buffer = csvFile.ReadToEnd();
-			var bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			var csvLines = FileIO.readCsv(csvFile);
 
-			int iterbuffer = 0;
 			try
 			{
-				for (int i = 0; i < bufferArray.Length; i++)
+				foreach (string csvLine in csvLines)
 				{
-					if (!bufferArray[i].Contains("<VOID>"))
+					var csvSplit = csvLine.Split('|');
+					if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
+						|| csvSplit[4] != null)
 					{
-						iterbuffer = i;
-						var csvSplit = bufferArray[i].Split('|');
-						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null
-							|| csvSplit[4] != null)
-						{
-							SkillList.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
-						}
-						else
-						{
-							SkillList.Add(new Skill());
-						}
+						skill.Add(new Skill(csvSplit));//TODO:Validate input and use proper constructor
+					}
+					else
+					{
+						skill.Add(new Skill());
 					}
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Error: Failed to add new Skills at iteration : " + iterbuffer + " Buffer Size: " + bufferArray.Length + "\n" + ex.Message);
+				MessageBox.Show("Error: Failed to add new Skills at iteration : " + ex.Message);
 			}
 
 		}
 
 		public Skill Find(string toBeFound)
 		{
-			var temp = SkillList.Find(x => x.name == toBeFound);
+			var temp = skill.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
@@ -78,7 +70,7 @@ namespace Char_Generator
 		{
 			try
 			{
-				SkillList.Add(skill);
+				this.skill.Add(skill);
 			}
 			catch (Exception ex)
 			{
@@ -86,20 +78,25 @@ namespace Char_Generator
 			}
 		}
 
-		public string SerializeXML()
-		{
-			var s = new XmlSerializer(GetType());
-			var sb = new StringBuilder();
-			var w = new StringWriter(sb);
-			s.Serialize(w, this);
-			w.Flush();
-			return sb.ToString();
-		}
-
 		public string SerializeJSON()
 		{
 			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
 			return json;
 		}
+
+		public override string ToString()
+		{
+			var toBeReturned = string.Empty;
+			skill.ForEach(x => toBeReturned += x + "\n");
+			return toBeReturned;
+		}
+
+		public string[] getNames()
+		{
+			var toBeReturned = new List<string>();
+			skill.ForEach(x => toBeReturned.Add(x.Name));
+			return toBeReturned.ToArray();
+		}
+
 	}
 }

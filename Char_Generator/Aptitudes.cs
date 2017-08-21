@@ -14,8 +14,12 @@ namespace Char_Generator
 			available = FileIO.readCsv("TextFiles\\Aptitudes_CSV.csv");
 		}
 
+		[JsonConstructor]
+		public Aptitudes() { }
+
 		public Aptitudes(string toBeAdded)
 		{
+			//MessageBox.Show(toBeAdded);
 			if (available.Contains(toBeAdded))
 			{
 				possessed.Add(toBeAdded);
@@ -24,6 +28,17 @@ namespace Char_Generator
 			{
 				MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
 			}
+		}
+
+
+		public Aptitudes(List<string> toBeAdded)
+		{
+			MessageBox.Show(toBeAdded.ToString());
+			foreach (string Added in toBeAdded)
+			{
+				possessed.Add(Added);
+			}
+
 		}
 
 		public Aptitudes(string[] arrayToBeAdded)
@@ -86,5 +101,20 @@ namespace Char_Generator
 			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
 			return json;
 		}
+
+		public override string ToString()
+		{
+			var toBeReturned = string.Empty;
+			possessed.ForEach(x => toBeReturned += x + "\n");
+			return toBeReturned;
+		}
+
+		public string[] getNames()
+		{
+			var toBeReturned = new List<string>();
+			possessed.ForEach(x => toBeReturned.Add(x));
+			return toBeReturned.ToArray();
+		}
+
 	}
 }

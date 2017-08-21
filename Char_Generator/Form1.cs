@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Char_Generator
 {
 	public partial class charGenMain : Form
 	{
 
-		Talents testTalents;//TODO Add ToString Overload
-		Skills testSkills;//TODO Add ToString Overload
-		Aptitudes testAptitudes;//TODO Add ToString Overload
-		Attributes testAttributes;//TODO Add ToString Overload
+		Talents testTalents;
+		Skills testSkills;
+		Aptitudes testAptitudes;
+		Attributes testAttributes;
 		Character testCharacter;
 
 		public charGenMain()
@@ -19,10 +20,10 @@ namespace Char_Generator
 
 		void loadTalantsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			testTalents = new Talents();
-			testSkills = new Skills();
-			displayInDetailsToolStripMenuItem.Enabled = true;
-			displayInLabelToolStripMenuItem.Enabled = true;
+			//testTalents = new Talents();
+			//testSkills = new Skills();
+			MenuItemCreateRegiment.Enabled = true;
+			MenuItemCreateCharacter.Enabled = true;
 		}
 
 		void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,13 +39,13 @@ namespace Char_Generator
 
 		void displayInDetailsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			testSkills.SkillList.ForEach(x => listBoxTalantDetails.Items.Add(x.name));
-			testTalents.TalentList.ForEach(x => listBoxTalantDetails.Items.Add(x.Name));
+			listBoxTalantDetails.Items.AddRange(testSkills.getNames());
+			listBoxTalantDetails.Items.AddRange(testTalents.getNames());
 		}
 
 		void displayInLabelToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			testTalents.TalentList.ForEach(x => richTextBoxCurrentlyKnown.Text += x + "\n");
+			richTextBoxCurrentlyKnown.Text +=testTalents.ToString();
 		}
 
 		void listBoxTalantDetails_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,36 +65,16 @@ namespace Char_Generator
 				"TextFiles\\Talents_XML(new).xml"), testTalents.SerializeXML());
 		}
 
-		void buttonSaveAsJson_Click(object sender, EventArgs e)
-		{
-			System.IO.File.WriteAllText(System.IO.Path.Combine(Environment.CurrentDirectory,
-				"TextFiles\\Talents_JSON(new).json"), testTalents.SerializeJSON());
-		}
-
 		void charGenMain_Shown(object sender, EventArgs e)
 		{
-			testTalents = new Talents();
-			testSkills = new Skills();
-			testAptitudes = new Aptitudes("Agility");
-			testAttributes = new Attributes();
-			testCharacter = new Character();
+			//testCharacter = new Character();
+			testCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Character_JSON.json"));
+			testTalents = testCharacter.talents;
+			testSkills =  testCharacter.skills;
+			testAptitudes =  testCharacter.aptitudes;
+			testAttributes =  testCharacter.attributes;
 
-			//testAptitudes
-			//testAptitudes.Add("General");
-			//richTextBoxCurrentlyKnown.Text = testAptitudes.GetPossesed();
-
-			//testSkills
-			//testSkills.SkillList.ForEach(x => richTextBoxCurrentlyKnown.Text += x + "\n");
-
-			//testTalents
-			//testTalents.TalentList.ForEach(x => listBoxTalantDetails.Items.Add(x.Name));
-			//testTalents.TalentList.ForEach(x => richTextBoxCurrentlyKnown.Text += x.ToString() + "\n");
-
-			//testAttributes
-			//testAttributes.AttributeList.ForEach(x => richTextBoxCurrentlyKnown.Text += x.ToString() + "\n");
-
-			//testCharacter
-			richTextBoxCurrentlyKnown.Text += testCharacter + "\n";
+			//listBoxTalantDetails.Items.AddRange(testTalents.getNames());
 		}
 
 		void listBoxCharacters_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,6 +88,39 @@ namespace Char_Generator
 			"TextFiles\\Character_JSON(new).json"), testCharacter.SerializeJSON());
 		}
 
+		void showSkills_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += testSkills.ToString();
+		}
 
+		void showTalents_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += testTalents.ToString();
+		}
+
+		void showAptitudes_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += testAptitudes.ToString();
+		}
+
+		void showAttributes_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += testAttributes.ToString();
+		}
+
+		void showCharacter_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += testCharacter + "\n";
+		}
+
+		void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

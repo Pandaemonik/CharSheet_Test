@@ -1,21 +1,3 @@
-Weapon Skill
-
-Ballistic Skill
-
-Strength
-
-Toughness
-
-Agility
-
-Intelligence
-
-Perception
-
-Willpower
-
-Fellowship
-
 Done:
 	Talent Class
 	Skills Class

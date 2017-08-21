@@ -11,15 +11,26 @@ namespace Char_Generator
 		public int experience { get; set; }
 		public string campaignId { get; set; }
 
+
 		public Character()
 		{
-			attributes = new Attributes();
-			skills = new Skills();
-			talents = new Talents();
 			aptitudes = new Aptitudes("General");
+			skills = new Skills("TextFiles\\Skills_CSV.csv");
+			attributes = new Attributes("TextFiles\\Attributes_CSV.csv");
+			talents = new Talents("TextFiles\\Talents_CSV.csv");
 			experience = 0;
-			campaignId = "RFF_ID_7";
+			campaignId = "RFF_ID_1";
+		}
 
+		[JsonConstructor]
+		public Character(Attributes attributes, Skills skills, Talents talents, Aptitudes aptitudes , int experience, string campaignId)
+		{
+			this.attributes = attributes;
+			this.skills = skills;
+			this.talents = talents;
+			this.aptitudes = aptitudes;
+			this.experience = experience;
+			this.campaignId = campaignId;
 		}
 
 		public override string ToString()

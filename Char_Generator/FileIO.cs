@@ -78,5 +78,30 @@ namespace Char_Generator
 
 			return toBeReturned;
 		}
+
+		public static string readJson(string jsonLocation)
+		{
+			var toBeReturned = string.Empty;
+
+			try
+			{
+				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory, jsonLocation)))
+				{
+					if (myStream != null)
+					{
+						using (StreamReader jsonFile = new StreamReader(myStream))
+						{
+							toBeReturned = jsonFile.ReadToEnd();
+						}
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
+			}
+
+			return toBeReturned;
+		}
 	}
 }

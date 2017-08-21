@@ -1,66 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace Char_Generator
 {
-	[XmlRoot(Namespace = "", IsNullable = false)]
 	public class Attributes
 	{
-		[XmlArray("AttributeArray")]
-		[XmlArrayItem("Attribute", typeof(Attribute))]
-		public List<Attribute> AttributeList = new List<Attribute>();
+		public List<Attribute> attribute = new List<Attribute>();
 
-		public Attributes()
+		[JsonConstructor]
+		public Attributes() { }
+
+		public Attributes(string csvPath)
 		{
-			var csvLines = FileIO.readCsv("TextFiles\\Attributes_CSV.csv");
+			var csvLines = FileIO.readCsv(csvPath);
 
 			foreach (string csvLine in csvLines)
 			{
 				var csvSplit = csvLine.Split('|');
 				if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null)
 				{
-					AttributeList.Add(new Attribute(csvSplit));//TODO:Validate input and use proper constructor
+					attribute.Add(new Attribute(csvSplit));//TODO:Validate input and use proper constructor
 				}
 				else
 				{
-					AttributeList.Add(new Attribute());
+					attribute.Add(new Attribute());
 				}
+
 			}
 		}
 
 		public Attributes(StreamReader csvFile)
 		{
-			var buffer = csvFile.ReadToEnd();
-			var bufferArray = buffer.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			var csvLines = FileIO.readCsv(csvFile);
 
-			int iterbuffer = 0;
 			try
 			{
-				for (int i = 0; i < bufferArray.Length; i++)
+				foreach (string csvLine in csvLines)
 				{
-					if (!bufferArray[i].Contains("<VOID>"))
+					var csvSplit = csvLine.Split('|');
+					if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null)
 					{
-						iterbuffer = i;
-						var csvSplit = bufferArray[i].Split('|');
-						if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null)
-						{
-							AttributeList.Add(new Attribute(csvSplit));//TODO:Validate input and use proper constructor
-						}
-						else
-						{
-							AttributeList.Add(new Attribute());
-						}
+						attribute.Add(new Attribute(csvSplit));//TODO:Validate input and use proper constructor
+					}
+					else
+					{
+						attribute.Add(new Attribute());
 					}
 				}
+
 			}
 			catch (Exception ex)
 			{
 				System.Windows.Forms.MessageBox.Show("Error: Failed to add new Attributes at iteration : "
-													 + iterbuffer + " Buffer Size: " + bufferArray.Length
 													 + "\n" + ex.Message);
 			}
 
@@ -68,7 +61,7 @@ namespace Char_Generator
 
 		public Attribute Find(string toBeFound)
 		{
-			var temp = AttributeList.Find(x => x.name == toBeFound);
+			var temp = attribute.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
@@ -76,7 +69,7 @@ namespace Char_Generator
 		{
 			try
 			{
-				AttributeList.Add(attribute);
+				this.attribute.Add(attribute);
 			}
 			catch (Exception ex)
 			{
@@ -84,20 +77,24 @@ namespace Char_Generator
 			}
 		}
 
-		public string SerializeXML()
-		{
-			var s = new XmlSerializer(GetType());
-			var sb = new StringBuilder();
-			var w = new StringWriter(sb);
-			s.Serialize(w, this);
-			w.Flush();
-			return sb.ToString();
-		}
-
 		public string SerializeJSON()
 		{
 			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
 			return json;
+		}
+
+		public override string ToString()
+		{
+			var toBeReturned = string.Empty;
+			attribute.ForEach(x => toBeReturned += x + "\n");
+			return toBeReturned;
+		}
+
+		public string[] getNames()
+		{
+			var toBeReturned = new List<string>();
+			attribute.ForEach(x => toBeReturned.Add(x.Name));
+			return toBeReturned.ToArray();
 		}
 	}
 }

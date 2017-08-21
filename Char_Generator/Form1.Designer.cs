@@ -31,20 +31,24 @@
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.loadTalantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveTalantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.loadCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.displayInDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.displayInLabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItemCreateRegiment = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItemCreateCharacter = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItemCreateTalent = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
+			this.showCharacter = new System.Windows.Forms.Button();
+			this.listBoxCharacters = new System.Windows.Forms.ListBox();
+			this.showAttributes = new System.Windows.Forms.Button();
+			this.showAptitudes = new System.Windows.Forms.Button();
+			this.showTalents = new System.Windows.Forms.Button();
+			this.showSkills = new System.Windows.Forms.Button();
 			this.richTextBoxCurrentlyKnown = new System.Windows.Forms.RichTextBox();
 			this.labelCurrentlyKnown = new System.Windows.Forms.Label();
 			this.tabPageMain = new System.Windows.Forms.TabPage();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.buttonSaveCharacterJson = new System.Windows.Forms.Button();
-			this.listBoxCharacters = new System.Windows.Forms.ListBox();
-			this.buttonSaveAsJson = new System.Windows.Forms.Button();
 			this.buttonSaveAsXml = new System.Windows.Forms.Button();
 			this.listBoxTalantDetails = new System.Windows.Forms.ListBox();
 			this.richTextBoxPrerequisites = new System.Windows.Forms.RichTextBox();
@@ -92,8 +96,6 @@
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadTalantsToolStripMenuItem,
             this.saveTalantsToolStripMenuItem,
-            this.loadCharacterToolStripMenuItem,
-            this.saveCharacterToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -102,62 +104,53 @@
 			// loadTalantsToolStripMenuItem
 			// 
 			this.loadTalantsToolStripMenuItem.Name = "loadTalantsToolStripMenuItem";
-			this.loadTalantsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.loadTalantsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.loadTalantsToolStripMenuItem.Text = "Load Talent";
 			this.loadTalantsToolStripMenuItem.Click += new System.EventHandler(this.loadTalantsToolStripMenuItem_Click);
 			// 
 			// saveTalantsToolStripMenuItem
 			// 
 			this.saveTalantsToolStripMenuItem.Name = "saveTalantsToolStripMenuItem";
-			this.saveTalantsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.saveTalantsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.saveTalantsToolStripMenuItem.Text = "Save Talent";
 			this.saveTalantsToolStripMenuItem.Click += new System.EventHandler(this.saveTalantsToolStripMenuItem_Click);
-			// 
-			// loadCharacterToolStripMenuItem
-			// 
-			this.loadCharacterToolStripMenuItem.Enabled = false;
-			this.loadCharacterToolStripMenuItem.Name = "loadCharacterToolStripMenuItem";
-			this.loadCharacterToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-			this.loadCharacterToolStripMenuItem.Text = "Load Character";
-			// 
-			// saveCharacterToolStripMenuItem
-			// 
-			this.saveCharacterToolStripMenuItem.Enabled = false;
-			this.saveCharacterToolStripMenuItem.Name = "saveCharacterToolStripMenuItem";
-			this.saveCharacterToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-			this.saveCharacterToolStripMenuItem.Text = "Save Character";
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// displayToolStripMenuItem
 			// 
 			this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.displayInDetailsToolStripMenuItem,
-            this.displayInLabelToolStripMenuItem});
+            this.MenuItemCreateRegiment,
+            this.MenuItemCreateCharacter,
+            this.MenuItemCreateTalent});
 			this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-			this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-			this.displayToolStripMenuItem.Text = "&Display";
+			this.displayToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+			this.displayToolStripMenuItem.Text = "&Create";
 			// 
-			// displayInDetailsToolStripMenuItem
+			// MenuItemCreateRegiment
 			// 
-			this.displayInDetailsToolStripMenuItem.Enabled = false;
-			this.displayInDetailsToolStripMenuItem.Name = "displayInDetailsToolStripMenuItem";
-			this.displayInDetailsToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-			this.displayInDetailsToolStripMenuItem.Text = "Display in details";
-			this.displayInDetailsToolStripMenuItem.Click += new System.EventHandler(this.displayInDetailsToolStripMenuItem_Click);
+			this.MenuItemCreateRegiment.Name = "MenuItemCreateRegiment";
+			this.MenuItemCreateRegiment.Size = new System.Drawing.Size(125, 22);
+			this.MenuItemCreateRegiment.Text = "Regiment";
+			this.MenuItemCreateRegiment.Click += new System.EventHandler(this.displayInDetailsToolStripMenuItem_Click);
 			// 
-			// displayInLabelToolStripMenuItem
+			// MenuItemCreateCharacter
 			// 
-			this.displayInLabelToolStripMenuItem.Enabled = false;
-			this.displayInLabelToolStripMenuItem.Name = "displayInLabelToolStripMenuItem";
-			this.displayInLabelToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-			this.displayInLabelToolStripMenuItem.Text = "Display in Known";
-			this.displayInLabelToolStripMenuItem.Click += new System.EventHandler(this.displayInLabelToolStripMenuItem_Click);
+			this.MenuItemCreateCharacter.Name = "MenuItemCreateCharacter";
+			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(125, 22);
+			this.MenuItemCreateCharacter.Text = "Character";
+			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.displayInLabelToolStripMenuItem_Click);
+			// 
+			// MenuItemCreateTalent
+			// 
+			this.MenuItemCreateTalent.Name = "MenuItemCreateTalent";
+			this.MenuItemCreateTalent.Size = new System.Drawing.Size(125, 22);
+			this.MenuItemCreateTalent.Text = "Talent";
 			// 
 			// menuStripMain
 			// 
@@ -172,6 +165,12 @@
 			// 
 			// tabPageDisplauInLabel
 			// 
+			this.tabPageDisplauInLabel.Controls.Add(this.showCharacter);
+			this.tabPageDisplauInLabel.Controls.Add(this.listBoxCharacters);
+			this.tabPageDisplauInLabel.Controls.Add(this.showAttributes);
+			this.tabPageDisplauInLabel.Controls.Add(this.showAptitudes);
+			this.tabPageDisplauInLabel.Controls.Add(this.showTalents);
+			this.tabPageDisplauInLabel.Controls.Add(this.showSkills);
 			this.tabPageDisplauInLabel.Controls.Add(this.richTextBoxCurrentlyKnown);
 			this.tabPageDisplauInLabel.Controls.Add(this.labelCurrentlyKnown);
 			this.tabPageDisplauInLabel.Location = new System.Drawing.Point(4, 22);
@@ -181,6 +180,64 @@
 			this.tabPageDisplauInLabel.TabIndex = 1;
 			this.tabPageDisplauInLabel.Text = "Debug Window";
 			this.tabPageDisplauInLabel.UseVisualStyleBackColor = true;
+			// 
+			// showCharacter
+			// 
+			this.showCharacter.Location = new System.Drawing.Point(486, 144);
+			this.showCharacter.Name = "showCharacter";
+			this.showCharacter.Size = new System.Drawing.Size(92, 23);
+			this.showCharacter.TabIndex = 74;
+			this.showCharacter.Text = "Show Character";
+			this.showCharacter.UseVisualStyleBackColor = true;
+			this.showCharacter.Click += new System.EventHandler(this.showCharacter_Click);
+			// 
+			// listBoxCharacters
+			// 
+			this.listBoxCharacters.FormattingEnabled = true;
+			this.listBoxCharacters.Location = new System.Drawing.Point(584, 20);
+			this.listBoxCharacters.Name = "listBoxCharacters";
+			this.listBoxCharacters.Size = new System.Drawing.Size(244, 30);
+			this.listBoxCharacters.TabIndex = 72;
+			// 
+			// showAttributes
+			// 
+			this.showAttributes.Location = new System.Drawing.Point(486, 113);
+			this.showAttributes.Name = "showAttributes";
+			this.showAttributes.Size = new System.Drawing.Size(92, 25);
+			this.showAttributes.TabIndex = 61;
+			this.showAttributes.Text = "Show Attributes";
+			this.showAttributes.UseVisualStyleBackColor = true;
+			this.showAttributes.Click += new System.EventHandler(this.showAttributes_Click);
+			// 
+			// showAptitudes
+			// 
+			this.showAptitudes.Location = new System.Drawing.Point(486, 82);
+			this.showAptitudes.Name = "showAptitudes";
+			this.showAptitudes.Size = new System.Drawing.Size(92, 25);
+			this.showAptitudes.TabIndex = 60;
+			this.showAptitudes.Text = "Show Aptitudes";
+			this.showAptitudes.UseVisualStyleBackColor = true;
+			this.showAptitudes.Click += new System.EventHandler(this.showAptitudes_Click);
+			// 
+			// showTalents
+			// 
+			this.showTalents.Location = new System.Drawing.Point(486, 51);
+			this.showTalents.Name = "showTalents";
+			this.showTalents.Size = new System.Drawing.Size(92, 25);
+			this.showTalents.TabIndex = 59;
+			this.showTalents.Text = "Show Talents";
+			this.showTalents.UseVisualStyleBackColor = true;
+			this.showTalents.Click += new System.EventHandler(this.showTalents_Click);
+			// 
+			// showSkills
+			// 
+			this.showSkills.Location = new System.Drawing.Point(486, 20);
+			this.showSkills.Name = "showSkills";
+			this.showSkills.Size = new System.Drawing.Size(92, 25);
+			this.showSkills.TabIndex = 58;
+			this.showSkills.Text = "Show Skills";
+			this.showSkills.UseVisualStyleBackColor = true;
+			this.showSkills.Click += new System.EventHandler(this.showSkills_Click);
 			// 
 			// richTextBoxCurrentlyKnown
 			// 
@@ -202,9 +259,8 @@
 			// 
 			// tabPageMain
 			// 
+			this.tabPageMain.Controls.Add(this.richTextBox1);
 			this.tabPageMain.Controls.Add(this.buttonSaveCharacterJson);
-			this.tabPageMain.Controls.Add(this.listBoxCharacters);
-			this.tabPageMain.Controls.Add(this.buttonSaveAsJson);
 			this.tabPageMain.Controls.Add(this.buttonSaveAsXml);
 			this.tabPageMain.Controls.Add(this.listBoxTalantDetails);
 			this.tabPageMain.Controls.Add(this.richTextBoxPrerequisites);
@@ -229,10 +285,19 @@
 			this.tabPageMain.Text = "MainTab";
 			this.tabPageMain.UseVisualStyleBackColor = true;
 			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Location = new System.Drawing.Point(728, 113);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.ReadOnly = true;
+			this.richTextBox1.Size = new System.Drawing.Size(246, 304);
+			this.richTextBox1.TabIndex = 74;
+			this.richTextBox1.Text = "";
+			// 
 			// buttonSaveCharacterJson
 			// 
 			this.buttonSaveCharacterJson.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonSaveCharacterJson.Location = new System.Drawing.Point(730, 358);
+			this.buttonSaveCharacterJson.Location = new System.Drawing.Point(107, 384);
 			this.buttonSaveCharacterJson.Name = "buttonSaveCharacterJson";
 			this.buttonSaveCharacterJson.Size = new System.Drawing.Size(126, 23);
 			this.buttonSaveCharacterJson.TabIndex = 72;
@@ -240,28 +305,9 @@
 			this.buttonSaveCharacterJson.UseVisualStyleBackColor = true;
 			this.buttonSaveCharacterJson.Click += new System.EventHandler(this.buttonSaveCharacterJson_Click);
 			// 
-			// listBoxCharacters
-			// 
-			this.listBoxCharacters.FormattingEnabled = true;
-			this.listBoxCharacters.Location = new System.Drawing.Point(730, 26);
-			this.listBoxCharacters.Name = "listBoxCharacters";
-			this.listBoxCharacters.Size = new System.Drawing.Size(244, 30);
-			this.listBoxCharacters.TabIndex = 71;
-			this.listBoxCharacters.SelectedIndexChanged += new System.EventHandler(this.listBoxCharacters_SelectedIndexChanged);
-			// 
-			// buttonSaveAsJson
-			// 
-			this.buttonSaveAsJson.Location = new System.Drawing.Point(560, 387);
-			this.buttonSaveAsJson.Name = "buttonSaveAsJson";
-			this.buttonSaveAsJson.Size = new System.Drawing.Size(90, 23);
-			this.buttonSaveAsJson.TabIndex = 70;
-			this.buttonSaveAsJson.Text = "Save as JSON";
-			this.buttonSaveAsJson.UseVisualStyleBackColor = true;
-			this.buttonSaveAsJson.Click += new System.EventHandler(this.buttonSaveAsJson_Click);
-			// 
 			// buttonSaveAsXml
 			// 
-			this.buttonSaveAsXml.Location = new System.Drawing.Point(464, 387);
+			this.buttonSaveAsXml.Location = new System.Drawing.Point(11, 384);
 			this.buttonSaveAsXml.Name = "buttonSaveAsXml";
 			this.buttonSaveAsXml.Size = new System.Drawing.Size(90, 23);
 			this.buttonSaveAsXml.TabIndex = 69;
@@ -272,15 +318,15 @@
 			// listBoxTalantDetails
 			// 
 			this.listBoxTalantDetails.FormattingEnabled = true;
-			this.listBoxTalantDetails.Location = new System.Drawing.Point(464, 286);
+			this.listBoxTalantDetails.Location = new System.Drawing.Point(728, 13);
 			this.listBoxTalantDetails.Name = "listBoxTalantDetails";
-			this.listBoxTalantDetails.Size = new System.Drawing.Size(260, 95);
+			this.listBoxTalantDetails.Size = new System.Drawing.Size(246, 95);
 			this.listBoxTalantDetails.TabIndex = 68;
 			this.listBoxTalantDetails.SelectedIndexChanged += new System.EventHandler(this.listBoxTalantDetails_SelectedIndexChanged);
 			// 
 			// richTextBoxPrerequisites
 			// 
-			this.richTextBoxPrerequisites.Location = new System.Drawing.Point(464, 104);
+			this.richTextBoxPrerequisites.Location = new System.Drawing.Point(11, 101);
 			this.richTextBoxPrerequisites.Name = "richTextBoxPrerequisites";
 			this.richTextBoxPrerequisites.ReadOnly = true;
 			this.richTextBoxPrerequisites.Size = new System.Drawing.Size(260, 20);
@@ -289,7 +335,7 @@
 			// 
 			// richTextBoxAptitudes
 			// 
-			this.richTextBoxAptitudes.Location = new System.Drawing.Point(464, 65);
+			this.richTextBoxAptitudes.Location = new System.Drawing.Point(11, 62);
 			this.richTextBoxAptitudes.Name = "richTextBoxAptitudes";
 			this.richTextBoxAptitudes.ReadOnly = true;
 			this.richTextBoxAptitudes.Size = new System.Drawing.Size(260, 20);
@@ -298,7 +344,7 @@
 			// 
 			// richTextBoxTier
 			// 
-			this.richTextBoxTier.Location = new System.Drawing.Point(696, 26);
+			this.richTextBoxTier.Location = new System.Drawing.Point(243, 23);
 			this.richTextBoxTier.Name = "richTextBoxTier";
 			this.richTextBoxTier.ReadOnly = true;
 			this.richTextBoxTier.Size = new System.Drawing.Size(28, 20);
@@ -307,7 +353,7 @@
 			// 
 			// richTextBoxName
 			// 
-			this.richTextBoxName.Location = new System.Drawing.Point(464, 26);
+			this.richTextBoxName.Location = new System.Drawing.Point(11, 23);
 			this.richTextBoxName.Name = "richTextBoxName";
 			this.richTextBoxName.ReadOnly = true;
 			this.richTextBoxName.Size = new System.Drawing.Size(226, 20);
@@ -316,7 +362,7 @@
 			// 
 			// richTextBoxDetails
 			// 
-			this.richTextBoxDetails.Location = new System.Drawing.Point(464, 184);
+			this.richTextBoxDetails.Location = new System.Drawing.Point(11, 181);
 			this.richTextBoxDetails.Name = "richTextBoxDetails";
 			this.richTextBoxDetails.ReadOnly = true;
 			this.richTextBoxDetails.Size = new System.Drawing.Size(260, 96);
@@ -325,7 +371,7 @@
 			// 
 			// richTextBoxBenefit
 			// 
-			this.richTextBoxBenefit.Location = new System.Drawing.Point(464, 143);
+			this.richTextBoxBenefit.Location = new System.Drawing.Point(11, 140);
 			this.richTextBoxBenefit.Name = "richTextBoxBenefit";
 			this.richTextBoxBenefit.ReadOnly = true;
 			this.richTextBoxBenefit.Size = new System.Drawing.Size(260, 22);
@@ -335,7 +381,7 @@
 			// labelTier
 			// 
 			this.labelTier.AutoSize = true;
-			this.labelTier.Location = new System.Drawing.Point(693, 10);
+			this.labelTier.Location = new System.Drawing.Point(240, 7);
 			this.labelTier.Name = "labelTier";
 			this.labelTier.Size = new System.Drawing.Size(25, 13);
 			this.labelTier.TabIndex = 63;
@@ -344,7 +390,7 @@
 			// labelName
 			// 
 			this.labelName.AutoSize = true;
-			this.labelName.Location = new System.Drawing.Point(461, 10);
+			this.labelName.Location = new System.Drawing.Point(8, 7);
 			this.labelName.Name = "labelName";
 			this.labelName.Size = new System.Drawing.Size(35, 13);
 			this.labelName.TabIndex = 56;
@@ -353,7 +399,7 @@
 			// labelPrerequisites
 			// 
 			this.labelPrerequisites.AutoSize = true;
-			this.labelPrerequisites.Location = new System.Drawing.Point(461, 88);
+			this.labelPrerequisites.Location = new System.Drawing.Point(8, 85);
 			this.labelPrerequisites.Name = "labelPrerequisites";
 			this.labelPrerequisites.Size = new System.Drawing.Size(67, 13);
 			this.labelPrerequisites.TabIndex = 57;
@@ -362,7 +408,7 @@
 			// labelAptitudes
 			// 
 			this.labelAptitudes.AutoSize = true;
-			this.labelAptitudes.Location = new System.Drawing.Point(461, 49);
+			this.labelAptitudes.Location = new System.Drawing.Point(8, 46);
 			this.labelAptitudes.Name = "labelAptitudes";
 			this.labelAptitudes.Size = new System.Drawing.Size(51, 13);
 			this.labelAptitudes.TabIndex = 58;
@@ -371,7 +417,7 @@
 			// labelBenefit
 			// 
 			this.labelBenefit.AutoSize = true;
-			this.labelBenefit.Location = new System.Drawing.Point(461, 127);
+			this.labelBenefit.Location = new System.Drawing.Point(8, 124);
 			this.labelBenefit.Name = "labelBenefit";
 			this.labelBenefit.Size = new System.Drawing.Size(40, 13);
 			this.labelBenefit.TabIndex = 59;
@@ -380,7 +426,7 @@
 			// labelDetails
 			// 
 			this.labelDetails.AutoSize = true;
-			this.labelDetails.Location = new System.Drawing.Point(461, 168);
+			this.labelDetails.Location = new System.Drawing.Point(8, 165);
 			this.labelDetails.Name = "labelDetails";
 			this.labelDetails.Size = new System.Drawing.Size(39, 13);
 			this.labelDetails.TabIndex = 60;
@@ -389,7 +435,7 @@
 			// groupBox2
 			// 
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.groupBox2.Location = new System.Drawing.Point(203, 6);
+			this.groupBox2.Location = new System.Drawing.Point(467, 13);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(255, 404);
 			this.groupBox2.TabIndex = 20;
@@ -417,7 +463,7 @@
 			this.groupBox1.Controls.Add(this.labelBallisticSkill);
 			this.groupBox1.Controls.Add(this.richTextBoxWeaponSkill);
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.groupBox1.Location = new System.Drawing.Point(13, 6);
+			this.groupBox1.Location = new System.Drawing.Point(277, 13);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(184, 404);
 			this.groupBox1.TabIndex = 19;
@@ -634,12 +680,10 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadCharacterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveCharacterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayInDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayInLabelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemCreateRegiment;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemCreateCharacter;
         private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem loadTalantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveTalantsToolStripMenuItem;
@@ -668,7 +712,6 @@
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.RichTextBox richTextBoxCurrentlyKnown;
 		private System.Windows.Forms.Label labelCurrentlyKnown;
-		private System.Windows.Forms.Button buttonSaveAsJson;
 		private System.Windows.Forms.Button buttonSaveAsXml;
 		private System.Windows.Forms.ListBox listBoxTalantDetails;
 		private System.Windows.Forms.RichTextBox richTextBoxPrerequisites;
@@ -683,8 +726,15 @@
 		private System.Windows.Forms.Label labelAptitudes;
 		private System.Windows.Forms.Label labelBenefit;
 		private System.Windows.Forms.Label labelDetails;
-		private System.Windows.Forms.ListBox listBoxCharacters;
 		private System.Windows.Forms.Button buttonSaveCharacterJson;
+		private System.Windows.Forms.ListBox listBoxCharacters;
+		private System.Windows.Forms.Button showAttributes;
+		private System.Windows.Forms.Button showAptitudes;
+		private System.Windows.Forms.Button showTalents;
+		private System.Windows.Forms.Button showSkills;
+		private System.Windows.Forms.ToolStripMenuItem MenuItemCreateTalent;
+		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.Button showCharacter;
 	}
 }
 
