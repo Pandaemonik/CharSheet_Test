@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.loadTalantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveTalantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exportCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.importCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateRegiment = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,46 +47,45 @@
 			this.richTextBoxCurrentlyKnown = new System.Windows.Forms.RichTextBox();
 			this.labelCurrentlyKnown = new System.Windows.Forms.Label();
 			this.tabPageMain = new System.Windows.Forms.TabPage();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-			this.buttonSaveCharacterJson = new System.Windows.Forms.Button();
-			this.buttonSaveAsXml = new System.Windows.Forms.Button();
-			this.listBoxTalantDetails = new System.Windows.Forms.ListBox();
-			this.richTextBoxPrerequisites = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxAptitudes = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxTier = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxName = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxDetails = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxBenefit = new System.Windows.Forms.RichTextBox();
-			this.labelTier = new System.Windows.Forms.Label();
+			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.buttonChangeDescription = new System.Windows.Forms.Button();
+			this.buttonSpendXp = new System.Windows.Forms.Button();
+			this.textBoxXpLeft = new System.Windows.Forms.RichTextBox();
+			this.textBoxXpSpent = new System.Windows.Forms.RichTextBox();
+			this.labelXpSpent = new System.Windows.Forms.Label();
+			this.labelXpLeft = new System.Windows.Forms.Label();
+			this.textBoxRegiment = new System.Windows.Forms.RichTextBox();
+			this.textBoxSpecialty = new System.Windows.Forms.RichTextBox();
+			this.textBoxWounds = new System.Windows.Forms.RichTextBox();
+			this.textBoxName = new System.Windows.Forms.RichTextBox();
+			this.textBoxDescription = new System.Windows.Forms.RichTextBox();
+			this.textBoxDemeanor = new System.Windows.Forms.RichTextBox();
+			this.labelWounds = new System.Windows.Forms.Label();
 			this.labelName = new System.Windows.Forms.Label();
-			this.labelPrerequisites = new System.Windows.Forms.Label();
-			this.labelAptitudes = new System.Windows.Forms.Label();
-			this.labelBenefit = new System.Windows.Forms.Label();
-			this.labelDetails = new System.Windows.Forms.Label();
+			this.labelRegiment = new System.Windows.Forms.Label();
+			this.labelSpecialty = new System.Windows.Forms.Label();
+			this.labelDemeanour = new System.Windows.Forms.Label();
+			this.labelDescription = new System.Windows.Forms.Label();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.listBoxTalentDetails = new System.Windows.Forms.ListBox();
+			this.textBoxTalents = new System.Windows.Forms.RichTextBox();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.textBoxSpecialRules = new System.Windows.Forms.RichTextBox();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.richTextBoxStrenght = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxWillpower = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxFellowship = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxIntelligence = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxAgility = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxToughness = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxPerception = new System.Windows.Forms.RichTextBox();
-			this.richTextBoxBallisticSkill = new System.Windows.Forms.RichTextBox();
-			this.labelFellowship = new System.Windows.Forms.Label();
-			this.labelWillpower = new System.Windows.Forms.Label();
-			this.labelPerception = new System.Windows.Forms.Label();
-			this.labelIntelligence = new System.Windows.Forms.Label();
-			this.labelAgility = new System.Windows.Forms.Label();
-			this.labelToughness = new System.Windows.Forms.Label();
-			this.labelStrength = new System.Windows.Forms.Label();
-			this.labelWeaponSkill = new System.Windows.Forms.Label();
-			this.labelBallisticSkill = new System.Windows.Forms.Label();
-			this.richTextBoxWeaponSkill = new System.Windows.Forms.RichTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.textBoxSkills = new System.Windows.Forms.RichTextBox();
+			this.textBoxAttributes = new System.Windows.Forms.RichTextBox();
+			this.textBoxAptitudes = new System.Windows.Forms.RichTextBox();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
 			this.tabPageMain.SuspendLayout();
+			this.groupBox6.SuspendLayout();
+			this.groupBox5.SuspendLayout();
+			this.groupBox4.SuspendLayout();
+			this.groupBox3.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.SuspendLayout();
@@ -94,31 +93,31 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadTalantsToolStripMenuItem,
-            this.saveTalantsToolStripMenuItem,
+            this.exportCharacterToolStripMenuItem,
+            this.importCharacterToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "&File";
 			// 
-			// loadTalantsToolStripMenuItem
+			// exportCharacterToolStripMenuItem
 			// 
-			this.loadTalantsToolStripMenuItem.Name = "loadTalantsToolStripMenuItem";
-			this.loadTalantsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-			this.loadTalantsToolStripMenuItem.Text = "Load Talent";
-			this.loadTalantsToolStripMenuItem.Click += new System.EventHandler(this.loadTalantsToolStripMenuItem_Click);
+			this.exportCharacterToolStripMenuItem.Name = "exportCharacterToolStripMenuItem";
+			this.exportCharacterToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.exportCharacterToolStripMenuItem.Text = "Export Character";
+			this.exportCharacterToolStripMenuItem.Click += new System.EventHandler(this.exportCharacterToolStripMenuItem_Click);
 			// 
-			// saveTalantsToolStripMenuItem
+			// importCharacterToolStripMenuItem
 			// 
-			this.saveTalantsToolStripMenuItem.Name = "saveTalantsToolStripMenuItem";
-			this.saveTalantsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-			this.saveTalantsToolStripMenuItem.Text = "Save Talent";
-			this.saveTalantsToolStripMenuItem.Click += new System.EventHandler(this.saveTalantsToolStripMenuItem_Click);
+			this.importCharacterToolStripMenuItem.Name = "importCharacterToolStripMenuItem";
+			this.importCharacterToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.importCharacterToolStripMenuItem.Text = "Import Character";
+			this.importCharacterToolStripMenuItem.Click += new System.EventHandler(this.importCharacterToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -137,20 +136,21 @@
 			this.MenuItemCreateRegiment.Name = "MenuItemCreateRegiment";
 			this.MenuItemCreateRegiment.Size = new System.Drawing.Size(125, 22);
 			this.MenuItemCreateRegiment.Text = "Regiment";
-			this.MenuItemCreateRegiment.Click += new System.EventHandler(this.displayInDetailsToolStripMenuItem_Click);
+			this.MenuItemCreateRegiment.Click += new System.EventHandler(this.MenuItemCreateRegiment_Click);
 			// 
 			// MenuItemCreateCharacter
 			// 
 			this.MenuItemCreateCharacter.Name = "MenuItemCreateCharacter";
 			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(125, 22);
 			this.MenuItemCreateCharacter.Text = "Character";
-			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.displayInLabelToolStripMenuItem_Click);
+			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.MenuItemCreateCharacter_Click);
 			// 
 			// MenuItemCreateTalent
 			// 
 			this.MenuItemCreateTalent.Name = "MenuItemCreateTalent";
 			this.MenuItemCreateTalent.Size = new System.Drawing.Size(125, 22);
 			this.MenuItemCreateTalent.Text = "Talent";
+			this.MenuItemCreateTalent.Click += new System.EventHandler(this.MenuItemCreateTalent_Click);
 			// 
 			// menuStripMain
 			// 
@@ -176,7 +176,7 @@
 			this.tabPageDisplauInLabel.Location = new System.Drawing.Point(4, 22);
 			this.tabPageDisplauInLabel.Name = "tabPageDisplauInLabel";
 			this.tabPageDisplauInLabel.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageDisplauInLabel.Size = new System.Drawing.Size(1076, 426);
+			this.tabPageDisplauInLabel.Size = new System.Drawing.Size(1076, 442);
 			this.tabPageDisplauInLabel.TabIndex = 1;
 			this.tabPageDisplauInLabel.Text = "Debug Window";
 			this.tabPageDisplauInLabel.UseVisualStyleBackColor = true;
@@ -259,387 +259,314 @@
 			// 
 			// tabPageMain
 			// 
-			this.tabPageMain.Controls.Add(this.richTextBox1);
-			this.tabPageMain.Controls.Add(this.buttonSaveCharacterJson);
-			this.tabPageMain.Controls.Add(this.buttonSaveAsXml);
-			this.tabPageMain.Controls.Add(this.listBoxTalantDetails);
-			this.tabPageMain.Controls.Add(this.richTextBoxPrerequisites);
-			this.tabPageMain.Controls.Add(this.richTextBoxAptitudes);
-			this.tabPageMain.Controls.Add(this.richTextBoxTier);
-			this.tabPageMain.Controls.Add(this.richTextBoxName);
-			this.tabPageMain.Controls.Add(this.richTextBoxDetails);
-			this.tabPageMain.Controls.Add(this.richTextBoxBenefit);
-			this.tabPageMain.Controls.Add(this.labelTier);
-			this.tabPageMain.Controls.Add(this.labelName);
-			this.tabPageMain.Controls.Add(this.labelPrerequisites);
-			this.tabPageMain.Controls.Add(this.labelAptitudes);
-			this.tabPageMain.Controls.Add(this.labelBenefit);
-			this.tabPageMain.Controls.Add(this.labelDetails);
+			this.tabPageMain.Controls.Add(this.groupBox6);
+			this.tabPageMain.Controls.Add(this.groupBox5);
+			this.tabPageMain.Controls.Add(this.groupBox4);
+			this.tabPageMain.Controls.Add(this.groupBox3);
 			this.tabPageMain.Controls.Add(this.groupBox2);
 			this.tabPageMain.Controls.Add(this.groupBox1);
 			this.tabPageMain.Location = new System.Drawing.Point(4, 22);
 			this.tabPageMain.Name = "tabPageMain";
 			this.tabPageMain.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageMain.Size = new System.Drawing.Size(1076, 426);
+			this.tabPageMain.Size = new System.Drawing.Size(1076, 442);
 			this.tabPageMain.TabIndex = 0;
 			this.tabPageMain.Text = "MainTab";
 			this.tabPageMain.UseVisualStyleBackColor = true;
 			// 
-			// richTextBox1
+			// groupBox6
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(728, 113);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.ReadOnly = true;
-			this.richTextBox1.Size = new System.Drawing.Size(246, 304);
-			this.richTextBox1.TabIndex = 74;
-			this.richTextBox1.Text = "";
+			this.groupBox6.Controls.Add(this.buttonChangeDescription);
+			this.groupBox6.Controls.Add(this.buttonSpendXp);
+			this.groupBox6.Controls.Add(this.textBoxXpLeft);
+			this.groupBox6.Controls.Add(this.textBoxXpSpent);
+			this.groupBox6.Controls.Add(this.labelXpSpent);
+			this.groupBox6.Controls.Add(this.labelXpLeft);
+			this.groupBox6.Controls.Add(this.textBoxRegiment);
+			this.groupBox6.Controls.Add(this.textBoxSpecialty);
+			this.groupBox6.Controls.Add(this.textBoxWounds);
+			this.groupBox6.Controls.Add(this.textBoxName);
+			this.groupBox6.Controls.Add(this.textBoxDescription);
+			this.groupBox6.Controls.Add(this.textBoxDemeanor);
+			this.groupBox6.Controls.Add(this.labelWounds);
+			this.groupBox6.Controls.Add(this.labelName);
+			this.groupBox6.Controls.Add(this.labelRegiment);
+			this.groupBox6.Controls.Add(this.labelSpecialty);
+			this.groupBox6.Controls.Add(this.labelDemeanour);
+			this.groupBox6.Controls.Add(this.labelDescription);
+			this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox6.Location = new System.Drawing.Point(8, 13);
+			this.groupBox6.Name = "groupBox6";
+			this.groupBox6.Size = new System.Drawing.Size(263, 404);
+			this.groupBox6.TabIndex = 80;
+			this.groupBox6.TabStop = false;
+			this.groupBox6.Text = "Bio && Info";
 			// 
-			// buttonSaveCharacterJson
+			// buttonChangeDescription
 			// 
-			this.buttonSaveCharacterJson.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.buttonSaveCharacterJson.Location = new System.Drawing.Point(107, 384);
-			this.buttonSaveCharacterJson.Name = "buttonSaveCharacterJson";
-			this.buttonSaveCharacterJson.Size = new System.Drawing.Size(126, 23);
-			this.buttonSaveCharacterJson.TabIndex = 72;
-			this.buttonSaveCharacterJson.Text = "Save Character JSON";
-			this.buttonSaveCharacterJson.UseVisualStyleBackColor = true;
-			this.buttonSaveCharacterJson.Click += new System.EventHandler(this.buttonSaveCharacterJson_Click);
+			this.buttonChangeDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonChangeDescription.Location = new System.Drawing.Point(6, 362);
+			this.buttonChangeDescription.Name = "buttonChangeDescription";
+			this.buttonChangeDescription.Size = new System.Drawing.Size(116, 23);
+			this.buttonChangeDescription.TabIndex = 97;
+			this.buttonChangeDescription.Text = "Change Description";
+			this.buttonChangeDescription.UseVisualStyleBackColor = true;
 			// 
-			// buttonSaveAsXml
+			// buttonSpendXp
 			// 
-			this.buttonSaveAsXml.Location = new System.Drawing.Point(11, 384);
-			this.buttonSaveAsXml.Name = "buttonSaveAsXml";
-			this.buttonSaveAsXml.Size = new System.Drawing.Size(90, 23);
-			this.buttonSaveAsXml.TabIndex = 69;
-			this.buttonSaveAsXml.Text = "Save as XML";
-			this.buttonSaveAsXml.UseVisualStyleBackColor = true;
-			this.buttonSaveAsXml.Click += new System.EventHandler(this.buttonSaveAsXml_Click);
+			this.buttonSpendXp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonSpendXp.Location = new System.Drawing.Point(136, 362);
+			this.buttonSpendXp.Name = "buttonSpendXp";
+			this.buttonSpendXp.Size = new System.Drawing.Size(75, 23);
+			this.buttonSpendXp.TabIndex = 96;
+			this.buttonSpendXp.Text = "Spend XP";
+			this.buttonSpendXp.UseVisualStyleBackColor = true;
+			this.buttonSpendXp.Click += new System.EventHandler(this.buttonSpendXp_Click);
 			// 
-			// listBoxTalantDetails
+			// textBoxXpLeft
 			// 
-			this.listBoxTalantDetails.FormattingEnabled = true;
-			this.listBoxTalantDetails.Location = new System.Drawing.Point(728, 13);
-			this.listBoxTalantDetails.Name = "listBoxTalantDetails";
-			this.listBoxTalantDetails.Size = new System.Drawing.Size(246, 95);
-			this.listBoxTalantDetails.TabIndex = 68;
-			this.listBoxTalantDetails.SelectedIndexChanged += new System.EventHandler(this.listBoxTalantDetails_SelectedIndexChanged);
+			this.textBoxXpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxXpLeft.Location = new System.Drawing.Point(136, 336);
+			this.textBoxXpLeft.Name = "textBoxXpLeft";
+			this.textBoxXpLeft.ReadOnly = true;
+			this.textBoxXpLeft.Size = new System.Drawing.Size(57, 20);
+			this.textBoxXpLeft.TabIndex = 95;
+			this.textBoxXpLeft.Text = "";
 			// 
-			// richTextBoxPrerequisites
+			// textBoxXpSpent
 			// 
-			this.richTextBoxPrerequisites.Location = new System.Drawing.Point(11, 101);
-			this.richTextBoxPrerequisites.Name = "richTextBoxPrerequisites";
-			this.richTextBoxPrerequisites.ReadOnly = true;
-			this.richTextBoxPrerequisites.Size = new System.Drawing.Size(260, 20);
-			this.richTextBoxPrerequisites.TabIndex = 67;
-			this.richTextBoxPrerequisites.Text = "";
+			this.textBoxXpSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxXpSpent.Location = new System.Drawing.Point(65, 336);
+			this.textBoxXpSpent.Name = "textBoxXpSpent";
+			this.textBoxXpSpent.ReadOnly = true;
+			this.textBoxXpSpent.Size = new System.Drawing.Size(57, 20);
+			this.textBoxXpSpent.TabIndex = 94;
+			this.textBoxXpSpent.Text = "";
 			// 
-			// richTextBoxAptitudes
+			// labelXpSpent
 			// 
-			this.richTextBoxAptitudes.Location = new System.Drawing.Point(11, 62);
-			this.richTextBoxAptitudes.Name = "richTextBoxAptitudes";
-			this.richTextBoxAptitudes.ReadOnly = true;
-			this.richTextBoxAptitudes.Size = new System.Drawing.Size(260, 20);
-			this.richTextBoxAptitudes.TabIndex = 66;
-			this.richTextBoxAptitudes.Text = "";
+			this.labelXpSpent.AutoSize = true;
+			this.labelXpSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelXpSpent.Location = new System.Drawing.Point(62, 320);
+			this.labelXpSpent.Name = "labelXpSpent";
+			this.labelXpSpent.Size = new System.Drawing.Size(56, 13);
+			this.labelXpSpent.TabIndex = 93;
+			this.labelXpSpent.Text = "Exp Spent";
 			// 
-			// richTextBoxTier
+			// labelXpLeft
 			// 
-			this.richTextBoxTier.Location = new System.Drawing.Point(243, 23);
-			this.richTextBoxTier.Name = "richTextBoxTier";
-			this.richTextBoxTier.ReadOnly = true;
-			this.richTextBoxTier.Size = new System.Drawing.Size(28, 20);
-			this.richTextBoxTier.TabIndex = 65;
-			this.richTextBoxTier.Text = "";
+			this.labelXpLeft.AutoSize = true;
+			this.labelXpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelXpLeft.Location = new System.Drawing.Point(133, 320);
+			this.labelXpLeft.Name = "labelXpLeft";
+			this.labelXpLeft.Size = new System.Drawing.Size(43, 13);
+			this.labelXpLeft.TabIndex = 92;
+			this.labelXpLeft.Text = "ExpLeft";
 			// 
-			// richTextBoxName
+			// textBoxRegiment
 			// 
-			this.richTextBoxName.Location = new System.Drawing.Point(11, 23);
-			this.richTextBoxName.Name = "richTextBoxName";
-			this.richTextBoxName.ReadOnly = true;
-			this.richTextBoxName.Size = new System.Drawing.Size(226, 20);
-			this.richTextBoxName.TabIndex = 64;
-			this.richTextBoxName.Text = "";
+			this.textBoxRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxRegiment.Location = new System.Drawing.Point(125, 77);
+			this.textBoxRegiment.Name = "textBoxRegiment";
+			this.textBoxRegiment.ReadOnly = true;
+			this.textBoxRegiment.Size = new System.Drawing.Size(132, 20);
+			this.textBoxRegiment.TabIndex = 91;
+			this.textBoxRegiment.Text = "";
 			// 
-			// richTextBoxDetails
+			// textBoxSpecialty
 			// 
-			this.richTextBoxDetails.Location = new System.Drawing.Point(11, 181);
-			this.richTextBoxDetails.Name = "richTextBoxDetails";
-			this.richTextBoxDetails.ReadOnly = true;
-			this.richTextBoxDetails.Size = new System.Drawing.Size(260, 96);
-			this.richTextBoxDetails.TabIndex = 61;
-			this.richTextBoxDetails.Text = "";
+			this.textBoxSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxSpecialty.Location = new System.Drawing.Point(6, 77);
+			this.textBoxSpecialty.Name = "textBoxSpecialty";
+			this.textBoxSpecialty.ReadOnly = true;
+			this.textBoxSpecialty.Size = new System.Drawing.Size(113, 20);
+			this.textBoxSpecialty.TabIndex = 90;
+			this.textBoxSpecialty.Text = "";
 			// 
-			// richTextBoxBenefit
+			// textBoxWounds
 			// 
-			this.richTextBoxBenefit.Location = new System.Drawing.Point(11, 140);
-			this.richTextBoxBenefit.Name = "richTextBoxBenefit";
-			this.richTextBoxBenefit.ReadOnly = true;
-			this.richTextBoxBenefit.Size = new System.Drawing.Size(260, 22);
-			this.richTextBoxBenefit.TabIndex = 62;
-			this.richTextBoxBenefit.Text = "";
+			this.textBoxWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxWounds.Location = new System.Drawing.Point(6, 336);
+			this.textBoxWounds.Name = "textBoxWounds";
+			this.textBoxWounds.ReadOnly = true;
+			this.textBoxWounds.Size = new System.Drawing.Size(44, 20);
+			this.textBoxWounds.TabIndex = 89;
+			this.textBoxWounds.Text = "";
 			// 
-			// labelTier
+			// textBoxName
 			// 
-			this.labelTier.AutoSize = true;
-			this.labelTier.Location = new System.Drawing.Point(240, 7);
-			this.labelTier.Name = "labelTier";
-			this.labelTier.Size = new System.Drawing.Size(25, 13);
-			this.labelTier.TabIndex = 63;
-			this.labelTier.Text = "Tier";
+			this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxName.Location = new System.Drawing.Point(6, 38);
+			this.textBoxName.Name = "textBoxName";
+			this.textBoxName.ReadOnly = true;
+			this.textBoxName.Size = new System.Drawing.Size(251, 20);
+			this.textBoxName.TabIndex = 88;
+			this.textBoxName.Text = "";
+			// 
+			// textBoxDescription
+			// 
+			this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxDescription.Location = new System.Drawing.Point(6, 221);
+			this.textBoxDescription.Name = "textBoxDescription";
+			this.textBoxDescription.ReadOnly = true;
+			this.textBoxDescription.Size = new System.Drawing.Size(251, 96);
+			this.textBoxDescription.TabIndex = 85;
+			this.textBoxDescription.Text = "";
+			// 
+			// textBoxDemeanor
+			// 
+			this.textBoxDemeanor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxDemeanor.Location = new System.Drawing.Point(6, 116);
+			this.textBoxDemeanor.Name = "textBoxDemeanor";
+			this.textBoxDemeanor.ReadOnly = true;
+			this.textBoxDemeanor.Size = new System.Drawing.Size(251, 85);
+			this.textBoxDemeanor.TabIndex = 86;
+			this.textBoxDemeanor.Text = "";
+			// 
+			// labelWounds
+			// 
+			this.labelWounds.AutoSize = true;
+			this.labelWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelWounds.Location = new System.Drawing.Point(3, 320);
+			this.labelWounds.Name = "labelWounds";
+			this.labelWounds.Size = new System.Drawing.Size(47, 13);
+			this.labelWounds.TabIndex = 87;
+			this.labelWounds.Text = "Wounds";
 			// 
 			// labelName
 			// 
 			this.labelName.AutoSize = true;
-			this.labelName.Location = new System.Drawing.Point(8, 7);
+			this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelName.Location = new System.Drawing.Point(3, 22);
 			this.labelName.Name = "labelName";
 			this.labelName.Size = new System.Drawing.Size(35, 13);
-			this.labelName.TabIndex = 56;
+			this.labelName.TabIndex = 80;
 			this.labelName.Text = "Name";
 			// 
-			// labelPrerequisites
+			// labelRegiment
 			// 
-			this.labelPrerequisites.AutoSize = true;
-			this.labelPrerequisites.Location = new System.Drawing.Point(8, 85);
-			this.labelPrerequisites.Name = "labelPrerequisites";
-			this.labelPrerequisites.Size = new System.Drawing.Size(67, 13);
-			this.labelPrerequisites.TabIndex = 57;
-			this.labelPrerequisites.Text = "Prerequisites";
+			this.labelRegiment.AutoSize = true;
+			this.labelRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelRegiment.Location = new System.Drawing.Point(122, 61);
+			this.labelRegiment.Name = "labelRegiment";
+			this.labelRegiment.Size = new System.Drawing.Size(52, 13);
+			this.labelRegiment.TabIndex = 81;
+			this.labelRegiment.Text = "Regiment";
 			// 
-			// labelAptitudes
+			// labelSpecialty
 			// 
-			this.labelAptitudes.AutoSize = true;
-			this.labelAptitudes.Location = new System.Drawing.Point(8, 46);
-			this.labelAptitudes.Name = "labelAptitudes";
-			this.labelAptitudes.Size = new System.Drawing.Size(51, 13);
-			this.labelAptitudes.TabIndex = 58;
-			this.labelAptitudes.Text = "Aptitudes";
+			this.labelSpecialty.AutoSize = true;
+			this.labelSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelSpecialty.Location = new System.Drawing.Point(3, 61);
+			this.labelSpecialty.Name = "labelSpecialty";
+			this.labelSpecialty.Size = new System.Drawing.Size(50, 13);
+			this.labelSpecialty.TabIndex = 82;
+			this.labelSpecialty.Text = "Specialty";
 			// 
-			// labelBenefit
+			// labelDemeanour
 			// 
-			this.labelBenefit.AutoSize = true;
-			this.labelBenefit.Location = new System.Drawing.Point(8, 124);
-			this.labelBenefit.Name = "labelBenefit";
-			this.labelBenefit.Size = new System.Drawing.Size(40, 13);
-			this.labelBenefit.TabIndex = 59;
-			this.labelBenefit.Text = "Benefit";
+			this.labelDemeanour.AutoSize = true;
+			this.labelDemeanour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelDemeanour.Location = new System.Drawing.Point(3, 100);
+			this.labelDemeanour.Name = "labelDemeanour";
+			this.labelDemeanour.Size = new System.Drawing.Size(56, 13);
+			this.labelDemeanour.TabIndex = 83;
+			this.labelDemeanour.Text = "Demeanor";
 			// 
-			// labelDetails
+			// labelDescription
 			// 
-			this.labelDetails.AutoSize = true;
-			this.labelDetails.Location = new System.Drawing.Point(8, 165);
-			this.labelDetails.Name = "labelDetails";
-			this.labelDetails.Size = new System.Drawing.Size(39, 13);
-			this.labelDetails.TabIndex = 60;
-			this.labelDetails.Text = "Details";
+			this.labelDescription.AutoSize = true;
+			this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelDescription.Location = new System.Drawing.Point(3, 204);
+			this.labelDescription.Name = "labelDescription";
+			this.labelDescription.Size = new System.Drawing.Size(60, 13);
+			this.labelDescription.TabIndex = 84;
+			this.labelDescription.Text = "Description";
+			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.listBoxTalentDetails);
+			this.groupBox5.Controls.Add(this.textBoxTalents);
+			this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox5.Location = new System.Drawing.Point(728, 13);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(246, 209);
+			this.groupBox5.TabIndex = 21;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Talents";
+			// 
+			// listBoxTalentDetails
+			// 
+			this.listBoxTalentDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.listBoxTalentDetails.FormattingEnabled = true;
+			this.listBoxTalentDetails.Location = new System.Drawing.Point(6, 19);
+			this.listBoxTalentDetails.Name = "listBoxTalentDetails";
+			this.listBoxTalentDetails.Size = new System.Drawing.Size(234, 56);
+			this.listBoxTalentDetails.TabIndex = 68;
+			this.listBoxTalentDetails.SelectedIndexChanged += new System.EventHandler(this.listBoxTalantDetails_SelectedIndexChanged);
+			// 
+			// textBoxTalents
+			// 
+			this.textBoxTalents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxTalents.Location = new System.Drawing.Point(6, 81);
+			this.textBoxTalents.Name = "textBoxTalents";
+			this.textBoxTalents.ReadOnly = true;
+			this.textBoxTalents.Size = new System.Drawing.Size(234, 122);
+			this.textBoxTalents.TabIndex = 74;
+			this.textBoxTalents.Text = "";
+			// 
+			// groupBox4
+			// 
+			this.groupBox4.Controls.Add(this.textBoxSpecialRules);
+			this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox4.Location = new System.Drawing.Point(467, 228);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(507, 189);
+			this.groupBox4.TabIndex = 21;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Special Rules";
+			// 
+			// textBoxSpecialRules
+			// 
+			this.textBoxSpecialRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxSpecialRules.Location = new System.Drawing.Point(6, 19);
+			this.textBoxSpecialRules.Name = "textBoxSpecialRules";
+			this.textBoxSpecialRules.ReadOnly = true;
+			this.textBoxSpecialRules.Size = new System.Drawing.Size(495, 164);
+			this.textBoxSpecialRules.TabIndex = 80;
+			this.textBoxSpecialRules.Text = "";
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.textBoxAptitudes);
+			this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.groupBox3.Location = new System.Drawing.Point(277, 228);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(184, 189);
+			this.groupBox3.TabIndex = 20;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Aptitudes";
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.textBoxSkills);
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.groupBox2.Location = new System.Drawing.Point(467, 13);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(255, 404);
+			this.groupBox2.Size = new System.Drawing.Size(255, 209);
 			this.groupBox2.TabIndex = 20;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Skills";
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.richTextBoxStrenght);
-			this.groupBox1.Controls.Add(this.richTextBoxWillpower);
-			this.groupBox1.Controls.Add(this.richTextBoxFellowship);
-			this.groupBox1.Controls.Add(this.richTextBoxIntelligence);
-			this.groupBox1.Controls.Add(this.richTextBoxAgility);
-			this.groupBox1.Controls.Add(this.richTextBoxToughness);
-			this.groupBox1.Controls.Add(this.richTextBoxPerception);
-			this.groupBox1.Controls.Add(this.richTextBoxBallisticSkill);
-			this.groupBox1.Controls.Add(this.labelFellowship);
-			this.groupBox1.Controls.Add(this.labelWillpower);
-			this.groupBox1.Controls.Add(this.labelPerception);
-			this.groupBox1.Controls.Add(this.labelIntelligence);
-			this.groupBox1.Controls.Add(this.labelAgility);
-			this.groupBox1.Controls.Add(this.labelToughness);
-			this.groupBox1.Controls.Add(this.labelStrength);
-			this.groupBox1.Controls.Add(this.labelWeaponSkill);
-			this.groupBox1.Controls.Add(this.labelBallisticSkill);
-			this.groupBox1.Controls.Add(this.richTextBoxWeaponSkill);
+			this.groupBox1.Controls.Add(this.textBoxAttributes);
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.groupBox1.Location = new System.Drawing.Point(277, 13);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(184, 404);
+			this.groupBox1.Size = new System.Drawing.Size(184, 209);
 			this.groupBox1.TabIndex = 19;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Characteristics";
-			// 
-			// richTextBoxStrenght
-			// 
-			this.richTextBoxStrenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxStrenght.Location = new System.Drawing.Point(15, 194);
-			this.richTextBoxStrenght.Name = "richTextBoxStrenght";
-			this.richTextBoxStrenght.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxStrenght.TabIndex = 18;
-			this.richTextBoxStrenght.Text = "";
-			// 
-			// richTextBoxWillpower
-			// 
-			this.richTextBoxWillpower.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxWillpower.Location = new System.Drawing.Point(97, 194);
-			this.richTextBoxWillpower.Name = "richTextBoxWillpower";
-			this.richTextBoxWillpower.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxWillpower.TabIndex = 17;
-			this.richTextBoxWillpower.Text = "";
-			// 
-			// richTextBoxFellowship
-			// 
-			this.richTextBoxFellowship.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxFellowship.Location = new System.Drawing.Point(97, 269);
-			this.richTextBoxFellowship.Name = "richTextBoxFellowship";
-			this.richTextBoxFellowship.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxFellowship.TabIndex = 16;
-			this.richTextBoxFellowship.Text = "";
-			// 
-			// richTextBoxIntelligence
-			// 
-			this.richTextBoxIntelligence.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxIntelligence.Location = new System.Drawing.Point(97, 44);
-			this.richTextBoxIntelligence.Name = "richTextBoxIntelligence";
-			this.richTextBoxIntelligence.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxIntelligence.TabIndex = 14;
-			this.richTextBoxIntelligence.Text = "";
-			// 
-			// richTextBoxAgility
-			// 
-			this.richTextBoxAgility.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxAgility.Location = new System.Drawing.Point(15, 342);
-			this.richTextBoxAgility.Name = "richTextBoxAgility";
-			this.richTextBoxAgility.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxAgility.TabIndex = 13;
-			this.richTextBoxAgility.Text = "";
-			// 
-			// richTextBoxToughness
-			// 
-			this.richTextBoxToughness.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxToughness.Location = new System.Drawing.Point(15, 269);
-			this.richTextBoxToughness.Name = "richTextBoxToughness";
-			this.richTextBoxToughness.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxToughness.TabIndex = 12;
-			this.richTextBoxToughness.Text = "";
-			// 
-			// richTextBoxPerception
-			// 
-			this.richTextBoxPerception.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxPerception.Location = new System.Drawing.Point(97, 119);
-			this.richTextBoxPerception.Name = "richTextBoxPerception";
-			this.richTextBoxPerception.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxPerception.TabIndex = 11;
-			this.richTextBoxPerception.Text = "";
-			// 
-			// richTextBoxBallisticSkill
-			// 
-			this.richTextBoxBallisticSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxBallisticSkill.Location = new System.Drawing.Point(15, 119);
-			this.richTextBoxBallisticSkill.Name = "richTextBoxBallisticSkill";
-			this.richTextBoxBallisticSkill.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxBallisticSkill.TabIndex = 10;
-			this.richTextBoxBallisticSkill.Text = "";
-			// 
-			// labelFellowship
-			// 
-			this.labelFellowship.AutoSize = true;
-			this.labelFellowship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelFellowship.Location = new System.Drawing.Point(94, 253);
-			this.labelFellowship.Name = "labelFellowship";
-			this.labelFellowship.Size = new System.Drawing.Size(56, 13);
-			this.labelFellowship.TabIndex = 9;
-			this.labelFellowship.Text = "Fellowship";
-			// 
-			// labelWillpower
-			// 
-			this.labelWillpower.AutoSize = true;
-			this.labelWillpower.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelWillpower.Location = new System.Drawing.Point(94, 178);
-			this.labelWillpower.Name = "labelWillpower";
-			this.labelWillpower.Size = new System.Drawing.Size(53, 13);
-			this.labelWillpower.TabIndex = 8;
-			this.labelWillpower.Text = "Willpower";
-			// 
-			// labelPerception
-			// 
-			this.labelPerception.AutoSize = true;
-			this.labelPerception.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelPerception.Location = new System.Drawing.Point(94, 103);
-			this.labelPerception.Name = "labelPerception";
-			this.labelPerception.Size = new System.Drawing.Size(58, 13);
-			this.labelPerception.TabIndex = 7;
-			this.labelPerception.Text = "Perception";
-			// 
-			// labelIntelligence
-			// 
-			this.labelIntelligence.AutoSize = true;
-			this.labelIntelligence.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelIntelligence.Location = new System.Drawing.Point(94, 28);
-			this.labelIntelligence.Name = "labelIntelligence";
-			this.labelIntelligence.Size = new System.Drawing.Size(61, 13);
-			this.labelIntelligence.TabIndex = 6;
-			this.labelIntelligence.Text = "Intelligence";
-			// 
-			// labelAgility
-			// 
-			this.labelAgility.AutoSize = true;
-			this.labelAgility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelAgility.Location = new System.Drawing.Point(13, 326);
-			this.labelAgility.Name = "labelAgility";
-			this.labelAgility.Size = new System.Drawing.Size(34, 13);
-			this.labelAgility.TabIndex = 5;
-			this.labelAgility.Text = "Agility";
-			// 
-			// labelToughness
-			// 
-			this.labelToughness.AutoSize = true;
-			this.labelToughness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelToughness.Location = new System.Drawing.Point(12, 253);
-			this.labelToughness.Name = "labelToughness";
-			this.labelToughness.Size = new System.Drawing.Size(60, 13);
-			this.labelToughness.TabIndex = 4;
-			this.labelToughness.Text = "Toughness";
-			// 
-			// labelStrength
-			// 
-			this.labelStrength.AutoSize = true;
-			this.labelStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelStrength.Location = new System.Drawing.Point(12, 178);
-			this.labelStrength.Name = "labelStrength";
-			this.labelStrength.Size = new System.Drawing.Size(47, 13);
-			this.labelStrength.TabIndex = 3;
-			this.labelStrength.Text = "Strength";
-			// 
-			// labelWeaponSkill
-			// 
-			this.labelWeaponSkill.AutoSize = true;
-			this.labelWeaponSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelWeaponSkill.Location = new System.Drawing.Point(12, 28);
-			this.labelWeaponSkill.Name = "labelWeaponSkill";
-			this.labelWeaponSkill.Size = new System.Drawing.Size(70, 13);
-			this.labelWeaponSkill.TabIndex = 2;
-			this.labelWeaponSkill.Text = "Weapon Skill";
-			// 
-			// labelBallisticSkill
-			// 
-			this.labelBallisticSkill.AutoSize = true;
-			this.labelBallisticSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelBallisticSkill.Location = new System.Drawing.Point(12, 103);
-			this.labelBallisticSkill.Name = "labelBallisticSkill";
-			this.labelBallisticSkill.Size = new System.Drawing.Size(64, 13);
-			this.labelBallisticSkill.TabIndex = 1;
-			this.labelBallisticSkill.Text = "Ballistic Skill";
-			// 
-			// richTextBoxWeaponSkill
-			// 
-			this.richTextBoxWeaponSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.richTextBoxWeaponSkill.Location = new System.Drawing.Point(15, 44);
-			this.richTextBoxWeaponSkill.Name = "richTextBoxWeaponSkill";
-			this.richTextBoxWeaponSkill.Size = new System.Drawing.Size(67, 56);
-			this.richTextBoxWeaponSkill.TabIndex = 0;
-			this.richTextBoxWeaponSkill.Text = "";
+			this.groupBox1.Text = "Attributes";
 			// 
 			// tabControl1
 			// 
@@ -648,14 +575,44 @@
 			this.tabControl1.Location = new System.Drawing.Point(0, 27);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1084, 452);
+			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
 			this.tabControl1.TabIndex = 15;
+			// 
+			// textBoxSkills
+			// 
+			this.textBoxSkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxSkills.Location = new System.Drawing.Point(6, 19);
+			this.textBoxSkills.Name = "textBoxSkills";
+			this.textBoxSkills.ReadOnly = true;
+			this.textBoxSkills.Size = new System.Drawing.Size(243, 182);
+			this.textBoxSkills.TabIndex = 75;
+			this.textBoxSkills.Text = "";
+			// 
+			// textBoxAttributes
+			// 
+			this.textBoxAttributes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxAttributes.Location = new System.Drawing.Point(6, 19);
+			this.textBoxAttributes.Name = "textBoxAttributes";
+			this.textBoxAttributes.ReadOnly = true;
+			this.textBoxAttributes.Size = new System.Drawing.Size(172, 182);
+			this.textBoxAttributes.TabIndex = 75;
+			this.textBoxAttributes.Text = "";
+			// 
+			// textBoxAptitudes
+			// 
+			this.textBoxAptitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxAptitudes.Location = new System.Drawing.Point(6, 19);
+			this.textBoxAptitudes.Name = "textBoxAptitudes";
+			this.textBoxAptitudes.ReadOnly = true;
+			this.textBoxAptitudes.Size = new System.Drawing.Size(172, 163);
+			this.textBoxAptitudes.TabIndex = 75;
+			this.textBoxAptitudes.Text = "";
 			// 
 			// charGenMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(990, 478);
+			this.ClientSize = new System.Drawing.Size(990, 471);
 			this.Controls.Add(this.menuStripMain);
 			this.Controls.Add(this.tabControl1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -663,15 +620,20 @@
 			this.MaximizeBox = false;
 			this.Name = "charGenMain";
 			this.Text = "Character Generator";
+			this.Load += new System.EventHandler(this.charGenMain_Load);
 			this.Shown += new System.EventHandler(this.charGenMain_Shown);
 			this.menuStripMain.ResumeLayout(false);
 			this.menuStripMain.PerformLayout();
 			this.tabPageDisplauInLabel.ResumeLayout(false);
 			this.tabPageDisplauInLabel.PerformLayout();
 			this.tabPageMain.ResumeLayout(false);
-			this.tabPageMain.PerformLayout();
+			this.groupBox6.ResumeLayout(false);
+			this.groupBox6.PerformLayout();
+			this.groupBox5.ResumeLayout(false);
+			this.groupBox4.ResumeLayout(false);
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox2.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -685,56 +647,50 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemCreateRegiment;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCreateCharacter;
         private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.ToolStripMenuItem loadTalantsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveTalantsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportCharacterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importCharacterToolStripMenuItem;
 		private System.Windows.Forms.TabPage tabPageDisplauInLabel;
 		private System.Windows.Forms.TabPage tabPageMain;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.RichTextBox richTextBoxStrenght;
-		private System.Windows.Forms.RichTextBox richTextBoxWillpower;
-		private System.Windows.Forms.RichTextBox richTextBoxFellowship;
-		private System.Windows.Forms.RichTextBox richTextBoxIntelligence;
-		private System.Windows.Forms.RichTextBox richTextBoxAgility;
-		private System.Windows.Forms.RichTextBox richTextBoxToughness;
-		private System.Windows.Forms.RichTextBox richTextBoxPerception;
-		private System.Windows.Forms.RichTextBox richTextBoxBallisticSkill;
-		private System.Windows.Forms.Label labelFellowship;
-		private System.Windows.Forms.Label labelWillpower;
-		private System.Windows.Forms.Label labelPerception;
-		private System.Windows.Forms.Label labelIntelligence;
-		private System.Windows.Forms.Label labelAgility;
-		private System.Windows.Forms.Label labelToughness;
-		private System.Windows.Forms.Label labelStrength;
-		private System.Windows.Forms.Label labelWeaponSkill;
-		private System.Windows.Forms.Label labelBallisticSkill;
-		private System.Windows.Forms.RichTextBox richTextBoxWeaponSkill;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.RichTextBox richTextBoxCurrentlyKnown;
 		private System.Windows.Forms.Label labelCurrentlyKnown;
-		private System.Windows.Forms.Button buttonSaveAsXml;
-		private System.Windows.Forms.ListBox listBoxTalantDetails;
-		private System.Windows.Forms.RichTextBox richTextBoxPrerequisites;
-		private System.Windows.Forms.RichTextBox richTextBoxAptitudes;
-		private System.Windows.Forms.RichTextBox richTextBoxTier;
-		private System.Windows.Forms.RichTextBox richTextBoxName;
-		private System.Windows.Forms.RichTextBox richTextBoxDetails;
-		private System.Windows.Forms.RichTextBox richTextBoxBenefit;
-		private System.Windows.Forms.Label labelTier;
-		private System.Windows.Forms.Label labelName;
-		private System.Windows.Forms.Label labelPrerequisites;
-		private System.Windows.Forms.Label labelAptitudes;
-		private System.Windows.Forms.Label labelBenefit;
-		private System.Windows.Forms.Label labelDetails;
-		private System.Windows.Forms.Button buttonSaveCharacterJson;
+		private System.Windows.Forms.ListBox listBoxTalentDetails;
 		private System.Windows.Forms.ListBox listBoxCharacters;
 		private System.Windows.Forms.Button showAttributes;
 		private System.Windows.Forms.Button showAptitudes;
 		private System.Windows.Forms.Button showTalents;
 		private System.Windows.Forms.Button showSkills;
 		private System.Windows.Forms.ToolStripMenuItem MenuItemCreateTalent;
-		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.RichTextBox textBoxTalents;
 		private System.Windows.Forms.Button showCharacter;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.RichTextBox textBoxSpecialRules;
+		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.Button buttonSpendXp;
+		private System.Windows.Forms.RichTextBox textBoxXpLeft;
+		private System.Windows.Forms.RichTextBox textBoxXpSpent;
+		private System.Windows.Forms.Label labelXpSpent;
+		private System.Windows.Forms.Label labelXpLeft;
+		private System.Windows.Forms.RichTextBox textBoxRegiment;
+		private System.Windows.Forms.RichTextBox textBoxSpecialty;
+		private System.Windows.Forms.RichTextBox textBoxWounds;
+		private System.Windows.Forms.RichTextBox textBoxName;
+		private System.Windows.Forms.RichTextBox textBoxDescription;
+		private System.Windows.Forms.RichTextBox textBoxDemeanor;
+		private System.Windows.Forms.Label labelWounds;
+		private System.Windows.Forms.Label labelName;
+		private System.Windows.Forms.Label labelRegiment;
+		private System.Windows.Forms.Label labelSpecialty;
+		private System.Windows.Forms.Label labelDemeanour;
+		private System.Windows.Forms.Label labelDescription;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.Button buttonChangeDescription;
+		private System.Windows.Forms.RichTextBox textBoxAptitudes;
+		private System.Windows.Forms.RichTextBox textBoxSkills;
+		private System.Windows.Forms.RichTextBox textBoxAttributes;
 	}
 }
 

@@ -11,7 +11,14 @@ namespace Char_Generator
 
 		static Aptitudes()
 		{
-			available = FileIO.readCsv("TextFiles\\Aptitudes_CSV.csv");
+			available = FileIO.readCsv("TextFiles\\CSV\\Aptitudes_CSV.csv");
+		}
+
+		public static bool CheckAvailable(string toBeChecked)
+		{
+			if (toBeChecked == "1")
+				return true;
+			return false;
 		}
 
 		[JsonConstructor]
@@ -19,7 +26,6 @@ namespace Char_Generator
 
 		public Aptitudes(string toBeAdded)
 		{
-			//MessageBox.Show(toBeAdded);
 			if (available.Contains(toBeAdded))
 			{
 				possessed.Add(toBeAdded);
@@ -28,17 +34,6 @@ namespace Char_Generator
 			{
 				MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
 			}
-		}
-
-
-		public Aptitudes(List<string> toBeAdded)
-		{
-			MessageBox.Show(toBeAdded.ToString());
-			foreach (string Added in toBeAdded)
-			{
-				possessed.Add(Added);
-			}
-
 		}
 
 		public Aptitudes(string[] arrayToBeAdded)
@@ -87,19 +82,6 @@ namespace Char_Generator
 			{
 				MessageBox.Show("Error: Failed to insert aptitude.\nReason: Aptitude \"" + toBeAdded + "\" not found.");
 			}
-		}
-
-		public static bool CheckAvailable(string toBeChecked)
-		{
-			if (toBeChecked == "1")
-				return true;
-			return false;
-		}
-
-		public string SerializeJSON()
-		{
-			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
-			return json;
 		}
 
 		public override string ToString()

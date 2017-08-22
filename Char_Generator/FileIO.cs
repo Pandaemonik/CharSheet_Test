@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Char_Generator
 {
@@ -102,6 +103,17 @@ namespace Char_Generator
 			}
 
 			return toBeReturned;
+		}
+
+		public static string SerializeJSON(object o)
+		{
+			var json = JsonConvert.SerializeObject(o, Formatting.Indented);
+			return json;
+		}
+
+		public static void writeToFile(string fileName,string text)
+		{
+			File.WriteAllText(Path.Combine(Environment.CurrentDirectory, fileName),text);
 		}
 	}
 }

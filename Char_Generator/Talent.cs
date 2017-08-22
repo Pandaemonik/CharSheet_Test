@@ -8,37 +8,25 @@
 		public string secondary { get; set; }
 		public string Benefit { get; set; }
 		public string Details { get; set; }
-		public string Tier { get; set; }
+		public int Tier { get; set; }
 		public string Source { get; set; }
-
-		public Talent(string csvLineRead)
-		{
-			var csvSplit = csvLineRead.Split('|');
-			if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null || csvSplit[4] != null ||
-				csvSplit[5] != null || csvSplit[6] != null || csvSplit[7] != null)
-			{
-				//TODO Move this to container class
-				//TODO Tier needs to be int
-				//TODO Validate Aptitudes
-				Name = csvSplit[0];
-				Prerequisites = csvSplit[1];
-				primary = csvSplit[2];
-				secondary = csvSplit[3];
-				Benefit = csvSplit[4];
-				Details = csvSplit[5];
-				Tier = csvSplit[6];
-				Source = csvSplit[7];
-			}
-
-			else
-			{
-				Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
-			}
-		}
 
 		public Talent()
 		{
-			//Name = Prerequisites = primary = secondary = Benefit = Details = "N/A";
+			Name = Prerequisites = primary = secondary = Benefit = Details = Source = "N/A";
+			Tier = 1;
+		}
+
+		public Talent(string[] csvSplit)
+		{
+			Name = csvSplit[0].Trim();
+			Prerequisites = csvSplit[1].Trim();
+			primary = csvSplit[2].Trim();
+			secondary = csvSplit[3].Trim();
+			Benefit = csvSplit[4].Trim();
+			Details = csvSplit[5].Trim();
+			Tier = int.Parse(csvSplit[6].Trim());
+			Source = csvSplit[7].Trim();
 		}
 
 		public override string ToString()
@@ -46,12 +34,11 @@
 			return
 				"Name: " + Name + "\n"
 				+ "Tier: " + Tier + "\n"
+				+ "Source: " + Source + "\n"
 				+ "Prerequisites: " + Prerequisites + "\n"
-				+ "Aptitude 1: " + primary + "\n"
-				+ "Aptitude 2: " + secondary + "\n"
+				+ "Aptitudes: " + primary + " " + secondary + "\n"
 				+ "Benefit: " + Benefit + "\n"
-				+ "Details: " + Details + "\n"
-				+ "Source: " + Source + "\n";
+				+ "Details: " + Details + "\n";
 		}
 
 	}

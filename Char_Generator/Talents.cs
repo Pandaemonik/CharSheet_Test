@@ -19,21 +19,46 @@ namespace Char_Generator
 		public Talents(string csvPath)
 		{
 			var csvLines = FileIO.readCsv(csvPath);
-
-			foreach (string csvLine in csvLines)
-			{
-				talent.Add(new Talent(csvLine));
-			}
+			addTalentsFromCsv(csvLines);
 		}
 
 		public Talents(StreamReader csvFile)
 		{
 			var csvLines = FileIO.readCsv(csvFile);
+			addTalentsFromCsv(csvLines);
 
-			foreach (string csvLine in csvLines)
+		}
+
+		void addTalentsFromCsv(List<string> csvLines)
+		{
+			try
 			{
-				talent.Add(new Talent(csvLine));
+				foreach (string csvLine in csvLines)
+				{
+					var csvSplit = csvLine.Split('|');
+					if (csvSplit[0] != null || csvSplit[1] != null || csvSplit[2] != null || csvSplit[3] != null || csvSplit[4] != null ||
+				csvSplit[5] != null || csvSplit[6] != null || csvSplit[7] != null)
+					{
+						if (Aptitudes.CheckAvailable(csvSplit[2].Trim()) && Aptitudes.CheckAvailable(csvSplit[3].Trim()))
+						{
+							talent.Add(new Talent(csvSplit));
+						}
+						else
+						{
+							talent.Add(new Talent());
+						}
+					}
+					else
+					{
+						talent.Add(new Talent());
+					}
+				}
 			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Failed to add new Skills at iteration : " + ex.Message);
+			}
+
 		}
 
 		public Talent Find(string toBeFound)
@@ -62,12 +87,6 @@ namespace Char_Generator
 			s.Serialize(w, this);
 			w.Flush();
 			return sb.ToString();
-		}
-
-		public string SerializeJSON()
-		{
-			var json = JsonConvert.SerializeObject(this, Formatting.Indented);
-			return json;
 		}
 
 		public override string ToString()
