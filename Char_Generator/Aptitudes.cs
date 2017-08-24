@@ -16,11 +16,18 @@ namespace Char_Generator
 
 		public static bool CheckAvailable(string toBeChecked)
 		{
-			if (toBeChecked == "1")
+			if (available.Contains(toBeChecked))
 				return true;
 			return false;
 		}
 
+		public bool checkPossesed(string toBeChecked)
+		{
+			if (possessed.Contains(toBeChecked))
+				return true;
+			return false;;
+		}
+		
 		[JsonConstructor]
 		public Aptitudes() { }
 
@@ -97,6 +104,5 @@ namespace Char_Generator
 			possessed.ForEach(x => toBeReturned.Add(x));
 			return toBeReturned.ToArray();
 		}
-
 	}
 }

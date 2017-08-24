@@ -18,7 +18,6 @@ namespace Char_Generator
 		public Skills skills { get; set; }
 		public Talents talents { get; set; }
 		public Aptitudes aptitudes { get; set; }
-		public string campaignId { get; set; }
 
 		public Character()
 		{
@@ -28,7 +27,6 @@ namespace Char_Generator
 			talents = new Talents("TextFiles\\Talents_CSV.csv");
 			experienceSpent = 0;
 			experienceLeft = 0;
-			campaignId = "RFF_ID_1";
 		}
 
 		[JsonConstructor]
@@ -50,19 +48,51 @@ namespace Char_Generator
 			return toBeReturned;
 		}
 
+		public int checkAptitudesCount(string primary, string secondary)
+		{
+			primary = primary.Trim();
+			secondary = secondary.Trim();
+			if (aptitudes.checkPossesed(primary) && aptitudes.checkPossesed(secondary))
+			{
+				return 2;
+			}
+			if (aptitudes.checkPossesed(primary) || aptitudes.checkPossesed(secondary))
+			{
+				return 1;
+			}
+			return 0;
+		}
+
 		public override string ToString()
 		{
-			return string.Format("Character:\n\tAttributes\n{0}" +
-								 "\n\tSkills\n{1} \n\tTalents\n{2}" +
-								 "\n\tAptitudes\n{3}" +
-								 "\n\texperienceLeft\n{4}," +
-								 "\n\tcampaignId\n{5}",
-								 attributes,
-								 skills,
-								 talents,
-								 aptitudes,
-								 experienceLeft,
-								 campaignId);
+			return string.Format(
+				"Character:" +
+				"\n\t Name\n{0}" +
+				"\n\t Regiment\n{1}" +
+				"\n\t Specialty\n{2}" +
+				"\n\t Demeanour\n{3}" +
+				"\n\t Description\n{4}" +
+				"\n\t Wounds\n{5}" +
+				"\n\t ExperienceSpent\n{6}" +
+				"\n\t ExperienceLeft\n{7}" +
+				"\n\t Attributes\n{8}" +
+				"\n\t Aptitudes\n{9}" +
+				"\n\t SpecialRules\n{10}" +
+				"\n\t Talents\n{11}",
+				name,
+				regiment,
+				specialty,
+				demeanour,
+				description,
+				wounds,
+				experienceSpent,
+				experienceLeft,
+				attributes,
+				skills,
+				aptitudes,
+				getSpecialRules(),
+				talents
+			);
 		}
 	}
 }

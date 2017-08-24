@@ -59,15 +59,41 @@ namespace Char_Generator
 
 		public Skill Find(string toBeFound)
 		{
+			toBeFound = toBeFound.Trim();
 			var temp = skill.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
-		public void Add(Skill skill)
+		public Skill Find(string toBeFoundName, string toBeFoundSpecialist)
+		{
+			var temp = skill.Find(x => x.Name == toBeFoundName && x.Specialist == toBeFoundSpecialist);
+			return temp;
+		}
+
+		public void Add(Skill skillToBeAdded)
 		{
 			try
 			{
-				this.skill.Add(skill);
+				if (skillToBeAdded != null)
+				{
+					if (skill.Contains(skillToBeAdded))
+					{
+						int index = skill.IndexOf(skillToBeAdded);
+						skill[index].Tier++;
+						if (skill[index].Tier > 3)
+						{
+							skill[index].Tier = 3;
+						}
+					}
+					else
+					{
+						skill.Add(skillToBeAdded);
+					}
+				}
+				else
+				{
+					MessageBox.Show("Error: Failed to insert skill. Skill is empty");
+				}
 			}
 			catch (Exception ex)
 			{
@@ -75,10 +101,31 @@ namespace Char_Generator
 			}
 		}
 
+		public void Remove(Skill toBeRemoved)
+		{
+			if (toBeRemoved != null)
+			{
+				int index = skill.IndexOf(toBeRemoved);
+				if (skill[index].Tier >0)
+				{
+					skill[index].Tier--;
+				}
+				else
+				{;
+					skill.Remove(toBeRemoved);
+				}
+			}
+			else
+			{
+				MessageBox.Show("Error: Failed to insert skill. Skill is empty");
+			}
+		}
+
 		public override string ToString()
 		{
 			var toBeReturned = string.Empty;
-			skill.ForEach(x => toBeReturned += x + "\n");
+			skill.ForEach(x => toBeReturned += x + "-\n");
+			toBeReturned += "\n----------------------------";
 			return toBeReturned;
 		}
 
@@ -110,7 +157,7 @@ namespace Char_Generator
 				else if (single.Tier > -1)
 				{
 					toBeReturned += single.Name + " (" + single.Specialist + "): +";
-					toBeReturned += (single.Tier * 10).ToString()+"\n";
+					toBeReturned += (single.Tier * 10).ToString() + "\n";
 				}
 			}
 			return toBeReturned;

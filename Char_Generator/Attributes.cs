@@ -58,15 +58,35 @@ namespace Char_Generator
 
 		public Attribute Find(string toBeFound)
 		{
+			toBeFound = toBeFound.Trim();
 			var temp = attribute.Find(x => x.Name == toBeFound);
 			return temp;
 		}
 
-		public void Add(Attribute attribute)
+		public void Add(Attribute attributeToBeAdded)
 		{
 			try
 			{
-				this.attribute.Add(attribute);
+				if (attributeToBeAdded != null)
+				{
+					if (attribute.Contains(attributeToBeAdded))
+					{
+						int index = attribute.IndexOf(attributeToBeAdded);
+						attribute[index].Tier++;
+						if (attribute[index].Tier > 4)
+						{
+							attribute[index].Tier = 4;
+						}
+					}
+					else
+					{
+						attribute.Add(attributeToBeAdded);
+					}
+				}
+				else
+				{
+					MessageBox.Show("Error: Failed to insert skill. Skill is empty");
+				}
 			}
 			catch (Exception ex)
 			{
@@ -88,6 +108,25 @@ namespace Char_Generator
 			return toBeReturned.ToArray();
 		}
 
+		public void Remove(Attribute toBeRemoved)
+		{
+			if (toBeRemoved != null)
+			{
+				int index = attribute.IndexOf(toBeRemoved);
+				if (attribute[index].Tier > 0)
+				{
+					attribute[index].Tier--;
+				}
+				else
+				{
+					attribute[index].Tier = 0;
+				}
+			}
+			else
+			{
+				MessageBox.Show("Error: Failed to remove Attribute. Attribute is empty");
+			}
+		}
 
 		public string getDisplayed()
 		{
@@ -95,7 +134,7 @@ namespace Char_Generator
 
 			foreach (Attribute single in attribute)
 			{
-				toBeReturned += single.Name + ": " + (single.Value + (5 * single.Tier)).ToString()+"\n";
+				toBeReturned += single.Name + ": " + (single.Value + (5 * single.Tier)).ToString() + "\n";
 			}
 			return toBeReturned;
 		}

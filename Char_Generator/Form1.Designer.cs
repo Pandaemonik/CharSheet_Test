@@ -35,7 +35,6 @@
 			this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateRegiment = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateCharacter = new System.Windows.Forms.ToolStripMenuItem();
-			this.MenuItemCreateTalent = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
 			this.showCharacter = new System.Windows.Forms.Button();
@@ -72,12 +71,12 @@
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.textBoxSpecialRules = new System.Windows.Forms.RichTextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.textBoxSkills = new System.Windows.Forms.RichTextBox();
-			this.textBoxAttributes = new System.Windows.Forms.RichTextBox();
 			this.textBoxAptitudes = new System.Windows.Forms.RichTextBox();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.textBoxSkills = new System.Windows.Forms.RichTextBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.textBoxAttributes = new System.Windows.Forms.RichTextBox();
+			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
 			this.tabPageMain.SuspendLayout();
@@ -125,8 +124,7 @@
 			// 
 			this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuItemCreateRegiment,
-            this.MenuItemCreateCharacter,
-            this.MenuItemCreateTalent});
+            this.MenuItemCreateCharacter});
 			this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
 			this.displayToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
 			this.displayToolStripMenuItem.Text = "&Create";
@@ -134,23 +132,16 @@
 			// MenuItemCreateRegiment
 			// 
 			this.MenuItemCreateRegiment.Name = "MenuItemCreateRegiment";
-			this.MenuItemCreateRegiment.Size = new System.Drawing.Size(125, 22);
+			this.MenuItemCreateRegiment.Size = new System.Drawing.Size(152, 22);
 			this.MenuItemCreateRegiment.Text = "Regiment";
 			this.MenuItemCreateRegiment.Click += new System.EventHandler(this.MenuItemCreateRegiment_Click);
 			// 
 			// MenuItemCreateCharacter
 			// 
 			this.MenuItemCreateCharacter.Name = "MenuItemCreateCharacter";
-			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(125, 22);
+			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(152, 22);
 			this.MenuItemCreateCharacter.Text = "Character";
 			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.MenuItemCreateCharacter_Click);
-			// 
-			// MenuItemCreateTalent
-			// 
-			this.MenuItemCreateTalent.Name = "MenuItemCreateTalent";
-			this.MenuItemCreateTalent.Size = new System.Drawing.Size(125, 22);
-			this.MenuItemCreateTalent.Text = "Talent";
-			this.MenuItemCreateTalent.Click += new System.EventHandler(this.MenuItemCreateTalent_Click);
 			// 
 			// menuStripMain
 			// 
@@ -546,6 +537,16 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Aptitudes";
 			// 
+			// textBoxAptitudes
+			// 
+			this.textBoxAptitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxAptitudes.Location = new System.Drawing.Point(6, 19);
+			this.textBoxAptitudes.Name = "textBoxAptitudes";
+			this.textBoxAptitudes.ReadOnly = true;
+			this.textBoxAptitudes.Size = new System.Drawing.Size(172, 163);
+			this.textBoxAptitudes.TabIndex = 75;
+			this.textBoxAptitudes.Text = "";
+			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.textBoxSkills);
@@ -556,6 +557,16 @@
 			this.groupBox2.TabIndex = 20;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Skills";
+			// 
+			// textBoxSkills
+			// 
+			this.textBoxSkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxSkills.Location = new System.Drawing.Point(6, 19);
+			this.textBoxSkills.Name = "textBoxSkills";
+			this.textBoxSkills.ReadOnly = true;
+			this.textBoxSkills.Size = new System.Drawing.Size(243, 182);
+			this.textBoxSkills.TabIndex = 75;
+			this.textBoxSkills.Text = "";
 			// 
 			// groupBox1
 			// 
@@ -568,26 +579,6 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Attributes";
 			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPageMain);
-			this.tabControl1.Controls.Add(this.tabPageDisplauInLabel);
-			this.tabControl1.Location = new System.Drawing.Point(0, 27);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
-			this.tabControl1.TabIndex = 15;
-			// 
-			// textBoxSkills
-			// 
-			this.textBoxSkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxSkills.Location = new System.Drawing.Point(6, 19);
-			this.textBoxSkills.Name = "textBoxSkills";
-			this.textBoxSkills.ReadOnly = true;
-			this.textBoxSkills.Size = new System.Drawing.Size(243, 182);
-			this.textBoxSkills.TabIndex = 75;
-			this.textBoxSkills.Text = "";
-			// 
 			// textBoxAttributes
 			// 
 			this.textBoxAttributes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -598,15 +589,15 @@
 			this.textBoxAttributes.TabIndex = 75;
 			this.textBoxAttributes.Text = "";
 			// 
-			// textBoxAptitudes
+			// tabControl1
 			// 
-			this.textBoxAptitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxAptitudes.Location = new System.Drawing.Point(6, 19);
-			this.textBoxAptitudes.Name = "textBoxAptitudes";
-			this.textBoxAptitudes.ReadOnly = true;
-			this.textBoxAptitudes.Size = new System.Drawing.Size(172, 163);
-			this.textBoxAptitudes.TabIndex = 75;
-			this.textBoxAptitudes.Text = "";
+			this.tabControl1.Controls.Add(this.tabPageMain);
+			this.tabControl1.Controls.Add(this.tabPageDisplauInLabel);
+			this.tabControl1.Location = new System.Drawing.Point(0, 27);
+			this.tabControl1.Name = "tabControl1";
+			this.tabControl1.SelectedIndex = 0;
+			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
+			this.tabControl1.TabIndex = 15;
 			// 
 			// charGenMain
 			// 
@@ -620,7 +611,6 @@
 			this.MaximizeBox = false;
 			this.Name = "charGenMain";
 			this.Text = "Character Generator";
-			this.Load += new System.EventHandler(this.charGenMain_Load);
 			this.Shown += new System.EventHandler(this.charGenMain_Shown);
 			this.menuStripMain.ResumeLayout(false);
 			this.menuStripMain.PerformLayout();
@@ -662,7 +652,6 @@
 		private System.Windows.Forms.Button showAptitudes;
 		private System.Windows.Forms.Button showTalents;
 		private System.Windows.Forms.Button showSkills;
-		private System.Windows.Forms.ToolStripMenuItem MenuItemCreateTalent;
 		private System.Windows.Forms.RichTextBox textBoxTalents;
 		private System.Windows.Forms.Button showCharacter;
 		private System.Windows.Forms.GroupBox groupBox3;

@@ -63,8 +63,19 @@ namespace Char_Generator
 
 		public Talent Find(string toBeFound)
 		{
+			toBeFound = toBeFound.Trim();
 			var temp = talent.Find(x => x.Name == toBeFound);
 			return temp;
+		}
+
+		public bool Contains(string toBefound)
+		{
+			foreach (Talent singleTalent in talent)
+			{
+				if (singleTalent.Name == toBefound)
+				{ return true; }
+			}
+			return false;
 		}
 
 		public void Add(Talent talent)
@@ -77,6 +88,11 @@ namespace Char_Generator
 			{
 				MessageBox.Show("Error: Failed to insert talent. Original error is : \n" + ex.Message);
 			}
+		}
+
+		public void Remove(string toBeRemovedName)
+		{
+			talent.Remove(Find(toBeRemovedName));
 		}
 
 		public string SerializeXML()
@@ -102,6 +118,7 @@ namespace Char_Generator
 
 			return toBeReturned.ToArray();
 		}
+
 
 	}
 }

@@ -18,10 +18,6 @@ namespace Char_Generator
 		void exportCharacterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			FileIO.writeToFile("TextFiles\\" + selectedCharacter.name + "_JSON.json", FileIO.SerializeJSON(selectedCharacter));
-			FileIO.writeToFile("TextFiles\\talents_JSON.json",FileIO.SerializeJSON(selectedCharacter.talents));
-			FileIO.writeToFile("TextFiles\\skills_JSON.json",FileIO.SerializeJSON(selectedCharacter.skills));
-			FileIO.writeToFile("TextFiles\\attributes_JSON.json",FileIO.SerializeJSON(selectedCharacter.aptitudes));
-			FileIO.writeToFile("TextFiles\\aptitudes_JSON.json",FileIO.SerializeJSON(selectedCharacter.attributes));
 		}
 
 		void importCharacterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,7 +38,12 @@ namespace Char_Generator
 
 		void charGenMain_Shown(object sender, EventArgs e)
 		{
-			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Character_JSON.json"));
+			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\default_JSON.json"));
+			refresh();
+		}
+
+		void refresh()
+		{
 			listBoxTalentDetails.Items.AddRange(selectedCharacter.talents.getNames());
 			textBoxRegiment.Text = selectedCharacter.regiment;
 			textBoxSpecialty.Text = selectedCharacter.specialty;
@@ -56,77 +57,59 @@ namespace Char_Generator
 			textBoxAptitudes.Text = selectedCharacter.aptitudes.ToString();
 			textBoxAttributes.Text = selectedCharacter.attributes.getDisplayed();
 			textBoxSkills.Text = selectedCharacter.skills.getDisplayed();
+		}
+
+		void listBoxCharacters_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		void showSkills_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += selectedCharacter.skills.ToString();
+		}
+
+		void showTalents_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += selectedCharacter.talents.ToString();
+		}
+
+		void showAptitudes_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += selectedCharacter.aptitudes.ToString();
+		}
+
+		void showAttributes_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += selectedCharacter.attributes.ToString();
+		}
+
+		void showCharacter_Click(object sender, EventArgs e)
+		{
+			richTextBoxCurrentlyKnown.Text = string.Empty;
+			richTextBoxCurrentlyKnown.Text += selectedCharacter + "\n";
+		}
+
+		void MenuItemCreateCharacter_Click(object sender, EventArgs e)
+		{
+			 
+		}
+
+		void MenuItemCreateRegiment_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		void buttonSpendXp_Click(object sender, EventArgs e)
+		{
+			var xpSpender = new spendXpForm(selectedCharacter);
+			xpSpender.ShowDialog();
+			selectedCharacter = xpSpender.GetSelectedCharacter();
+			refresh();
+		}
 	}
-
-	void listBoxCharacters_SelectedIndexChanged(object sender, EventArgs e)
-	{
-
-	}
-
-	void showSkills_Click(object sender, EventArgs e)
-	{
-		richTextBoxCurrentlyKnown.Text = string.Empty;
-		richTextBoxCurrentlyKnown.Text += selectedCharacter.skills.ToString();
-	}
-
-	void showTalents_Click(object sender, EventArgs e)
-	{
-		richTextBoxCurrentlyKnown.Text = string.Empty;
-		richTextBoxCurrentlyKnown.Text += selectedCharacter.talents.ToString();
-	}
-
-	void showAptitudes_Click(object sender, EventArgs e)
-	{
-		richTextBoxCurrentlyKnown.Text = string.Empty;
-		richTextBoxCurrentlyKnown.Text += selectedCharacter.aptitudes.ToString();
-	}
-
-	void showAttributes_Click(object sender, EventArgs e)
-	{
-		richTextBoxCurrentlyKnown.Text = string.Empty;
-		richTextBoxCurrentlyKnown.Text += selectedCharacter.attributes.ToString();
-	}
-
-	void showCharacter_Click(object sender, EventArgs e)
-	{
-		richTextBoxCurrentlyKnown.Text = string.Empty;
-		richTextBoxCurrentlyKnown.Text += selectedCharacter + "\n";
-	}
-
-	void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-	{
-
-	}
-
-	void MenuItemCreateTalent_Click(object sender, EventArgs e)
-	{
-
-	}
-
-	void MenuItemCreateCharacter_Click(object sender, EventArgs e)
-	{
-
-	}
-
-	void MenuItemCreateRegiment_Click(object sender, EventArgs e)
-	{
-
-	}
-
-	void charGenMain_Load(object sender, EventArgs e)
-	{
-		//Load Character
-		//Load Demeanors
-		//Load Regiment
-		//Load Specialtyes
-		//Load Talents
-	}
-
-	private void buttonSpendXp_Click(object sender, EventArgs e)
-	{
-		var xpSpender = new spendXpForm(selectedCharacter);
-		xpSpender.Show();
-		selectedCharacter = xpSpender.GetSelectedCharacter();
-	}
-}
 }
