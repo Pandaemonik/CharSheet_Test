@@ -9,17 +9,18 @@ namespace Char_Generator
 		public string Secondary { get; set; }
 		public string Specialist { get; set; }
 
-		public Skill(string name, string primary, string secondary, int tier)
+		public Skill(string name, string primary, string secondary, string specialist, int tier)
 		{
 			Name = name;
 			Primary = primary;
 			Secondary = secondary;
 			Tier = tier;
+			Specialist = specialist;
 		}
 
 		public Skill()
 		{
-			Name = Primary = Secondary = "N/A";
+			Name = Primary = Secondary = Specialist = "N/A";
 			Tier = -1;
 		}
 

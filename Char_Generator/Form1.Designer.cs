@@ -33,13 +33,12 @@
 			this.importCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.MenuItemCreateRegiment = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateCharacter = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
 			this.showCharacter = new System.Windows.Forms.Button();
 			this.listBoxCharacters = new System.Windows.Forms.ListBox();
-			this.showAttributes = new System.Windows.Forms.Button();
+			this.showCharacteristics = new System.Windows.Forms.Button();
 			this.showAptitudes = new System.Windows.Forms.Button();
 			this.showTalents = new System.Windows.Forms.Button();
 			this.showSkills = new System.Windows.Forms.Button();
@@ -75,7 +74,7 @@
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.textBoxSkills = new System.Windows.Forms.RichTextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.textBoxAttributes = new System.Windows.Forms.RichTextBox();
+			this.textBoxCharacteristics = new System.Windows.Forms.RichTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
@@ -123,23 +122,15 @@
 			// displayToolStripMenuItem
 			// 
 			this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemCreateRegiment,
             this.MenuItemCreateCharacter});
 			this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
 			this.displayToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
 			this.displayToolStripMenuItem.Text = "&Create";
 			// 
-			// MenuItemCreateRegiment
-			// 
-			this.MenuItemCreateRegiment.Name = "MenuItemCreateRegiment";
-			this.MenuItemCreateRegiment.Size = new System.Drawing.Size(152, 22);
-			this.MenuItemCreateRegiment.Text = "Regiment";
-			this.MenuItemCreateRegiment.Click += new System.EventHandler(this.MenuItemCreateRegiment_Click);
-			// 
 			// MenuItemCreateCharacter
 			// 
 			this.MenuItemCreateCharacter.Name = "MenuItemCreateCharacter";
-			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(152, 22);
+			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(125, 22);
 			this.MenuItemCreateCharacter.Text = "Character";
 			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.MenuItemCreateCharacter_Click);
 			// 
@@ -158,7 +149,7 @@
 			// 
 			this.tabPageDisplauInLabel.Controls.Add(this.showCharacter);
 			this.tabPageDisplauInLabel.Controls.Add(this.listBoxCharacters);
-			this.tabPageDisplauInLabel.Controls.Add(this.showAttributes);
+			this.tabPageDisplauInLabel.Controls.Add(this.showCharacteristics);
 			this.tabPageDisplauInLabel.Controls.Add(this.showAptitudes);
 			this.tabPageDisplauInLabel.Controls.Add(this.showTalents);
 			this.tabPageDisplauInLabel.Controls.Add(this.showSkills);
@@ -190,15 +181,15 @@
 			this.listBoxCharacters.Size = new System.Drawing.Size(244, 30);
 			this.listBoxCharacters.TabIndex = 72;
 			// 
-			// showAttributes
+			// showCharacteristics
 			// 
-			this.showAttributes.Location = new System.Drawing.Point(486, 113);
-			this.showAttributes.Name = "showAttributes";
-			this.showAttributes.Size = new System.Drawing.Size(92, 25);
-			this.showAttributes.TabIndex = 61;
-			this.showAttributes.Text = "Show Attributes";
-			this.showAttributes.UseVisualStyleBackColor = true;
-			this.showAttributes.Click += new System.EventHandler(this.showAttributes_Click);
+			this.showCharacteristics.Location = new System.Drawing.Point(486, 113);
+			this.showCharacteristics.Name = "showCharacteristics";
+			this.showCharacteristics.Size = new System.Drawing.Size(92, 25);
+			this.showCharacteristics.TabIndex = 61;
+			this.showCharacteristics.Text = "Show Characteristics";
+			this.showCharacteristics.UseVisualStyleBackColor = true;
+			this.showCharacteristics.Click += new System.EventHandler(this.showCharacteristics_Click);
 			// 
 			// showAptitudes
 			// 
@@ -570,24 +561,24 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.textBoxAttributes);
+			this.groupBox1.Controls.Add(this.textBoxCharacteristics);
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.groupBox1.Location = new System.Drawing.Point(277, 13);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(184, 209);
 			this.groupBox1.TabIndex = 19;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Attributes";
+			this.groupBox1.Text = "Characteristics";
 			// 
-			// textBoxAttributes
+			// textBoxCharacteristics
 			// 
-			this.textBoxAttributes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxAttributes.Location = new System.Drawing.Point(6, 19);
-			this.textBoxAttributes.Name = "textBoxAttributes";
-			this.textBoxAttributes.ReadOnly = true;
-			this.textBoxAttributes.Size = new System.Drawing.Size(172, 182);
-			this.textBoxAttributes.TabIndex = 75;
-			this.textBoxAttributes.Text = "";
+			this.textBoxCharacteristics.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxCharacteristics.Location = new System.Drawing.Point(6, 19);
+			this.textBoxCharacteristics.Name = "textBoxCharacteristics";
+			this.textBoxCharacteristics.ReadOnly = true;
+			this.textBoxCharacteristics.Size = new System.Drawing.Size(172, 182);
+			this.textBoxCharacteristics.TabIndex = 75;
+			this.textBoxCharacteristics.Text = "";
 			// 
 			// tabControl1
 			// 
@@ -634,7 +625,6 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem MenuItemCreateRegiment;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCreateCharacter;
         private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem exportCharacterToolStripMenuItem;
@@ -648,7 +638,7 @@
 		private System.Windows.Forms.Label labelCurrentlyKnown;
 		private System.Windows.Forms.ListBox listBoxTalentDetails;
 		private System.Windows.Forms.ListBox listBoxCharacters;
-		private System.Windows.Forms.Button showAttributes;
+		private System.Windows.Forms.Button showCharacteristics;
 		private System.Windows.Forms.Button showAptitudes;
 		private System.Windows.Forms.Button showTalents;
 		private System.Windows.Forms.Button showSkills;
@@ -679,7 +669,7 @@
 		private System.Windows.Forms.Button buttonChangeDescription;
 		private System.Windows.Forms.RichTextBox textBoxAptitudes;
 		private System.Windows.Forms.RichTextBox textBoxSkills;
-		private System.Windows.Forms.RichTextBox textBoxAttributes;
+		private System.Windows.Forms.RichTextBox textBoxCharacteristics;
 	}
 }
 

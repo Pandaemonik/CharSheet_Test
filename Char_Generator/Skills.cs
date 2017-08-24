@@ -124,8 +124,7 @@ namespace Char_Generator
 		public override string ToString()
 		{
 			var toBeReturned = string.Empty;
-			skill.ForEach(x => toBeReturned += x + "-\n");
-			toBeReturned += "\n----------------------------";
+			skill.ForEach(x => toBeReturned += x + "\n");
 			return toBeReturned;
 		}
 

@@ -39,10 +39,10 @@
 			this.textBoxTalentCost = new System.Windows.Forms.RichTextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.buttonBuyAttributes = new System.Windows.Forms.Button();
-			this.textBoxAttributeCost = new System.Windows.Forms.RichTextBox();
+			this.buttonBuyCharacteristics = new System.Windows.Forms.Button();
+			this.textBoxCharacteristicCost = new System.Windows.Forms.RichTextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.listBoxAttributes = new System.Windows.Forms.ListBox();
+			this.listBoxCharacteristics = new System.Windows.Forms.ListBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.textBoxSelected = new System.Windows.Forms.RichTextBox();
 			this.label6 = new System.Windows.Forms.Label();
@@ -165,36 +165,36 @@
 			// 
 			// groupBox3
 			// 
-			this.groupBox3.Controls.Add(this.buttonBuyAttributes);
-			this.groupBox3.Controls.Add(this.textBoxAttributeCost);
+			this.groupBox3.Controls.Add(this.buttonBuyCharacteristics);
+			this.groupBox3.Controls.Add(this.textBoxCharacteristicCost);
 			this.groupBox3.Controls.Add(this.label3);
-			this.groupBox3.Controls.Add(this.listBoxAttributes);
+			this.groupBox3.Controls.Add(this.listBoxCharacteristics);
 			this.groupBox3.Location = new System.Drawing.Point(424, 12);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Size = new System.Drawing.Size(200, 417);
 			this.groupBox3.TabIndex = 4;
 			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Attributes";
+			this.groupBox3.Text = "Characteristics";
 			// 
-			// buttonBuyAttributes
+			// buttonBuyCharacteristics
 			// 
-			this.buttonBuyAttributes.Location = new System.Drawing.Point(119, 386);
-			this.buttonBuyAttributes.Name = "buttonBuyAttributes";
-			this.buttonBuyAttributes.Size = new System.Drawing.Size(75, 23);
-			this.buttonBuyAttributes.TabIndex = 96;
-			this.buttonBuyAttributes.Text = "Buy";
-			this.buttonBuyAttributes.UseVisualStyleBackColor = true;
-			this.buttonBuyAttributes.Click += new System.EventHandler(this.buttonBuyAttributes_Click);
+			this.buttonBuyCharacteristics.Location = new System.Drawing.Point(119, 386);
+			this.buttonBuyCharacteristics.Name = "buttonBuyCharacteristics";
+			this.buttonBuyCharacteristics.Size = new System.Drawing.Size(75, 23);
+			this.buttonBuyCharacteristics.TabIndex = 96;
+			this.buttonBuyCharacteristics.Text = "Buy";
+			this.buttonBuyCharacteristics.UseVisualStyleBackColor = true;
+			this.buttonBuyCharacteristics.Click += new System.EventHandler(this.buttonBuyCharacteristics_Click);
 			// 
-			// textBoxAttributeCost
+			// textBoxCharacteristicCost
 			// 
-			this.textBoxAttributeCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxAttributeCost.Location = new System.Drawing.Point(46, 388);
-			this.textBoxAttributeCost.Name = "textBoxAttributeCost";
-			this.textBoxAttributeCost.ReadOnly = true;
-			this.textBoxAttributeCost.Size = new System.Drawing.Size(67, 20);
-			this.textBoxAttributeCost.TabIndex = 92;
-			this.textBoxAttributeCost.Text = "";
+			this.textBoxCharacteristicCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxCharacteristicCost.Location = new System.Drawing.Point(46, 388);
+			this.textBoxCharacteristicCost.Name = "textBoxCharacteristicCost";
+			this.textBoxCharacteristicCost.ReadOnly = true;
+			this.textBoxCharacteristicCost.Size = new System.Drawing.Size(67, 20);
+			this.textBoxCharacteristicCost.TabIndex = 92;
+			this.textBoxCharacteristicCost.Text = "";
 			// 
 			// label3
 			// 
@@ -205,14 +205,14 @@
 			this.label3.TabIndex = 4;
 			this.label3.Text = "Cost :";
 			// 
-			// listBoxAttributes
+			// listBoxCharacteristics
 			// 
-			this.listBoxAttributes.FormattingEnabled = true;
-			this.listBoxAttributes.Location = new System.Drawing.Point(6, 19);
-			this.listBoxAttributes.Name = "listBoxAttributes";
-			this.listBoxAttributes.Size = new System.Drawing.Size(188, 355);
-			this.listBoxAttributes.TabIndex = 1;
-			this.listBoxAttributes.SelectedIndexChanged += new System.EventHandler(this.listBoxAttributes_SelectedIndexChanged);
+			this.listBoxCharacteristics.FormattingEnabled = true;
+			this.listBoxCharacteristics.Location = new System.Drawing.Point(6, 19);
+			this.listBoxCharacteristics.Name = "listBoxCharacteristics";
+			this.listBoxCharacteristics.Size = new System.Drawing.Size(188, 355);
+			this.listBoxCharacteristics.TabIndex = 1;
+			this.listBoxCharacteristics.SelectedIndexChanged += new System.EventHandler(this.listBoxCharacteristics_SelectedIndexChanged);
 			// 
 			// groupBox4
 			// 
@@ -355,7 +355,7 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.ListBox listBoxAttributes;
+		private System.Windows.Forms.ListBox listBoxCharacteristics;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
@@ -367,8 +367,8 @@
 		private System.Windows.Forms.RichTextBox textBoxSkillCost;
 		private System.Windows.Forms.Button buttonBuyTalents;
 		private System.Windows.Forms.RichTextBox textBoxTalentCost;
-		private System.Windows.Forms.Button buttonBuyAttributes;
-		private System.Windows.Forms.RichTextBox textBoxAttributeCost;
+		private System.Windows.Forms.Button buttonBuyCharacteristics;
+		private System.Windows.Forms.RichTextBox textBoxCharacteristicCost;
 		private System.Windows.Forms.Button buttonFinalize;
 		private System.Windows.Forms.Button buttonRefund;
 		private System.Windows.Forms.RichTextBox textBoxTotalXp;

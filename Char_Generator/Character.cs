@@ -14,25 +14,28 @@ namespace Char_Generator
 		public int experienceSpent { get; set; }
 		public int experienceLeft { get; set; }
 		public List<string> specialRules { get; set; }
-		public Attributes attributes { get; set; }
+		public Characteristics characteristics { get; set; }
 		public Skills skills { get; set; }
 		public Talents talents { get; set; }
 		public Aptitudes aptitudes { get; set; }
 
-		public Character()
+		public Character(string Aptitude, string skillCsvPath, string characteristicCSVPath, string talentCsvPath)
 		{
-			aptitudes = new Aptitudes("General");
-			skills = new Skills("TextFiles\\Skills_CSV.csv");
-			attributes = new Attributes("TextFiles\\Attributes_CSV.csv");
-			talents = new Talents("TextFiles\\Talents_CSV.csv");
+			aptitudes = new Aptitudes(Aptitude);
+			skills = new Skills(skillCsvPath);
+			characteristics = new Characteristics(characteristicCSVPath);
+			talents = new Talents(talentCsvPath);
 			experienceSpent = 0;
 			experienceLeft = 0;
 		}
 
 		[JsonConstructor]
-		public Character(Attributes attributes, Skills skills, Talents talents, Aptitudes aptitudes, string campaignId)
+		public Character() { }
+
+
+		public Character(Characteristics characteristics, Skills skills, Talents talents, Aptitudes aptitudes, string campaignId)
 		{
-			this.attributes = attributes;
+			this.characteristics = characteristics;
 			this.skills = skills;
 			this.talents = talents;
 			this.aptitudes = aptitudes;
@@ -75,7 +78,7 @@ namespace Char_Generator
 				"\n\t Wounds\n{5}" +
 				"\n\t ExperienceSpent\n{6}" +
 				"\n\t ExperienceLeft\n{7}" +
-				"\n\t Attributes\n{8}" +
+				"\n\t Characteristics\n{8}" +
 				"\n\t Aptitudes\n{9}" +
 				"\n\t SpecialRules\n{10}" +
 				"\n\t Talents\n{11}",
@@ -87,7 +90,7 @@ namespace Char_Generator
 				wounds,
 				experienceSpent,
 				experienceLeft,
-				attributes,
+				characteristics,
 				skills,
 				aptitudes,
 				getSpecialRules(),

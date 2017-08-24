@@ -15,8 +15,7 @@ namespace Char_Generator
 
 			try
 			{
-				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory,
-				csvLocation)))
+				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory,csvLocation)))
 				{
 					if (myStream != null)
 					{
@@ -114,6 +113,12 @@ namespace Char_Generator
 		public static void writeToFile(string fileName,string text)
 		{
 			File.WriteAllText(Path.Combine(Environment.CurrentDirectory, fileName),text);
+		}
+
+		public static string openFile()
+		{
+
+			return string.Empty;
 		}
 	}
 }

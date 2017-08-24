@@ -29,11 +29,11 @@ namespace Char_Generator
 		{
 			textBoxAvailableXp.Text = tempCharacter.experienceLeft.ToString();
 			listBoxTalents.Items.AddRange(validateTalents());
-			listBoxAttributes.Items.AddRange(validateAttributes());
+			listBoxCharacteristics.Items.AddRange(validateCharacteristics());
 			listBoxSkills.Items.AddRange(validateSkills());
 			buttonBuySkill.Enabled = false;
 			buttonBuyTalents.Enabled = false;
-			buttonBuyAttributes.Enabled = false;
+			buttonBuyCharacteristics.Enabled = false;
 			buttonRefund.Enabled = false;
 		}
 
@@ -98,14 +98,14 @@ namespace Char_Generator
 			return toBeReturned.ToArray();
 		}
 
-		string[] validateAttributes()
+		string[] validateCharacteristics()
 		{
 			List<string> toBeReturned = new List<string>();
-			foreach (Attribute singleAttribute in tempCharacter.attributes.attribute)
+			foreach (Characteristic singleCharacteristic in tempCharacter.characteristics.characteristic)
 			{
-				if (singleAttribute.Tier < 4)
+				if (singleCharacteristic.Tier < 4)
 				{
-					toBeReturned.Add(singleAttribute.Name + " +" + ((singleAttribute.Tier + 1) * 5).ToString());
+					toBeReturned.Add(singleCharacteristic.Name + " +" + ((singleCharacteristic.Tier + 1) * 5).ToString());
 				}
 			}
 
@@ -159,20 +159,20 @@ namespace Char_Generator
 			return cost.ToString();
 		}
 
-		string calculateAttributeCost(string attributeToBuyName, int isBought)
+		string calculateCharacteristicCost(string characteristicToBuyName, int isBought)
 		{
 			int cost = 0;
-			var attributeToBuy = tempCharacter.attributes.Find(attributeToBuyName);
-			var aptitudeCount = tempCharacter.checkAptitudesCount(attributeToBuy.Name, attributeToBuy.Secondary);
+			var characteristicToBuy = tempCharacter.characteristics.Find(characteristicToBuyName);
+			var aptitudeCount = tempCharacter.checkAptitudesCount(characteristicToBuy.Name, characteristicToBuy.Secondary);
 
-			var tier = attributeToBuy.Tier - isBought;
+			var tier = characteristicToBuy.Tier - isBought;
 			if (tier < 0)
 			{
 				tier = 0;
 			}
 			if (aptitudeCount == 2)
 			{
-				if (attributeToBuy.Tier == 0)
+				if (characteristicToBuy.Tier == 0)
 				{
 					cost = 100;
 				}
@@ -260,7 +260,7 @@ namespace Char_Generator
 
 			if (totalCost > availableXp)
 			{
-				//buttonFinalize.Enabled = false;
+				buttonFinalize.Enabled = false;
 			}
 			textBoxTotalXp.Text = totalCost.ToString();
 			listBoxTalents.Items.Clear();
@@ -268,36 +268,36 @@ namespace Char_Generator
 			buttonBuyTalents.Enabled = false;
 		}
 
-		void buttonBuyAttributes_Click(object sender, System.EventArgs e)
+		void buttonBuyCharacteristics_Click(object sender, System.EventArgs e)
 		{
-			var toBeParsed = listBoxAttributes.Text;
-			var name = parseAttributeName(toBeParsed);
+			var toBeParsed = listBoxCharacteristics.Text;
+			var name = parseCharacteristicName(toBeParsed);
 
 			listBoxBuyList.Items.Add("(A)" + name);
 
-			var foundAttribute = tempCharacter.attributes.Find(name);
-			if (foundAttribute != null)
+			var foundCharacteristic = tempCharacter.characteristics.Find(name);
+			if (foundCharacteristic != null)
 			{
-				tempCharacter.attributes.Add(foundAttribute);
+				tempCharacter.characteristics.Add(foundCharacteristic);
 			}
 			else
 			{
-				MessageBox.Show("Error: Failed to insert attribute. Attribute is empty.");
+				MessageBox.Show("Error: Failed to insert characteristic. Characteristic is empty.");
 			}
 
 			var totalCost = int.Parse(textBoxTotalXp.Text);
-			var attributeCost = int.Parse(textBoxAttributeCost.Text);
-			totalCost += attributeCost;
+			var characteristicCost = int.Parse(textBoxCharacteristicCost.Text);
+			totalCost += characteristicCost;
 			var availableXp = int.Parse(textBoxAvailableXp.Text);
 
 			if (totalCost > availableXp)
 			{
-				//buttonFinalize.Enabled = false;
+				buttonFinalize.Enabled = false;
 			}
 			textBoxTotalXp.Text = totalCost.ToString();
-			listBoxAttributes.Items.Clear();
-			listBoxAttributes.Items.AddRange(validateAttributes());
-			buttonBuyAttributes.Enabled = false;
+			listBoxCharacteristics.Items.Clear();
+			listBoxCharacteristics.Items.AddRange(validateCharacteristics());
+			buttonBuyCharacteristics.Enabled = false;
 		}
 
 		void buttonRefund_Click(object sender, System.EventArgs e)
@@ -329,18 +329,18 @@ namespace Char_Generator
 			}
 			if (parsed[0] == "(A)")
 			{
-				var foundAttribute = tempCharacter.attributes.Find(parsed[1]);
+				var foundCharacteristic = tempCharacter.characteristics.Find(parsed[1]);
 
-				if (foundAttribute != null)
+				if (foundCharacteristic != null)
 				{
-					tempCharacter.attributes.Remove(foundAttribute);
+					tempCharacter.characteristics.Remove(foundCharacteristic);
 				}
 				else
 				{
-					MessageBox.Show("Error: Failed to insert attribute. Attribute is empty.");
+					MessageBox.Show("Error: Failed to insert characteristic. Characteristic is empty.");
 				}
-				listBoxAttributes.Items.Clear();
-				listBoxAttributes.Items.AddRange(validateAttributes());
+				listBoxCharacteristics.Items.Clear();
+				listBoxCharacteristics.Items.AddRange(validateCharacteristics());
 			}
 
 			var totalCost = int.Parse(textBoxTotalXp.Text);
@@ -388,12 +388,12 @@ namespace Char_Generator
 			buttonBuyTalents.Enabled = true;
 		}
 
-		void listBoxAttributes_SelectedIndexChanged(object sender, System.EventArgs e)
+		void listBoxCharacteristics_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
-			var temp = listBoxAttributes.Text;
-			var name = parseAttributeName(temp);
-			textBoxAttributeCost.Text = calculateAttributeCost(name, 0);
-			buttonBuyAttributes.Enabled = true;
+			var temp = listBoxCharacteristics.Text;
+			var name = parseCharacteristicName(temp);
+			textBoxCharacteristicCost.Text = calculateCharacteristicCost(name, 0);
+			buttonBuyCharacteristics.Enabled = true;
 		}
 
 		void listBoxBuyList_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -412,7 +412,7 @@ namespace Char_Generator
 				}
 				if (parsed[0] == "(A)")
 				{
-					textBoxSelected.Text = calculateAttributeCost(parsed[1], 1);
+					textBoxSelected.Text = calculateCharacteristicCost(parsed[1], 1);
 					if (textBoxSelected.Text == "0")
 					{
 						textBoxSelected.Text = "100";
@@ -466,7 +466,7 @@ namespace Char_Generator
 			return parsed.ToArray();
 		}
 
-		string parseAttributeName(string toBeParsed)
+		string parseCharacteristicName(string toBeParsed)
 		{
 			var endIndex = toBeParsed.IndexOf('+');
 			var name = toBeParsed.Substring(0, endIndex);

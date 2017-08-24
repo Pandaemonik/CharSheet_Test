@@ -11,7 +11,31 @@ namespace Char_Generator
 
 		static Aptitudes()
 		{
-			available = FileIO.readCsv("TextFiles\\CSV\\Aptitudes_CSV.csv");
+			try
+			{
+				available = JsonConvert.DeserializeObject<List<string>>(FileIO.readJson("TextFiles\\data\\default_aptitudes.json"));
+			}
+			catch
+			{
+				available.Add("General");
+				available.Add("Offence");
+				available.Add("Finesse");
+				available.Add("Defence");
+				available.Add("Psyker");
+				available.Add("Knowledge");
+				available.Add("Leadership");
+				available.Add("Fieldcraft");
+				available.Add("Social");
+				available.Add("Weapon Skill");
+				available.Add("Ballistic Skill");
+				available.Add("Strength");
+				available.Add("Toughness");
+				available.Add("Agility");
+				available.Add("Intelligence");
+				available.Add("Perception");
+				available.Add("Willpower");
+				available.Add("Fellowship");
+			}
 		}
 
 		public static bool CheckAvailable(string toBeChecked)
@@ -25,9 +49,9 @@ namespace Char_Generator
 		{
 			if (possessed.Contains(toBeChecked))
 				return true;
-			return false;;
+			return false; ;
 		}
-		
+
 		[JsonConstructor]
 		public Aptitudes() { }
 

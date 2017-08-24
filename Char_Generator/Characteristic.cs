@@ -1,13 +1,13 @@
 ﻿namespace Char_Generator
 {
-	public class Attribute
+	public class Characteristic
 	{
 		public string Name { set; get; }
 		public string Secondary { set; get; }
 		public int Tier { set; get; }
 		public int Value { set; get; }
 
-		public Attribute(string name, string secondary, int tier, int value)
+		public Characteristic(string name, string secondary, int tier, int value)
 		{
 			Name = name;
 			Secondary = secondary;
@@ -15,14 +15,14 @@
 			Value = value;
 		}
 
-		public Attribute()
+		public Characteristic()
 		{
 			Name = Secondary = "N/A";
 			Tier = 0;
 			Value = 0;
 		}
 
-		public Attribute(string[] csvSplit)
+		public Characteristic(string[] csvSplit)
 		{
 			Name = csvSplit[0].Trim();
 			Secondary = csvSplit[1].Trim();

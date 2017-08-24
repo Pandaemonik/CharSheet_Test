@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCharacter.Designer.cs">
+      <DependentUpon>CreateCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
       <DependentUpon>spendXpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Talent.cs" />
+    <EmbeddedResource Include="CreateCharacter.resx">
+      <DependentUpon>CreateCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,16 +112,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Skills.cs" />
-    <Compile Include="Attribute.cs" />
+    <Compile Include="Characteristic.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Attributes.cs" />
+    <Compile Include="Characteristics.cs" />
     <Compile Include="Talents.cs" />
     <Compile Include="Aptitudes.cs" />
     <Compile Include="FileIO.cs" />
     <Compile Include="Specialty.cs" />
-    <Compile Include="Regimental\modifiers.cs" />
-    <Compile Include="Regimental\Regiment.cs" />
-    <Compile Include="Regimental\Regiments.cs" />
+    <Compile Include="Regiment.cs" />
+    <Compile Include="modifiers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

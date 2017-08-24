@@ -43,6 +43,24 @@
 			this.labelName = new System.Windows.Forms.Label();
 			this.labelDescription = new System.Windows.Forms.Label();
 			this.buttonCancel = new System.Windows.Forms.Button();
+			this.textBoxWeaponSkill = new System.Windows.Forms.RichTextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.textBoxBallisticSkill = new System.Windows.Forms.RichTextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.textBoxStrenght = new System.Windows.Forms.RichTextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.textBoxToughness = new System.Windows.Forms.RichTextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.textBoxAgility = new System.Windows.Forms.RichTextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.textBoxIntelligence = new System.Windows.Forms.RichTextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.textBoxPerception = new System.Windows.Forms.RichTextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.textBoxWillpower = new System.Windows.Forms.RichTextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.textBoxFellowship = new System.Windows.Forms.RichTextBox();
+			this.label9 = new System.Windows.Forms.Label();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -157,18 +175,18 @@
 			// textBoxName
 			// 
 			this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxName.Location = new System.Drawing.Point(794, 22);
+			this.textBoxName.Location = new System.Drawing.Point(832, 19);
 			this.textBoxName.Name = "textBoxName";
-			this.textBoxName.Size = new System.Drawing.Size(184, 20);
+			this.textBoxName.Size = new System.Drawing.Size(146, 20);
 			this.textBoxName.TabIndex = 104;
 			this.textBoxName.Text = "";
 			// 
 			// textBoxDescription
 			// 
 			this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxDescription.Location = new System.Drawing.Point(794, 61);
+			this.textBoxDescription.Location = new System.Drawing.Point(794, 58);
 			this.textBoxDescription.Name = "textBoxDescription";
-			this.textBoxDescription.Size = new System.Drawing.Size(184, 255);
+			this.textBoxDescription.Size = new System.Drawing.Size(184, 100);
 			this.textBoxDescription.TabIndex = 101;
 			this.textBoxDescription.Text = "";
 			// 
@@ -176,7 +194,7 @@
 			// 
 			this.labelName.AutoSize = true;
 			this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelName.Location = new System.Drawing.Point(791, 6);
+			this.labelName.Location = new System.Drawing.Point(791, 22);
 			this.labelName.Name = "labelName";
 			this.labelName.Size = new System.Drawing.Size(35, 13);
 			this.labelName.TabIndex = 96;
@@ -186,7 +204,7 @@
 			// 
 			this.labelDescription.AutoSize = true;
 			this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelDescription.Location = new System.Drawing.Point(791, 45);
+			this.labelDescription.Location = new System.Drawing.Point(791, 42);
 			this.labelDescription.Name = "labelDescription";
 			this.labelDescription.Size = new System.Drawing.Size(60, 13);
 			this.labelDescription.TabIndex = 100;
@@ -202,9 +220,216 @@
 			this.buttonCancel.UseVisualStyleBackColor = true;
 			this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
 			// 
+			// textBoxWeaponSkill
+			// 
+			this.textBoxWeaponSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxWeaponSkill.Location = new System.Drawing.Point(948, 164);
+			this.textBoxWeaponSkill.MaxLength = 2;
+			this.textBoxWeaponSkill.Name = "textBoxWeaponSkill";
+			this.textBoxWeaponSkill.Size = new System.Drawing.Size(30, 20);
+			this.textBoxWeaponSkill.TabIndex = 114;
+			this.textBoxWeaponSkill.Text = "";
+			this.textBoxWeaponSkill.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.Location = new System.Drawing.Point(866, 167);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(76, 13);
+			this.label1.TabIndex = 113;
+			this.label1.Text = "Weapon Skill :";
+			// 
+			// textBoxBallisticSkill
+			// 
+			this.textBoxBallisticSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxBallisticSkill.Location = new System.Drawing.Point(948, 190);
+			this.textBoxBallisticSkill.MaxLength = 2;
+			this.textBoxBallisticSkill.Name = "textBoxBallisticSkill";
+			this.textBoxBallisticSkill.Size = new System.Drawing.Size(30, 20);
+			this.textBoxBallisticSkill.TabIndex = 116;
+			this.textBoxBallisticSkill.Text = "";
+			this.textBoxBallisticSkill.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.Location = new System.Drawing.Point(872, 193);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(70, 13);
+			this.label2.TabIndex = 115;
+			this.label2.Text = "Ballistic Skill :";
+			// 
+			// textBoxStrenght
+			// 
+			this.textBoxStrenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxStrenght.Location = new System.Drawing.Point(948, 216);
+			this.textBoxStrenght.MaxLength = 2;
+			this.textBoxStrenght.Name = "textBoxStrenght";
+			this.textBoxStrenght.Size = new System.Drawing.Size(30, 20);
+			this.textBoxStrenght.TabIndex = 118;
+			this.textBoxStrenght.Text = "";
+			this.textBoxStrenght.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label3.Location = new System.Drawing.Point(889, 219);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(53, 13);
+			this.label3.TabIndex = 117;
+			this.label3.Text = "Strength :";
+			// 
+			// textBoxToughness
+			// 
+			this.textBoxToughness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxToughness.Location = new System.Drawing.Point(948, 242);
+			this.textBoxToughness.MaxLength = 2;
+			this.textBoxToughness.Name = "textBoxToughness";
+			this.textBoxToughness.Size = new System.Drawing.Size(30, 20);
+			this.textBoxToughness.TabIndex = 120;
+			this.textBoxToughness.Text = "";
+			this.textBoxToughness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label4.Location = new System.Drawing.Point(876, 245);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(66, 13);
+			this.label4.TabIndex = 119;
+			this.label4.Text = "Toughness :";
+			// 
+			// textBoxAgility
+			// 
+			this.textBoxAgility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxAgility.Location = new System.Drawing.Point(948, 268);
+			this.textBoxAgility.MaxLength = 2;
+			this.textBoxAgility.Name = "textBoxAgility";
+			this.textBoxAgility.Size = new System.Drawing.Size(30, 20);
+			this.textBoxAgility.TabIndex = 122;
+			this.textBoxAgility.Text = "";
+			this.textBoxAgility.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label5.Location = new System.Drawing.Point(902, 271);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(40, 13);
+			this.label5.TabIndex = 121;
+			this.label5.Text = "Agility :";
+			// 
+			// textBoxIntelligence
+			// 
+			this.textBoxIntelligence.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxIntelligence.Location = new System.Drawing.Point(948, 294);
+			this.textBoxIntelligence.MaxLength = 2;
+			this.textBoxIntelligence.Name = "textBoxIntelligence";
+			this.textBoxIntelligence.Size = new System.Drawing.Size(30, 20);
+			this.textBoxIntelligence.TabIndex = 124;
+			this.textBoxIntelligence.Text = "";
+			this.textBoxIntelligence.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label6.Location = new System.Drawing.Point(875, 297);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(67, 13);
+			this.label6.TabIndex = 123;
+			this.label6.Text = "Intelligence :";
+			// 
+			// textBoxPerception
+			// 
+			this.textBoxPerception.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxPerception.Location = new System.Drawing.Point(948, 320);
+			this.textBoxPerception.MaxLength = 2;
+			this.textBoxPerception.Name = "textBoxPerception";
+			this.textBoxPerception.Size = new System.Drawing.Size(30, 20);
+			this.textBoxPerception.TabIndex = 126;
+			this.textBoxPerception.Text = "";
+			this.textBoxPerception.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label7.Location = new System.Drawing.Point(878, 323);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(64, 13);
+			this.label7.TabIndex = 125;
+			this.label7.Text = "Perception :";
+			// 
+			// textBoxWillpower
+			// 
+			this.textBoxWillpower.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxWillpower.Location = new System.Drawing.Point(948, 346);
+			this.textBoxWillpower.MaxLength = 2;
+			this.textBoxWillpower.Name = "textBoxWillpower";
+			this.textBoxWillpower.Size = new System.Drawing.Size(30, 20);
+			this.textBoxWillpower.TabIndex = 128;
+			this.textBoxWillpower.Text = "";
+			this.textBoxWillpower.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label8.Location = new System.Drawing.Point(883, 349);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(59, 13);
+			this.label8.TabIndex = 127;
+			this.label8.Text = "Willpower :";
+			// 
+			// textBoxFellowship
+			// 
+			this.textBoxFellowship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxFellowship.Location = new System.Drawing.Point(948, 372);
+			this.textBoxFellowship.MaxLength = 2;
+			this.textBoxFellowship.Name = "textBoxFellowship";
+			this.textBoxFellowship.Size = new System.Drawing.Size(30, 20);
+			this.textBoxFellowship.TabIndex = 130;
+			this.textBoxFellowship.Text = "";
+			this.textBoxFellowship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verifyCharacteristicIsDigit);
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label9.Location = new System.Drawing.Point(880, 375);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(62, 13);
+			this.label9.TabIndex = 129;
+			this.label9.Text = "Fellowship :";
+			// 
 			// CreateCharacter
 			// 
 			this.ClientSize = new System.Drawing.Size(990, 482);
+			this.Controls.Add(this.textBoxFellowship);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.textBoxWillpower);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.textBoxPerception);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.textBoxIntelligence);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.textBoxAgility);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.textBoxToughness);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.textBoxStrenght);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.textBoxBallisticSkill);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.textBoxWeaponSkill);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonCancel);
 			this.Controls.Add(this.textBoxName);
 			this.Controls.Add(this.textBoxDescription);
@@ -241,5 +466,23 @@
 		private System.Windows.Forms.Label labelName;
 		private System.Windows.Forms.Label labelDescription;
 		private System.Windows.Forms.Button buttonCancel;
+		private System.Windows.Forms.RichTextBox textBoxWeaponSkill;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.RichTextBox textBoxBallisticSkill;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.RichTextBox textBoxStrenght;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.RichTextBox textBoxToughness;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.RichTextBox textBoxAgility;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.RichTextBox textBoxIntelligence;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.RichTextBox textBoxPerception;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.RichTextBox textBoxWillpower;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.RichTextBox textBoxFellowship;
+		private System.Windows.Forms.Label label9;
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -8,7 +9,6 @@ namespace Char_Generator
 	public partial class charGenMain : Form
 	{
 		Character selectedCharacter;
-		List<string> demeanores = new List<string>();
 
 		public charGenMain()
 		{
@@ -22,7 +22,35 @@ namespace Char_Generator
 
 		void importCharacterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Character_JSON.json"));
+
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			String buffer = String.Empty;
+
+			openFileDialog.InitialDirectory = "E:\\C#_Projects\\Char_Generator\\Char_Generator";
+			openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+			openFileDialog.FilterIndex = 2;
+			openFileDialog.RestoreDirectory = true;
+
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					using (Stream myStream = openFileDialog.OpenFile())
+					{
+						if (myStream != null)
+						{
+							using (StreamReader csvFile = new StreamReader(myStream))
+							{
+								buffer = csvFile.ReadToEnd();
+							}
+						}
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
+				}
+			}
 		}
 
 		void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,7 +66,7 @@ namespace Char_Generator
 
 		void charGenMain_Shown(object sender, EventArgs e)
 		{
-			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\default_JSON.json"));
+			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Characters\\default_JSON.json"));
 			refresh();
 		}
 
@@ -55,7 +83,7 @@ namespace Char_Generator
 			textBoxXpSpent.Text = selectedCharacter.experienceSpent.ToString();
 			textBoxSpecialRules.Text = selectedCharacter.getSpecialRules();
 			textBoxAptitudes.Text = selectedCharacter.aptitudes.ToString();
-			textBoxAttributes.Text = selectedCharacter.attributes.getDisplayed();
+			textBoxCharacteristics.Text = selectedCharacter.characteristics.getDisplayed();
 			textBoxSkills.Text = selectedCharacter.skills.getDisplayed();
 		}
 
@@ -82,10 +110,10 @@ namespace Char_Generator
 			richTextBoxCurrentlyKnown.Text += selectedCharacter.aptitudes.ToString();
 		}
 
-		void showAttributes_Click(object sender, EventArgs e)
+		void showCharacteristics_Click(object sender, EventArgs e)
 		{
 			richTextBoxCurrentlyKnown.Text = string.Empty;
-			richTextBoxCurrentlyKnown.Text += selectedCharacter.attributes.ToString();
+			richTextBoxCurrentlyKnown.Text += selectedCharacter.characteristics.ToString();
 		}
 
 		void showCharacter_Click(object sender, EventArgs e)
@@ -96,19 +124,24 @@ namespace Char_Generator
 
 		void MenuItemCreateCharacter_Click(object sender, EventArgs e)
 		{
-			 
-		}
 
-		void MenuItemCreateRegiment_Click(object sender, EventArgs e)
-		{
-
+			var characterCreationWindow = new CreateCharacter(selectedCharacter);
+			characterCreationWindow.Show();
+			//Save character 
+			//Load character 
+			//Display
+			//Regiment test = new Regiment();
+			//List<Regiment> test2 = new List<Regiment>();
+			//test2.Add(test);
+			//test2.Add(test);
+			//FileIO.writeToFile("TextFiles\\default_regiment_JSON.json", FileIO.SerializeJSON(test2));
 		}
 
 		void buttonSpendXp_Click(object sender, EventArgs e)
 		{
-			var xpSpender = new spendXpForm(selectedCharacter);
-			xpSpender.ShowDialog();
-			selectedCharacter = xpSpender.GetSelectedCharacter();
+			var xpSpendWindow = new spendXpForm(selectedCharacter);
+			xpSpendWindow.ShowDialog();
+			selectedCharacter = xpSpendWindow.GetSelectedCharacter();
 			refresh();
 		}
 	}
