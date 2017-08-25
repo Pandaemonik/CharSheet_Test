@@ -8,7 +8,7 @@ namespace Char_Generator
 	public partial class CreateCharacter : Form
 	{
 		List<Regiment> regiments = new List<Regiment>();
-		List<Specialty> specialtyes = new List<Specialty>();
+		List<Specialty> specialties = new List<Specialty>();
 		Dictionary<string, string> demeanors = new Dictionary<string, string>();
 		Character selectedCharacter;
 		Character newCharacter;
@@ -23,13 +23,13 @@ namespace Char_Generator
 			newCharacter = new Character();
 			regiments = JsonConvert.DeserializeObject<List<Regiment>>(FileIO.readJson("TextFiles\\data\\default_regiment.json"));
 			demeanorsTemp = JsonConvert.DeserializeObject<List<string>>(FileIO.readJson("TextFiles\\data\\default_demeanors.json"));
+			specialties = JsonConvert.DeserializeObject<List<Specialty>>(FileIO.readJson("TextFiles\\data\\default_specialties.json"));
+			string[] parsed = new string[2];
 			foreach (string demeanor in demeanorsTemp)
 			{
-				var parsed = parseDemeanorName(demeanor);
+				parsed = parseDemeanorName(demeanor);
 				demeanors.Add(parsed[0], parsed[1]);
 			}
-
-			//TODO Load Specialties
 		}
 
 		public Character getSelectedCharacter()
@@ -41,7 +41,7 @@ namespace Char_Generator
 		{
 			listBoxRegiment.Items.AddRange(validateRegiment());
 			listBoxDemeanor.Items.AddRange(validateDemeanors());
-			//TODO display specialty in listbox
+			listBoxSpecialty.Items.AddRange(validateSpecialty());
 			textBoxWeaponSkill.Text = getCharacteristicRoll().ToString();
 			textBoxBallisticSkill.Text = getCharacteristicRoll().ToString();
 			textBoxStrenght.Text = getCharacteristicRoll().ToString();
@@ -71,7 +71,7 @@ namespace Char_Generator
 		string[] validateSpecialty()
 		{
 			List<string> toBeReturned = new List<string>();
-			foreach (Specialty singleSpecialty in specialtyes)
+			foreach (Specialty singleSpecialty in specialties)
 			{
 				toBeReturned.Add(singleSpecialty.name);
 			}
@@ -100,6 +100,7 @@ namespace Char_Generator
 			}
 			return toBeReturned.ToArray();
 		}
+
 		bool checkCreateButtonEnabled()
 		{
 			if (listBoxDemeanor.SelectedIndex != -1 && listBoxRegiment.SelectedIndex != -1
@@ -108,6 +109,7 @@ namespace Char_Generator
 			return false;
 
 		}
+
 		void buttonCancel_Click(object sender, EventArgs e)
 		{
 			Hide();
@@ -115,13 +117,23 @@ namespace Char_Generator
 
 		void buttonCreate_Click(object sender, EventArgs e)
 		{
-			//TODO Load regiment parts to newCharacter
-			//TODO Load specialty info to newCharacter
-			//TODO Load demeanor info to newCharacter
-			//TODO Load name to newCharacter
-			//TODO Load Details to newCharacter
-			//TODO Save selected Character
-			//TODO Assign newCharacter to selectedCharacter
+			newCharacter.regiment = listBoxRegiment.Text.Trim();
+			newCharacter.specialty = listBoxSpecialty.Text.Trim();
+			newCharacter.name = textBoxName.Text.Trim();
+			newCharacter.demeanour = listBoxDemeanor.Text.Trim() + " - " + textBoxDemeanor.Text.Trim();
+			newCharacter.description = textBoxDescription.Text;
+			newCharacter.experienceSpent = 0;
+			newCharacter.experienceLeft = 600;
+			var selectedSpecialty = specialties.Find(x => x.name.Trim() == listBoxSpecialty.Text.Trim());
+			var selectedRegiment = regiments.Find(x => x.name.Trim() == listBoxRegiment.Text.Trim());
+			assignSkills(selectedSpecialty, selectedRegiment);
+			assignWounds(selectedSpecialty, selectedRegiment);
+			assignSpecialRules(selectedSpecialty, selectedRegiment);
+			assignTalents(selectedSpecialty, selectedRegiment);
+			assignAptitudes(selectedSpecialty, selectedRegiment);
+			assignCharacteristics(selectedSpecialty, selectedRegiment);
+			FileIO.saveCharactertoJson(selectedCharacter);
+			selectedCharacter = newCharacter;
 			Hide();
 		}
 
@@ -134,7 +146,9 @@ namespace Char_Generator
 
 		void listBoxSpecialty_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			//TODO Display specialty.toString() in textBoxSpecialty
+			var toBeDisplayed = specialties.Find(x => x.name.Trim() == listBoxSpecialty.Text.Trim());
+			textBoxSpecialty.Text = toBeDisplayed.ToString();
+			buttonCreate.Enabled = checkCreateButtonEnabled();
 		}
 
 		void listBoxDemeanor_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,5 +184,55 @@ namespace Char_Generator
 			int rollTwo = tenSidedDie.Next(1, 11);
 			return rollOne + rollTwo + 20;
 		}
+
+		void textBoxName_TextChanged(object sender, EventArgs e)
+		{
+			buttonCreate.Enabled = checkCreateButtonEnabled();
+		}
+
+		void assignSkills(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			selectedRegiment.skills.skill.ForEach(newCharacter.skills.Add);
+			selectedSpecialty.skills.skill.ForEach(newCharacter.skills.Add);
+		}
+
+		void assignCharacteristics(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			selectedSpecialty.characteristics.characteristic.ForEach(newCharacter.characteristics.Add);
+			selectedRegiment.characteristics.characteristic.ForEach((x => newCharacter.characteristics.addValue(x.Name, x.Value)));
+			newCharacter.characteristics.addValue("Weapon Skill", int.Parse(textBoxWeaponSkill.Text));
+			newCharacter.characteristics.addValue("Ballistic Skill", int.Parse(textBoxBallisticSkill.Text));
+			newCharacter.characteristics.addValue("Strength", int.Parse(textBoxStrenght.Text));
+			newCharacter.characteristics.addValue("Toughness", int.Parse(textBoxToughness.Text));
+			newCharacter.characteristics.addValue("Agility", int.Parse(textBoxAgility.Text));
+			newCharacter.characteristics.addValue("Intelligence", int.Parse(textBoxIntelligence.Text));
+			newCharacter.characteristics.addValue("Perception", int.Parse(textBoxPerception.Text));
+			newCharacter.characteristics.addValue("Willpower", int.Parse(textBoxWillpower.Text));
+			newCharacter.characteristics.addValue("Fellowship", int.Parse(textBoxFellowship.Text));
+		}
+
+		void assignTalents(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			selectedRegiment.talents.talent.ForEach(newCharacter.talents.Add);
+			selectedSpecialty.talents.talent.ForEach(newCharacter.talents.Add);
+		}
+
+		void assignAptitudes(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			selectedRegiment.aptitides.possessed.ForEach(newCharacter.aptitudes.Add);
+			selectedSpecialty.aptitides.possessed.ForEach(newCharacter.aptitudes.Add);
+		}
+
+		void assignSpecialRules(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			selectedRegiment.specialRules.ForEach(newCharacter.specialRules.Add);
+			selectedSpecialty.specialRules.ForEach(newCharacter.specialRules.Add);
+		}
+
+		void assignWounds(Specialty selectedSpecialty, Regiment selectedRegiment)
+		{
+			newCharacter.wounds = selectedRegiment.wounds + selectedSpecialty.wounds;
+		}
+
 	}
 }

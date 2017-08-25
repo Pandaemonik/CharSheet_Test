@@ -107,7 +107,10 @@ namespace Char_Generator
 		{
 			if (available.Contains(toBeAdded))
 			{
-				possessed.Add(toBeAdded);
+				if (!possessed.Contains(toBeAdded))
+				{
+					possessed.Add(toBeAdded);
+				}
 			}
 			else
 			{

@@ -78,11 +78,14 @@ namespace Char_Generator
 			return false;
 		}
 
-		public void Add(Talent talent)
+		public void Add(Talent talentToBeAdded)
 		{
 			try
 			{
-				this.talent.Add(talent);
+				if (!talent.Contains(talentToBeAdded))
+				{
+                	talent.Add(talentToBeAdded);
+				}
 			}
 			catch (Exception ex)
 			{

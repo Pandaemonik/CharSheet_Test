@@ -134,7 +134,10 @@ namespace Char_Generator
 
 			foreach (Characteristic single in characteristic)
 			{
-				toBeReturned += single.Name + ": " + (single.Value + (5 * single.Tier)).ToString() + "\n";
+				if (single.Value > 0)
+				{
+					toBeReturned += single.Name + ": " + (single.Value + (5 * single.Tier)).ToString() + "\n";
+				}
 			}
 			return toBeReturned;
 		}
@@ -154,6 +157,5 @@ namespace Char_Generator
 				MessageBox.Show("Error: Failed to insert skill. Skill is empty");;
 			}
 		}
-
 	}
 }

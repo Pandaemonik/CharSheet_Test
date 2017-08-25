@@ -15,41 +15,19 @@ namespace Char_Generator
 			InitializeComponent();
 		}
 
+
 		void exportCharacterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FileIO.writeToFile("TextFiles\\" + selectedCharacter.name + "_JSON.json", FileIO.SerializeJSON(selectedCharacter));
+			FileIO.saveCharactertoJson(selectedCharacter);
 		}
 
 		void importCharacterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-
-			OpenFileDialog openFileDialog = new OpenFileDialog();
-			String buffer = String.Empty;
-
-			openFileDialog.InitialDirectory = "E:\\C#_Projects\\Char_Generator\\Char_Generator";
-			openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-			openFileDialog.FilterIndex = 2;
-			openFileDialog.RestoreDirectory = true;
-
-			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			var characterFile = FileIO.openFile();
+			if (characterFile != "NULL")
 			{
-				try
-				{
-					using (Stream myStream = openFileDialog.OpenFile())
-					{
-						if (myStream != null)
-						{
-							using (StreamReader csvFile = new StreamReader(myStream))
-							{
-								buffer = csvFile.ReadToEnd();
-							}
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
-				}
+				selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readCharacter(characterFile));
+				refresh();
 			}
 		}
 
@@ -66,7 +44,7 @@ namespace Char_Generator
 
 		void charGenMain_Shown(object sender, EventArgs e)
 		{
-			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Characters\\default_JSON.json"));
+			selectedCharacter = JsonConvert.DeserializeObject<Character>(FileIO.readJson("TextFiles\\Characters\\default.character"));
 			refresh();
 		}
 
@@ -86,12 +64,6 @@ namespace Char_Generator
 			textBoxCharacteristics.Text = selectedCharacter.characteristics.getDisplayed();
 			textBoxSkills.Text = selectedCharacter.skills.getDisplayed();
 		}
-
-		void listBoxCharacters_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		void showSkills_Click(object sender, EventArgs e)
 		{
 			richTextBoxCurrentlyKnown.Text = string.Empty;
@@ -124,17 +96,10 @@ namespace Char_Generator
 
 		void MenuItemCreateCharacter_Click(object sender, EventArgs e)
 		{
-
 			var characterCreationWindow = new CreateCharacter(selectedCharacter);
-			characterCreationWindow.Show();
-			//Save character 
-			//Load character 
-			//Display
-			//Regiment test = new Regiment();
-			//List<Regiment> test2 = new List<Regiment>();
-			//test2.Add(test);
-			//test2.Add(test);
-			//FileIO.writeToFile("TextFiles\\default_regiment_JSON.json", FileIO.SerializeJSON(test2));
+			characterCreationWindow.ShowDialog();
+			selectedCharacter = characterCreationWindow.getSelectedCharacter();
+			refresh();
 		}
 
 		void buttonSpendXp_Click(object sender, EventArgs e)

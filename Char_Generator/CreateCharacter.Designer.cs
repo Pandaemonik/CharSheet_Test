@@ -180,6 +180,7 @@
 			this.textBoxName.Size = new System.Drawing.Size(146, 20);
 			this.textBoxName.TabIndex = 104;
 			this.textBoxName.Text = "";
+			this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
 			// 
 			// textBoxDescription
 			// 

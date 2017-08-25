@@ -37,13 +37,11 @@
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
 			this.showCharacter = new System.Windows.Forms.Button();
-			this.listBoxCharacters = new System.Windows.Forms.ListBox();
 			this.showCharacteristics = new System.Windows.Forms.Button();
 			this.showAptitudes = new System.Windows.Forms.Button();
 			this.showTalents = new System.Windows.Forms.Button();
 			this.showSkills = new System.Windows.Forms.Button();
 			this.richTextBoxCurrentlyKnown = new System.Windows.Forms.RichTextBox();
-			this.labelCurrentlyKnown = new System.Windows.Forms.Label();
 			this.tabPageMain = new System.Windows.Forms.TabPage();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.buttonChangeDescription = new System.Windows.Forms.Button();
@@ -148,44 +146,34 @@
 			// tabPageDisplauInLabel
 			// 
 			this.tabPageDisplauInLabel.Controls.Add(this.showCharacter);
-			this.tabPageDisplauInLabel.Controls.Add(this.listBoxCharacters);
 			this.tabPageDisplauInLabel.Controls.Add(this.showCharacteristics);
 			this.tabPageDisplauInLabel.Controls.Add(this.showAptitudes);
 			this.tabPageDisplauInLabel.Controls.Add(this.showTalents);
 			this.tabPageDisplauInLabel.Controls.Add(this.showSkills);
 			this.tabPageDisplauInLabel.Controls.Add(this.richTextBoxCurrentlyKnown);
-			this.tabPageDisplauInLabel.Controls.Add(this.labelCurrentlyKnown);
 			this.tabPageDisplauInLabel.Location = new System.Drawing.Point(4, 22);
 			this.tabPageDisplauInLabel.Name = "tabPageDisplauInLabel";
 			this.tabPageDisplauInLabel.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPageDisplauInLabel.Size = new System.Drawing.Size(1076, 442);
 			this.tabPageDisplauInLabel.TabIndex = 1;
-			this.tabPageDisplauInLabel.Text = "Debug Window";
+			this.tabPageDisplauInLabel.Text = "Show as Text";
 			this.tabPageDisplauInLabel.UseVisualStyleBackColor = true;
 			// 
 			// showCharacter
 			// 
-			this.showCharacter.Location = new System.Drawing.Point(486, 144);
+			this.showCharacter.Location = new System.Drawing.Point(8, 386);
 			this.showCharacter.Name = "showCharacter";
-			this.showCharacter.Size = new System.Drawing.Size(92, 23);
+			this.showCharacter.Size = new System.Drawing.Size(117, 23);
 			this.showCharacter.TabIndex = 74;
 			this.showCharacter.Text = "Show Character";
 			this.showCharacter.UseVisualStyleBackColor = true;
 			this.showCharacter.Click += new System.EventHandler(this.showCharacter_Click);
 			// 
-			// listBoxCharacters
-			// 
-			this.listBoxCharacters.FormattingEnabled = true;
-			this.listBoxCharacters.Location = new System.Drawing.Point(584, 20);
-			this.listBoxCharacters.Name = "listBoxCharacters";
-			this.listBoxCharacters.Size = new System.Drawing.Size(244, 30);
-			this.listBoxCharacters.TabIndex = 72;
-			// 
 			// showCharacteristics
 			// 
-			this.showCharacteristics.Location = new System.Drawing.Point(486, 113);
+			this.showCharacteristics.Location = new System.Drawing.Point(239, 385);
 			this.showCharacteristics.Name = "showCharacteristics";
-			this.showCharacteristics.Size = new System.Drawing.Size(92, 25);
+			this.showCharacteristics.Size = new System.Drawing.Size(117, 25);
 			this.showCharacteristics.TabIndex = 61;
 			this.showCharacteristics.Text = "Show Characteristics";
 			this.showCharacteristics.UseVisualStyleBackColor = true;
@@ -193,9 +181,9 @@
 			// 
 			// showAptitudes
 			// 
-			this.showAptitudes.Location = new System.Drawing.Point(486, 82);
+			this.showAptitudes.Location = new System.Drawing.Point(460, 385);
 			this.showAptitudes.Name = "showAptitudes";
-			this.showAptitudes.Size = new System.Drawing.Size(92, 25);
+			this.showAptitudes.Size = new System.Drawing.Size(117, 25);
 			this.showAptitudes.TabIndex = 60;
 			this.showAptitudes.Text = "Show Aptitudes";
 			this.showAptitudes.UseVisualStyleBackColor = true;
@@ -203,9 +191,9 @@
 			// 
 			// showTalents
 			// 
-			this.showTalents.Location = new System.Drawing.Point(486, 51);
+			this.showTalents.Location = new System.Drawing.Point(686, 385);
 			this.showTalents.Name = "showTalents";
-			this.showTalents.Size = new System.Drawing.Size(92, 25);
+			this.showTalents.Size = new System.Drawing.Size(117, 25);
 			this.showTalents.TabIndex = 59;
 			this.showTalents.Text = "Show Talents";
 			this.showTalents.UseVisualStyleBackColor = true;
@@ -213,9 +201,9 @@
 			// 
 			// showSkills
 			// 
-			this.showSkills.Location = new System.Drawing.Point(486, 20);
+			this.showSkills.Location = new System.Drawing.Point(857, 385);
 			this.showSkills.Name = "showSkills";
-			this.showSkills.Size = new System.Drawing.Size(92, 25);
+			this.showSkills.Size = new System.Drawing.Size(117, 25);
 			this.showSkills.TabIndex = 58;
 			this.showSkills.Text = "Show Skills";
 			this.showSkills.UseVisualStyleBackColor = true;
@@ -223,21 +211,12 @@
 			// 
 			// richTextBoxCurrentlyKnown
 			// 
-			this.richTextBoxCurrentlyKnown.Location = new System.Drawing.Point(8, 20);
+			this.richTextBoxCurrentlyKnown.Location = new System.Drawing.Point(8, 19);
 			this.richTextBoxCurrentlyKnown.Name = "richTextBoxCurrentlyKnown";
 			this.richTextBoxCurrentlyKnown.ReadOnly = true;
-			this.richTextBoxCurrentlyKnown.Size = new System.Drawing.Size(472, 397);
+			this.richTextBoxCurrentlyKnown.Size = new System.Drawing.Size(966, 360);
 			this.richTextBoxCurrentlyKnown.TabIndex = 57;
 			this.richTextBoxCurrentlyKnown.Text = "";
-			// 
-			// labelCurrentlyKnown
-			// 
-			this.labelCurrentlyKnown.AutoSize = true;
-			this.labelCurrentlyKnown.Location = new System.Drawing.Point(5, 3);
-			this.labelCurrentlyKnown.Name = "labelCurrentlyKnown";
-			this.labelCurrentlyKnown.Size = new System.Drawing.Size(83, 13);
-			this.labelCurrentlyKnown.TabIndex = 56;
-			this.labelCurrentlyKnown.Text = "Currently known";
 			// 
 			// tabPageMain
 			// 
@@ -606,7 +585,6 @@
 			this.menuStripMain.ResumeLayout(false);
 			this.menuStripMain.PerformLayout();
 			this.tabPageDisplauInLabel.ResumeLayout(false);
-			this.tabPageDisplauInLabel.PerformLayout();
 			this.tabPageMain.ResumeLayout(false);
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
@@ -635,9 +613,7 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.RichTextBox richTextBoxCurrentlyKnown;
-		private System.Windows.Forms.Label labelCurrentlyKnown;
 		private System.Windows.Forms.ListBox listBoxTalentDetails;
-		private System.Windows.Forms.ListBox listBoxCharacters;
 		private System.Windows.Forms.Button showCharacteristics;
 		private System.Windows.Forms.Button showAptitudes;
 		private System.Windows.Forms.Button showTalents;

@@ -30,7 +30,14 @@ namespace Char_Generator
 		}
 
 		[JsonConstructor]
-		public Character() { }
+		public Character() 
+		{
+			specialRules = new List<string>();
+			characteristics = new Characteristics();
+			skills = new Skills();
+			talents = new Talents();
+			aptitudes = new Aptitudes();
+		}
 
 
 		public Character(Characteristics characteristics, Skills skills, Talents talents, Aptitudes aptitudes, string campaignId)

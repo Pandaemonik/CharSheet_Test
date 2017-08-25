@@ -16,8 +16,8 @@ namespace Char_Generator
 			InitializeComponent();
 			this.selectedCharacter = selectedCharacter;
 			tempCharacter = selectedCharacter;
-			availableTalents = JsonConvert.DeserializeObject<Talents>(FileIO.readJson("TextFiles\\talents_JSON.json"));
-			availableSkills = JsonConvert.DeserializeObject<Skills>(FileIO.readJson("TextFiles\\skills_JSON.json"));
+			availableTalents = JsonConvert.DeserializeObject<Talents>(FileIO.readJson("TextFiles\\data\\default_talents.json"));
+			availableSkills = JsonConvert.DeserializeObject<Skills>(FileIO.readJson("TextFiles\\data\\default_skills.json"));
 		}
 
 		public Character GetSelectedCharacter()

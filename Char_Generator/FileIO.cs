@@ -15,7 +15,7 @@ namespace Char_Generator
 
 			try
 			{
-				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory,csvLocation)))
+				using (Stream myStream = File.OpenRead(Path.Combine(Environment.CurrentDirectory, csvLocation)))
 				{
 					if (myStream != null)
 					{
@@ -100,9 +100,32 @@ namespace Char_Generator
 			{
 				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
 			}
-
 			return toBeReturned;
 		}
+
+		public static string readCharacter(string characterLocation)
+		{
+			var toBeReturned = string.Empty;
+			try
+			{
+				using (Stream myStream = File.OpenRead(characterLocation))
+				{
+					if (myStream != null)
+					{
+						using (StreamReader jsonFile = new StreamReader(myStream))
+						{
+							toBeReturned = jsonFile.ReadToEnd();
+						}
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Could not read file from disk. Original error: \n" + ex.Message);
+			}
+			return toBeReturned;
+		}
+
 
 		public static string SerializeJSON(object o)
 		{
@@ -110,15 +133,32 @@ namespace Char_Generator
 			return json;
 		}
 
-		public static void writeToFile(string fileName,string text)
+		public static void writeToFile(string fileName, string text)
 		{
-			File.WriteAllText(Path.Combine(Environment.CurrentDirectory, fileName),text);
+			File.WriteAllText(Path.Combine(Environment.CurrentDirectory, fileName), text);
 		}
 
 		public static string openFile()
 		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			string buffer = string.Empty;
 
-			return string.Empty;
+			openFileDialog.InitialDirectory = Environment.CurrentDirectory;
+			openFileDialog.Filter = "Character files (*.character)|*.txt|All files (*.*)|*.*";
+			openFileDialog.FilterIndex = 2;
+			openFileDialog.RestoreDirectory = true;
+
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				return openFileDialog.FileName;
+			}
+			return "NULL";
 		}
+
+		public static void saveCharactertoJson(Character character)
+		{
+			writeToFile("TextFiles\\Characters\\" + character.name + ".character", SerializeJSON(character));
+		}
+
 	}
 }
