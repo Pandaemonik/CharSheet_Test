@@ -35,6 +35,7 @@
 			this.textBoxSkillCost = new System.Windows.Forms.RichTextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.textBoxTalent = new System.Windows.Forms.RichTextBox();
 			this.buttonBuyTalents = new System.Windows.Forms.Button();
 			this.textBoxTalentCost = new System.Windows.Forms.RichTextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.listBoxBuyList = new System.Windows.Forms.ListBox();
-			this.textBoxTalent = new System.Windows.Forms.RichTextBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -133,6 +133,15 @@
 			this.groupBox2.TabIndex = 3;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Talents";
+			// 
+			// textBoxTalent
+			// 
+			this.textBoxTalent.Location = new System.Drawing.Point(6, 198);
+			this.textBoxTalent.Name = "textBoxTalent";
+			this.textBoxTalent.ReadOnly = true;
+			this.textBoxTalent.Size = new System.Drawing.Size(188, 176);
+			this.textBoxTalent.TabIndex = 98;
+			this.textBoxTalent.Text = "";
 			// 
 			// buttonBuyTalents
 			// 
@@ -318,15 +327,6 @@
 			this.listBoxBuyList.TabIndex = 1;
 			this.listBoxBuyList.SelectedIndexChanged += new System.EventHandler(this.listBoxBuyList_SelectedIndexChanged);
 			// 
-			// textBoxTalent
-			// 
-			this.textBoxTalent.Location = new System.Drawing.Point(6, 198);
-			this.textBoxTalent.Name = "textBoxTalent";
-			this.textBoxTalent.ReadOnly = true;
-			this.textBoxTalent.Size = new System.Drawing.Size(188, 176);
-			this.textBoxTalent.TabIndex = 98;
-			this.textBoxTalent.Text = "";
-			// 
 			// spendXpForm
 			// 
 			this.ClientSize = new System.Drawing.Size(849, 441);
@@ -335,7 +335,7 @@
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "spendXpForm";
-			this.Load += new System.EventHandler(this.spendXpForm_Load);
+			this.Shown += new System.EventHandler(this.spendXpForm_Shown);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);

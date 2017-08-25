@@ -71,7 +71,7 @@ namespace Char_Generator
 				{
 					if (characteristic.Contains(characteristicToBeAdded))
 					{
-						int index = characteristic.IndexOf(characteristicToBeAdded);
+						var index = characteristic.IndexOf(characteristicToBeAdded);
 						characteristic[index].Tier++;
 						if (characteristic[index].Tier > 4)
 						{
@@ -112,7 +112,7 @@ namespace Char_Generator
 		{
 			if (toBeRemoved != null)
 			{
-				int index = characteristic.IndexOf(toBeRemoved);
+				var index = characteristic.IndexOf(toBeRemoved);
 				if (characteristic[index].Tier > 0)
 				{
 					characteristic[index].Tier--;
@@ -149,12 +149,12 @@ namespace Char_Generator
 
 			if (characteristicName != null)
 			{
-				int index = characteristic.IndexOf(foundCharacteristic);
+				var index = characteristic.IndexOf(foundCharacteristic);
 				characteristic[index].Value += value;
 			}
 			else
 			{
-				MessageBox.Show("Error: Failed to insert skill. Skill is empty");;
+				MessageBox.Show("Error: Failed to insert skill. Skill is empty");
 			}
 		}
 	}

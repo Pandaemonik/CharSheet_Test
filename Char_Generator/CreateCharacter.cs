@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 
 namespace Char_Generator
@@ -17,19 +20,8 @@ namespace Char_Generator
 		public CreateCharacter(Character selectedCharacter)
 		{
 			InitializeComponent();
-			List<string> demeanorsTemp = new List<string>();
 			this.selectedCharacter = selectedCharacter;
-
 			newCharacter = new Character();
-			regiments = JsonConvert.DeserializeObject<List<Regiment>>(FileIO.readJson("TextFiles\\data\\default_regiment.json"));
-			demeanorsTemp = JsonConvert.DeserializeObject<List<string>>(FileIO.readJson("TextFiles\\data\\default_demeanors.json"));
-			specialties = JsonConvert.DeserializeObject<List<Specialty>>(FileIO.readJson("TextFiles\\data\\default_specialties.json"));
-			string[] parsed = new string[2];
-			foreach (string demeanor in demeanorsTemp)
-			{
-				parsed = parseDemeanorName(demeanor);
-				demeanors.Add(parsed[0], parsed[1]);
-			}
 		}
 
 		public Character getSelectedCharacter()
@@ -37,8 +29,36 @@ namespace Char_Generator
 			return selectedCharacter;
 		}
 
-		void CreateCharacter_Load(object sender, EventArgs e)
+		async void CreateCharacter_Shown(object sender, EventArgs e)
 		{
+			try
+			{
+				var client = new MongoClient("mongodb://localhost:27017");
+
+				var database = client.GetDatabase("main");
+				var collectionRegiments = database.GetCollection<BsonDocument>("regiment");
+				var collectionSpecialties = database.GetCollection<BsonDocument>("specialties");
+				await collectionSpecialties.Find(new BsonDocument()).ForEachAsync(x => specialties.Add(
+																JsonConvert.DeserializeObject<Specialty>(x.ToJson())));
+				await collectionRegiments.Find(new BsonDocument()).ForEachAsync(x => regiments.Add(
+												JsonConvert.DeserializeObject<Regiment>(x.ToJson())));
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Could not establish connection to DB(" + ex.Message + ") using default");
+				regiments = JsonConvert.DeserializeObject<List<Regiment>>(FileIO.readJson("TextFiles\\defaults\\default.regiment"));
+				specialties = JsonConvert.DeserializeObject<List<Specialty>>(FileIO.readJson("TextFiles\\defaults\\default.specialties"));
+			}
+
+			var demeanorsTemp = new List<string>();
+			demeanorsTemp = JsonConvert.DeserializeObject<List<string>>(FileIO.readJson("TextFiles\\defaults\\default.demeanors"));
+			string[] parsed = new string[2];
+			foreach (string demeanor in demeanorsTemp)
+			{
+				parsed = parseDemeanorName(demeanor);
+				demeanors.Add(parsed[0], parsed[1]);
+			}
 			listBoxRegiment.Items.AddRange(validateRegiment());
 			listBoxDemeanor.Items.AddRange(validateDemeanors());
 			listBoxSpecialty.Items.AddRange(validateSpecialty());
@@ -56,7 +76,7 @@ namespace Char_Generator
 
 		string[] validateRegiment()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			foreach (Regiment singleRegiment in regiments)
 			{
 				toBeReturned.Add(singleRegiment.name);
@@ -65,12 +85,12 @@ namespace Char_Generator
 			{
 				toBeReturned.Add("No Regiments available");
 			}
-			return toBeReturned.ToArray(); ;
+			return toBeReturned.ToArray();
 		}
 
 		string[] validateSpecialty()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			foreach (Specialty singleSpecialty in specialties)
 			{
 				toBeReturned.Add(singleSpecialty.name);
@@ -81,12 +101,12 @@ namespace Char_Generator
 				toBeReturned.Add("No specialty available");
 			}
 
-			return toBeReturned.ToArray(); ;
+			return toBeReturned.ToArray();
 		}
 
 		string[] validateDemeanors()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			var keys = demeanors.Keys;
 
 			foreach (string key in keys)
@@ -167,7 +187,7 @@ namespace Char_Generator
 
 		string[] parseDemeanorName(string toBeParsed)
 		{
-			List<string> parsed = new List<string>();
+			var parsed = new List<string>();
 			var startIndex = toBeParsed.IndexOf('-');
 			var name = toBeParsed.Substring(0, startIndex);
 			var length = toBeParsed.Length - startIndex - 1;
@@ -180,8 +200,8 @@ namespace Char_Generator
 
 		int getCharacteristicRoll()
 		{
-			int rollOne = tenSidedDie.Next(1, 11);
-			int rollTwo = tenSidedDie.Next(1, 11);
+			var rollOne = tenSidedDie.Next(1, 11);
+			var rollTwo = tenSidedDie.Next(1, 11);
 			return rollOne + rollTwo + 20;
 		}
 

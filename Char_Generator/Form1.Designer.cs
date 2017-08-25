@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exportCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.importCharacterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.characterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateCharacter = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
@@ -74,6 +74,7 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.textBoxCharacteristics = new System.Windows.Forms.RichTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.addExpirienceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
 			this.tabPageMain.SuspendLayout();
@@ -89,54 +90,55 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportCharacterToolStripMenuItem,
+            this.saveCharacterToolStripMenuItem,
             this.importCharacterToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "&File";
 			// 
-			// exportCharacterToolStripMenuItem
+			// saveCharacterToolStripMenuItem
 			// 
-			this.exportCharacterToolStripMenuItem.Name = "exportCharacterToolStripMenuItem";
-			this.exportCharacterToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			this.exportCharacterToolStripMenuItem.Text = "Export Character";
-			this.exportCharacterToolStripMenuItem.Click += new System.EventHandler(this.exportCharacterToolStripMenuItem_Click);
+			this.saveCharacterToolStripMenuItem.Name = "saveCharacterToolStripMenuItem";
+			this.saveCharacterToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.saveCharacterToolStripMenuItem.Text = "Save Character";
+			this.saveCharacterToolStripMenuItem.Click += new System.EventHandler(this.exportCharacterToolStripMenuItem_Click);
 			// 
 			// importCharacterToolStripMenuItem
 			// 
 			this.importCharacterToolStripMenuItem.Name = "importCharacterToolStripMenuItem";
-			this.importCharacterToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-			this.importCharacterToolStripMenuItem.Text = "Import Character";
+			this.importCharacterToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.importCharacterToolStripMenuItem.Text = "Load Character";
 			this.importCharacterToolStripMenuItem.Click += new System.EventHandler(this.importCharacterToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
-			// displayToolStripMenuItem
+			// characterToolStripMenuItem
 			// 
-			this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemCreateCharacter});
-			this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-			this.displayToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-			this.displayToolStripMenuItem.Text = "&Create";
+			this.characterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemCreateCharacter,
+            this.addExpirienceToolStripMenuItem});
+			this.characterToolStripMenuItem.Name = "characterToolStripMenuItem";
+			this.characterToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+			this.characterToolStripMenuItem.Text = "&Character";
 			// 
 			// MenuItemCreateCharacter
 			// 
 			this.MenuItemCreateCharacter.Name = "MenuItemCreateCharacter";
-			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(125, 22);
-			this.MenuItemCreateCharacter.Text = "Character";
+			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(155, 22);
+			this.MenuItemCreateCharacter.Text = "Create";
 			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.MenuItemCreateCharacter_Click);
 			// 
 			// menuStripMain
 			// 
 			this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.displayToolStripMenuItem});
+            this.characterToolStripMenuItem});
 			this.menuStripMain.Location = new System.Drawing.Point(0, 0);
 			this.menuStripMain.Name = "menuStripMain";
 			this.menuStripMain.Size = new System.Drawing.Size(990, 24);
@@ -569,6 +571,13 @@
 			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
 			this.tabControl1.TabIndex = 15;
 			// 
+			// addExpirienceToolStripMenuItem
+			// 
+			this.addExpirienceToolStripMenuItem.Name = "addExpirienceToolStripMenuItem";
+			this.addExpirienceToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+			this.addExpirienceToolStripMenuItem.Text = "Add Experience";
+			this.addExpirienceToolStripMenuItem.Click += new System.EventHandler(this.addExpirienceToolStripMenuItem_Click);
+			// 
 			// charGenMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,10 +611,10 @@
         #endregion
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem characterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuItemCreateCharacter;
         private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.ToolStripMenuItem exportCharacterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveCharacterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importCharacterToolStripMenuItem;
 		private System.Windows.Forms.TabPage tabPageDisplauInLabel;
 		private System.Windows.Forms.TabPage tabPageMain;
@@ -646,6 +655,7 @@
 		private System.Windows.Forms.RichTextBox textBoxAptitudes;
 		private System.Windows.Forms.RichTextBox textBoxSkills;
 		private System.Windows.Forms.RichTextBox textBoxCharacteristics;
+		private System.Windows.Forms.ToolStripMenuItem addExpirienceToolStripMenuItem;
 	}
 }
 

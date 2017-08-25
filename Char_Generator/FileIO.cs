@@ -126,7 +126,6 @@ namespace Char_Generator
 			return toBeReturned;
 		}
 
-
 		public static string SerializeJSON(object o)
 		{
 			var json = JsonConvert.SerializeObject(o, Formatting.Indented);
@@ -140,10 +139,10 @@ namespace Char_Generator
 
 		public static string openFile()
 		{
-			OpenFileDialog openFileDialog = new OpenFileDialog();
+			var openFileDialog = new OpenFileDialog();
 			string buffer = string.Empty;
 
-			openFileDialog.InitialDirectory = Environment.CurrentDirectory;
+			openFileDialog.InitialDirectory = Path.Combine(Environment.CurrentDirectory, "TextFiles\\Characters");
 			openFileDialog.Filter = "Character files (*.character)|*.txt|All files (*.*)|*.*";
 			openFileDialog.FilterIndex = 2;
 			openFileDialog.RestoreDirectory = true;

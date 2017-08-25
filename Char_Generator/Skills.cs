@@ -9,6 +9,7 @@ namespace Char_Generator
 {
 	public class Skills
 	{
+		public string _id; 
 		public List<Skill> skill = new List<Skill>();
 
 		[JsonConstructor]
@@ -78,7 +79,7 @@ namespace Char_Generator
 				{
 					if (skill.Contains(skillToBeAdded))
 					{
-						int index = skill.IndexOf(skillToBeAdded);
+						var index = skill.IndexOf(skillToBeAdded);
 						skill[index].Tier++;
 						if (skill[index].Tier > 3)
 						{
@@ -105,13 +106,13 @@ namespace Char_Generator
 		{
 			if (toBeRemoved != null)
 			{
-				int index = skill.IndexOf(toBeRemoved);
+				var index = skill.IndexOf(toBeRemoved);
 				if (skill[index].Tier >0)
 				{
 					skill[index].Tier--;
 				}
 				else
-				{;
+				{
 					skill.Remove(toBeRemoved);
 				}
 			}

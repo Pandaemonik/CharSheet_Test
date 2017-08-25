@@ -4,6 +4,7 @@ namespace Char_Generator
 {
 	public class modifiers
 	{
+		public string _id;
 		public int wounds;
 		public Skills skills = new Skills();
 		public Talents talents = new Talents();
@@ -14,7 +15,7 @@ namespace Char_Generator
 		public virtual string getSpecialRules()
 		{
 			var toBeReturned = string.Empty;
-			specialRules.ForEach(x => toBeReturned += x+"\n");
+			specialRules.ForEach(x => toBeReturned += x + "\n");
 			return toBeReturned;
 		}
 	}

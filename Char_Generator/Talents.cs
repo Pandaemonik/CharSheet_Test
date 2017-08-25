@@ -11,6 +11,7 @@ namespace Char_Generator
 {
 	public class Talents
 	{
+		public string _id;
 		public List<Talent> talent = new List<Talent>();
 
 		[JsonConstructor]

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson;
 using Newtonsoft.Json;
 
 namespace Char_Generator
@@ -39,15 +40,15 @@ namespace Char_Generator
 		public string getDoctrines()
 		{
 			var toBeReturned = string.Empty;
-			doctrines.ForEach(x=> toBeReturned+=x+", ");
+			doctrines.ForEach(x => toBeReturned += x + ", ");
 			return toBeReturned;
 		}
 
 		public override string ToString()
 		{
-			
+
 			return string.Format("Regiment: \n" +
-			                     "Name: {0}\n" +
+								 "Name: {0}\n" +
 								 "Homeworld: {1},\n" +
 								 "Commanding Officer: {2},\n" +
 								 "Doctrines: {3},\n" +
@@ -57,7 +58,7 @@ namespace Char_Generator
 								 "\tAttribures:\n{7}\n" +
 								 "\tAptitudes:\n{8}\n" +
 								 "\tSpecial Rules:\n{9}\n",
-			                     name,
+								 name,
 								 homeworld,
 								 commandingOfficer,
 								 getDoctrines(),
@@ -67,7 +68,7 @@ namespace Char_Generator
 								 characteristics.getDisplayed(),
 								 aptitides,
 								 getSpecialRules()
-			                    );
+								);
 		}
 	}
 }

@@ -18,6 +18,7 @@ namespace Char_Generator
 		public Skills skills { get; set; }
 		public Talents talents { get; set; }
 		public Aptitudes aptitudes { get; set; }
+		public string _id { get; set; }
 
 		public Character(string Aptitude, string skillCsvPath, string characteristicCSVPath, string talentCsvPath)
 		{
@@ -40,7 +41,7 @@ namespace Char_Generator
 		}
 
 
-		public Character(Characteristics characteristics, Skills skills, Talents talents, Aptitudes aptitudes, string campaignId)
+		public Character(Characteristics characteristics, Skills skills, Talents talents, Aptitudes aptitudes)
 		{
 			this.characteristics = characteristics;
 			this.skills = skills;

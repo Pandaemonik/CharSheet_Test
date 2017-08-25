@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using Newtonsoft.Json;
 
 namespace Char_Generator
@@ -10,14 +13,14 @@ namespace Char_Generator
 		Character tempCharacter;
 		Talents availableTalents;
 		Skills availableSkills;
+		//MongoClient client;
 
 		public spendXpForm(Character selectedCharacter)
 		{
 			InitializeComponent();
 			this.selectedCharacter = selectedCharacter;
 			tempCharacter = selectedCharacter;
-			availableTalents = JsonConvert.DeserializeObject<Talents>(FileIO.readJson("TextFiles\\data\\default_talents.json"));
-			availableSkills = JsonConvert.DeserializeObject<Skills>(FileIO.readJson("TextFiles\\data\\default_skills.json"));
+
 		}
 
 		public Character GetSelectedCharacter()
@@ -25,8 +28,27 @@ namespace Char_Generator
 			return selectedCharacter;
 		}
 
-		void spendXpForm_Load(object sender, System.EventArgs e)
+		async void spendXpForm_Shown(object sender, EventArgs e)
 		{
+			try
+			{
+				var client = new MongoClient("mongodb://localhost:27017");
+				var database = client.GetDatabase("main");
+				var collectionSkills = database.GetCollection<BsonDocument>("skills");
+				var collectionTalents = database.GetCollection<BsonDocument>("talents");
+				var filter = Builders<BsonDocument>.Filter.Eq("_id", "default");
+				var talents = await collectionTalents.Find(filter).FirstAsync();
+				var skills = await collectionSkills.Find(filter).FirstAsync();
+				availableSkills = JsonConvert.DeserializeObject<Skills>(skills.ToJson());
+				availableTalents = JsonConvert.DeserializeObject<Talents>(talents.ToJson());
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: Could not establish connection to DB(" + ex.Message + ") using default");
+				availableTalents = JsonConvert.DeserializeObject<Talents>(FileIO.readJson("TextFiles\\defaults\\default.talents"));
+				availableSkills = JsonConvert.DeserializeObject<Skills>(FileIO.readJson("TextFiles\\defaults\\default.skills"));
+			}
+
 			textBoxAvailableXp.Text = tempCharacter.experienceLeft.ToString();
 			listBoxTalents.Items.AddRange(validateTalents());
 			listBoxCharacteristics.Items.AddRange(validateCharacteristics());
@@ -35,11 +57,12 @@ namespace Char_Generator
 			buttonBuyTalents.Enabled = false;
 			buttonBuyCharacteristics.Enabled = false;
 			buttonRefund.Enabled = false;
+
 		}
 
 		string[] validateTalents()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			foreach (Talent singleTalent in availableTalents.talent)
 			{
 				if (!tempCharacter.talents.Contains(singleTalent.Name))
@@ -56,7 +79,7 @@ namespace Char_Generator
 
 		string[] validateSkills()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			foreach (var singleSkill in availableSkills.skill)
 			{
 				if (singleSkill.Specialist != "N/A")
@@ -100,7 +123,7 @@ namespace Char_Generator
 
 		string[] validateCharacteristics()
 		{
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			foreach (Characteristic singleCharacteristic in tempCharacter.characteristics.characteristic)
 			{
 				if (singleCharacteristic.Tier < 4)
@@ -352,10 +375,7 @@ namespace Char_Generator
 			var availableXp = int.Parse(textBoxAvailableXp.Text);
 			System.Console.Write(availableXp + "\n");
 
-			if (totalCost <= availableXp)
-			{
-				buttonFinalize.Enabled = true;
-			}
+			buttonFinalize.Enabled |= totalCost <= availableXp;
 			textBoxTotalXp.Text = totalCost.ToString();
 			listBoxBuyList.Items.Remove(listBoxBuyList.SelectedItem);
 			listBoxBuyList.SelectedIndex = -1;
@@ -428,7 +448,7 @@ namespace Char_Generator
 
 		string[] parseSkillName(string nameToBeParsed)
 		{
-			List<string> parsed = new List<string>();
+			var parsed = new List<string>();
 			if (nameToBeParsed.Contains("("))
 			{
 				var startIndex = nameToBeParsed.IndexOf('(');
@@ -476,7 +496,7 @@ namespace Char_Generator
 		string[] parseBoughtName(string toBeParsed)
 		{
 			toBeParsed = toBeParsed.Trim();
-			List<string> toBeReturned = new List<string>();
+			var toBeReturned = new List<string>();
 			var type = toBeParsed.Substring(0, 3).Trim();
 			toBeReturned.Add(type);
 
