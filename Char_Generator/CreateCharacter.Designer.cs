@@ -441,6 +441,7 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.groupBox2);
 			this.Name = "CreateCharacter";
+			this.Text = "Create Character";
 			this.Shown += new System.EventHandler(this.CreateCharacter_Shown);
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);

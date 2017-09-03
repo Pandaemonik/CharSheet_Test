@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using MongoDB.Bson;
 using Newtonsoft.Json;
 
 namespace Char_Generator

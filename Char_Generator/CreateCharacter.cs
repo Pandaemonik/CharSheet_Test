@@ -188,7 +188,7 @@ namespace Char_Generator
 		string[] parseDemeanorName(string toBeParsed)
 		{
 			var parsed = new List<string>();
-			var startIndex = toBeParsed.IndexOf('-');
+			var startIndex = toBeParsed.IndexOf(':');
 			var name = toBeParsed.Substring(0, startIndex);
 			var length = toBeParsed.Length - startIndex - 1;
 			var description = toBeParsed.Substring(startIndex + 1, length);

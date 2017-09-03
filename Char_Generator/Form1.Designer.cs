@@ -34,6 +34,7 @@
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.characterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuItemCreateCharacter = new System.Windows.Forms.ToolStripMenuItem();
+			this.addExpirienceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.tabPageDisplauInLabel = new System.Windows.Forms.TabPage();
 			this.showCharacter = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.textBoxCharacteristics = new System.Windows.Forms.RichTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.addExpirienceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
 			this.tabPageMain.SuspendLayout();
@@ -133,6 +133,13 @@
 			this.MenuItemCreateCharacter.Size = new System.Drawing.Size(155, 22);
 			this.MenuItemCreateCharacter.Text = "Create";
 			this.MenuItemCreateCharacter.Click += new System.EventHandler(this.MenuItemCreateCharacter_Click);
+			// 
+			// addExpirienceToolStripMenuItem
+			// 
+			this.addExpirienceToolStripMenuItem.Name = "addExpirienceToolStripMenuItem";
+			this.addExpirienceToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+			this.addExpirienceToolStripMenuItem.Text = "Add Experience";
+			this.addExpirienceToolStripMenuItem.Click += new System.EventHandler(this.addExpirienceToolStripMenuItem_Click);
 			// 
 			// menuStripMain
 			// 
@@ -273,6 +280,7 @@
 			this.buttonChangeDescription.TabIndex = 97;
 			this.buttonChangeDescription.Text = "Change Description";
 			this.buttonChangeDescription.UseVisualStyleBackColor = true;
+			this.buttonChangeDescription.Click += new System.EventHandler(this.buttonChangeDescription_Click);
 			// 
 			// buttonSpendXp
 			// 
@@ -570,13 +578,6 @@
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
 			this.tabControl1.TabIndex = 15;
-			// 
-			// addExpirienceToolStripMenuItem
-			// 
-			this.addExpirienceToolStripMenuItem.Name = "addExpirienceToolStripMenuItem";
-			this.addExpirienceToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-			this.addExpirienceToolStripMenuItem.Text = "Add Experience";
-			this.addExpirienceToolStripMenuItem.Click += new System.EventHandler(this.addExpirienceToolStripMenuItem_Click);
 			// 
 			// charGenMain
 			// 

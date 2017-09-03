@@ -99,16 +99,6 @@ namespace Char_Generator
 			talent.Remove(Find(toBeRemovedName));
 		}
 
-		public string SerializeXML()
-		{
-			var s = new XmlSerializer(GetType());
-			var sb = new StringBuilder();
-			var w = new StringWriter(sb);
-			s.Serialize(w, this);
-			w.Flush();
-			return sb.ToString();
-		}
-
 		public override string ToString()
 		{
 			var toBeReturned = string.Empty;
@@ -122,7 +112,5 @@ namespace Char_Generator
 
 			return toBeReturned.ToArray();
 		}
-
-
 	}
 }

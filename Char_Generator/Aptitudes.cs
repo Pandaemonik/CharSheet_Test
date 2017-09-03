@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using Newtonsoft.Json;
 
 namespace Char_Generator

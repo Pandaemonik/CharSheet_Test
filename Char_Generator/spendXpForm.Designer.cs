@@ -335,6 +335,7 @@
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "spendXpForm";
+			this.Text = "Spend Experience";
 			this.Shown += new System.EventHandler(this.spendXpForm_Shown);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

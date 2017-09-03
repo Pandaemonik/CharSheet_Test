@@ -117,26 +117,37 @@ namespace Char_Generator
 
 		void MenuItemCreateCharacter_Click(object sender, EventArgs e)
 		{
-			var characterCreationWindow = new CreateCharacter(selectedCharacter);
-			characterCreationWindow.ShowDialog();
-			selectedCharacter = characterCreationWindow.getSelectedCharacter();
-			refresh();
+			using (var characterCreationWindow = new CreateCharacter(selectedCharacter))
+			{
+				characterCreationWindow.ShowDialog();
+				selectedCharacter = characterCreationWindow.getSelectedCharacter();
+				refresh();
+			}
 		}
 
 		void buttonSpendXp_Click(object sender, EventArgs e)
 		{
-			var xpSpendWindow = new spendXpForm(selectedCharacter);
-			xpSpendWindow.ShowDialog();
-			selectedCharacter = xpSpendWindow.GetSelectedCharacter();
-			refresh();
+			using (var xpSpendWindow = new spendXpForm(selectedCharacter))
+			{
+				xpSpendWindow.ShowDialog();
+				selectedCharacter = xpSpendWindow.GetSelectedCharacter();
+				refresh();
+			}
 		}
 
 		void addExpirienceToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			var addExperienceWindow = new AddExperience(selectedCharacter);
-			addExperienceWindow.ShowDialog();
-			selectedCharacter = addExperienceWindow.getSelectedCharacter();
-			refresh();
+			using (var addExperienceWindow = new AddExperience(selectedCharacter))
+			{
+				addExperienceWindow.ShowDialog();
+				selectedCharacter = addExperienceWindow.getSelectedCharacter();
+				refresh();
+			}
+		}
+
+		void buttonChangeDescription_Click(object sender, EventArgs e)
+		{
+			selectedCharacter.description = textBoxDescription.Text;
 		}
 	}
 }

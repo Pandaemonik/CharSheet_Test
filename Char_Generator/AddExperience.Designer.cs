@@ -79,6 +79,7 @@
 			this.Controls.Add(this.buttonCancel);
 			this.Controls.Add(this.textBoxAddExperence);
 			this.Name = "AddExperience";
+			this.Text = "Add experience";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

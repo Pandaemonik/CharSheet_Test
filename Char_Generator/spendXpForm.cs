@@ -13,7 +13,6 @@ namespace Char_Generator
 		Character tempCharacter;
 		Talents availableTalents;
 		Skills availableSkills;
-		//MongoClient client;
 
 		public spendXpForm(Character selectedCharacter)
 		{
@@ -126,7 +125,7 @@ namespace Char_Generator
 			var toBeReturned = new List<string>();
 			foreach (Characteristic singleCharacteristic in tempCharacter.characteristics.characteristic)
 			{
-				if (singleCharacteristic.Tier < 4)
+				if (singleCharacteristic.Tier <= 4)
 				{
 					toBeReturned.Add(singleCharacteristic.Name + " +" + ((singleCharacteristic.Tier + 1) * 5).ToString());
 				}
@@ -171,13 +170,12 @@ namespace Char_Generator
 			if (temp != null)
 			{
 				tier = temp.Tier - isBought + 1;
-				if (tier > 2)
+				if (tier > 3)
 				{
-					tier = 2;
+					tier = 3;
 				}
 			}
 			cost = ((3 - aptitudeCount) * 100) + ((tier * 100) * (3 - aptitudeCount));
-
 
 			return cost.ToString();
 		}
@@ -222,7 +220,7 @@ namespace Char_Generator
 			return cost.ToString();
 		}
 
-		void buttonBuySkill_Click(object sender, System.EventArgs e)
+		void buttonBuySkill_Click(object sender, EventArgs e)
 		{
 			var toBeParsed = listBoxSkills.Text;
 			var parsed = parseSkillName(toBeParsed);
@@ -261,7 +259,7 @@ namespace Char_Generator
 			buttonBuySkill.Enabled = false;
 		}
 
-		void buttonBuyTalents_Click(object sender, System.EventArgs e)
+		void buttonBuyTalents_Click(object sender, EventArgs e)
 		{
 			var toBeBought = listBoxTalents.Text;
 			listBoxBuyList.Items.Add("(T)" + toBeBought);
@@ -270,28 +268,29 @@ namespace Char_Generator
 			if (found != null)
 			{
 				tempCharacter.talents.Add(found);
+				var totalCost = int.Parse(textBoxTotalXp.Text);
+				var talentCost = int.Parse(textBoxTalentCost.Text);
+				totalCost += talentCost;
+				var availableXp = int.Parse(textBoxAvailableXp.Text);
+
+				if (totalCost > availableXp)
+				{
+					buttonFinalize.Enabled = false;
+				}
+				textBoxTotalXp.Text = totalCost.ToString();
+				listBoxTalents.Items.Clear();
 			}
 			else
 			{
 				MessageBox.Show("Error: Failed to insert talent. Talent is empty.");
 			}
 
-			var totalCost = int.Parse(textBoxTotalXp.Text);
-			var talentCost = int.Parse(textBoxTalentCost.Text);
-			totalCost += talentCost;
-			var availableXp = int.Parse(textBoxAvailableXp.Text);
 
-			if (totalCost > availableXp)
-			{
-				buttonFinalize.Enabled = false;
-			}
-			textBoxTotalXp.Text = totalCost.ToString();
-			listBoxTalents.Items.Clear();
 			listBoxTalents.Items.AddRange(validateTalents());
 			buttonBuyTalents.Enabled = false;
 		}
 
-		void buttonBuyCharacteristics_Click(object sender, System.EventArgs e)
+		void buttonBuyCharacteristics_Click(object sender, EventArgs e)
 		{
 			var toBeParsed = listBoxCharacteristics.Text;
 			var name = parseCharacteristicName(toBeParsed);
@@ -323,7 +322,7 @@ namespace Char_Generator
 			buttonBuyCharacteristics.Enabled = false;
 		}
 
-		void buttonRefund_Click(object sender, System.EventArgs e)
+		void buttonRefund_Click(object sender, EventArgs e)
 		{
 			var toBeParsed = listBoxBuyList.Text;
 			var parsed = parseBoughtName(toBeParsed);
@@ -367,13 +366,13 @@ namespace Char_Generator
 			}
 
 			var totalCost = int.Parse(textBoxTotalXp.Text);
-			System.Console.Write(totalCost + "\n");
+			Console.Write(totalCost + "\n");
 			var refundedCost = int.Parse(textBoxSelected.Text);
-			System.Console.Write(refundedCost + "\n");
+			Console.Write(refundedCost + "\n");
 			totalCost -= refundedCost;
-			System.Console.Write(totalCost + "\n");
+			Console.Write(totalCost + "\n");
 			var availableXp = int.Parse(textBoxAvailableXp.Text);
-			System.Console.Write(availableXp + "\n");
+			Console.Write(availableXp + "\n");
 
 			buttonFinalize.Enabled |= totalCost <= availableXp;
 			textBoxTotalXp.Text = totalCost.ToString();
@@ -383,7 +382,7 @@ namespace Char_Generator
 			buttonRefund.Enabled = false;
 		}
 
-		void buttonFinalize_Click(object sender, System.EventArgs e)
+		void buttonFinalize_Click(object sender, EventArgs e)
 		{
 			var totalCost = int.Parse(textBoxTotalXp.Text);
 			tempCharacter.experienceLeft -= totalCost;
@@ -392,15 +391,15 @@ namespace Char_Generator
 			Hide();
 		}
 
-		void listBoxSkills_SelectedIndexChanged(object sender, System.EventArgs e)
+		void listBoxSkills_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			buttonBuySkill.Enabled = true;
 			var toBeParsed = listBoxSkills.Text;
 			var parsed = parseSkillName(toBeParsed);
 			textBoxSkillCost.Text = calculateSkillCost(parsed[0].Trim(), parsed[1].Trim(), 0);
+			buttonBuySkill.Enabled = true;
 		}
 
-		void listBoxTalents_SelectedIndexChanged(object sender, System.EventArgs e)
+		void listBoxTalents_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			var curSelected = availableTalents.Find(listBoxTalents.Text);
 			textBoxTalent.Text = curSelected.ToString();
@@ -408,7 +407,7 @@ namespace Char_Generator
 			buttonBuyTalents.Enabled = true;
 		}
 
-		void listBoxCharacteristics_SelectedIndexChanged(object sender, System.EventArgs e)
+		void listBoxCharacteristics_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			var temp = listBoxCharacteristics.Text;
 			var name = parseCharacteristicName(temp);
@@ -416,7 +415,7 @@ namespace Char_Generator
 			buttonBuyCharacteristics.Enabled = true;
 		}
 
-		void listBoxBuyList_SelectedIndexChanged(object sender, System.EventArgs e)
+		void listBoxBuyList_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			var toBeParsed = listBoxBuyList.Text;
 			if (toBeParsed != string.Empty)

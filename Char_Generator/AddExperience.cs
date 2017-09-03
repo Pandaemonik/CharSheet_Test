@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Char_Generator
@@ -25,10 +20,9 @@ namespace Char_Generator
 
 		void textBoxAddExperience_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (!char.IsDigit(e.KeyChar))
-			{
-				e.Handled = true;
-			}
+			if (char.IsDigit(e.KeyChar))
+				return;
+			e.Handled = true;
 		}
 
 		void buttonAdd_Click(object sender, EventArgs e)
@@ -37,9 +31,6 @@ namespace Char_Generator
 			Hide();
 		}
 
-		void buttonCancel_Click(object sender, EventArgs e)
-		{
-			Hide();
-		}
+		void buttonCancel_Click(object sender, EventArgs e){Hide();}
 	}
 }
