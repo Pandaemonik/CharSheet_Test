@@ -36,7 +36,7 @@
 				+ "Tier: " + Tier + "\n"
 				+ "Source: " + Source + "\n"
 				+ "Prerequisites: " + Prerequisites + "\n"
-				+ "Aptitudes: " + primary + "  do - " + secondary + "\n"
+				+ "Aptitudes: " + primary + "  ddo - " + secondary + "\n"
 				+ "Benefit: " + Benefit + "\n"
 				+ "Details: " + Details + "\n";
 		}
