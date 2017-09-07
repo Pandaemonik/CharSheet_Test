@@ -15,7 +15,7 @@ namespace Char_Generator
 		Dictionary<string, string> demeanors = new Dictionary<string, string>();
 		Character selectedCharacter;
 		Character newCharacter;
-		Random tenSidedDie = new Random();
+		DiceRoller diceRoller = new DiceRoller();
 
 		public CreateCharacter(Character selectedCharacter)
 		{
@@ -42,7 +42,6 @@ namespace Char_Generator
 																JsonConvert.DeserializeObject<Specialty>(x.ToJson())));
 				await collectionRegiments.Find(new BsonDocument()).ForEachAsync(x => regiments.Add(
 												JsonConvert.DeserializeObject<Regiment>(x.ToJson())));
-
 			}
 			catch (Exception ex)
 			{
@@ -200,9 +199,8 @@ namespace Char_Generator
 
 		int getCharacteristicRoll()
 		{
-			var rollOne = tenSidedDie.Next(1, 11);
-			var rollTwo = tenSidedDie.Next(1, 11);
-			return rollOne + rollTwo + 20;
+			var characteristicRoll = diceRoller.RollDice("2d10+20");
+			return characteristicRoll;
 		}
 
 		void textBoxName_TextChanged(object sender, EventArgs e)
@@ -251,7 +249,7 @@ namespace Char_Generator
 
 		void assignWounds(Specialty selectedSpecialty, Regiment selectedRegiment)
 		{
-			newCharacter.wounds = selectedRegiment.wounds + selectedSpecialty.wounds;
+			newCharacter.wounds = selectedRegiment.wounds + selectedSpecialty.wounds + diceRoller.RollDice("1d5") ;
 		}
 
 	}

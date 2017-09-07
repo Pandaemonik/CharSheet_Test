@@ -13,6 +13,9 @@ namespace Char_Generator
 		public int wounds { get; set; }
 		public int experienceSpent { get; set; }
 		public int experienceLeft { get; set; }
+		public int insanity { get; set; }
+		public int fate { get; set; }
+		public int corruption { get; set; }
 		public List<string> specialRules { get; set; }
 		public Characteristics characteristics { get; set; }
 		public Skills skills { get; set; }

@@ -27,7 +27,6 @@ namespace Char_Generator
 		{
 			var csvLines = FileIO.readCsv(csvFile);
 			addTalentsFromCsv(csvLines);
-
 		}
 
 		void addTalentsFromCsv(List<string> csvLines)

@@ -142,6 +142,8 @@
     <Compile Include="Specialty.cs" />
     <Compile Include="Regiment.cs" />
     <Compile Include="modifiers.cs" />
+    <Compile Include="DiceRoller.cs" />
+    <Compile Include="DbInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
