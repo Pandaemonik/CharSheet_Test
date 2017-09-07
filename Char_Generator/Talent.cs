@@ -36,10 +36,9 @@
 				+ "Tier: " + Tier + "\n"
 				+ "Source: " + Source + "\n"
 				+ "Prerequisites: " + Prerequisites + "\n"
-				+ "Aptitudes: " + primary + "  ddo - " + secondary + "\n"
+				+ "Aptitudes: " + primary + " y " + secondary + "\n"
 				+ "Benefit: " + Benefit + "\n"
 				+ "Details: " + Details + "\n";
 		}
-
 	}
 }
