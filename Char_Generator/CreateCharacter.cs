@@ -58,6 +58,7 @@ namespace Char_Generator
 				parsed = parseDemeanorName(demeanor);
 				demeanors.Add(parsed[0], parsed[1]);
 			}
+
 			listBoxRegiment.Items.AddRange(validateRegiment());
 			listBoxDemeanor.Items.AddRange(validateDemeanors());
 			listBoxSpecialty.Items.AddRange(validateSpecialty());
@@ -70,6 +71,10 @@ namespace Char_Generator
 			textBoxPerception.Text = getCharacteristicRoll().ToString();
 			textBoxWillpower.Text = getCharacteristicRoll().ToString();
 			textBoxFellowship.Text = getCharacteristicRoll().ToString();
+			textBoxWounds.Text = "0";
+			textBoxFatePoints.Text = "0";
+			textBoxCorruption.Text = "0";
+			textBoxInsanity.Text = "0";
 			buttonCreate.Enabled = checkCreateButtonEnabled();
 		}
 
@@ -249,7 +254,7 @@ namespace Char_Generator
 
 		void assignWounds(Specialty selectedSpecialty, Regiment selectedRegiment)
 		{
-			newCharacter.wounds = selectedRegiment.wounds + selectedSpecialty.wounds + diceRoller.RollDice("1d5") ;
+			newCharacter.woundsMax = newCharacter.woundsCurrent = selectedRegiment.wounds + selectedSpecialty.wounds + diceRoller.RollDice("1d5") ;
 		}
 
 	}

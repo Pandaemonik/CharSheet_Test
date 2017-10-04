@@ -45,24 +45,23 @@
 			this.richTextBoxCurrentlyKnown = new System.Windows.Forms.RichTextBox();
 			this.tabPageMain = new System.Windows.Forms.TabPage();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
-			this.buttonChangeDescription = new System.Windows.Forms.Button();
+			this.textBoxWoundsCurrent = new System.Windows.Forms.RichTextBox();
+			this.labelWoundsMax = new System.Windows.Forms.Label();
+			this.textBoxFateCurrent = new System.Windows.Forms.RichTextBox();
+			this.labelFateMax = new System.Windows.Forms.Label();
+			this.labelFate = new System.Windows.Forms.Label();
+			this.textBoxCorruption = new System.Windows.Forms.RichTextBox();
+			this.labelCorruption = new System.Windows.Forms.Label();
+			this.textBoxInsanity = new System.Windows.Forms.RichTextBox();
+			this.labelInanity = new System.Windows.Forms.Label();
+			this.labelXpSpent = new System.Windows.Forms.Label();
+			this.labelXpLeft = new System.Windows.Forms.Label();
+			this.labelWounds = new System.Windows.Forms.Label();
 			this.buttonSpendXp = new System.Windows.Forms.Button();
 			this.textBoxXpLeft = new System.Windows.Forms.RichTextBox();
 			this.textBoxXpSpent = new System.Windows.Forms.RichTextBox();
-			this.labelXpSpent = new System.Windows.Forms.Label();
-			this.labelXpLeft = new System.Windows.Forms.Label();
-			this.textBoxRegiment = new System.Windows.Forms.RichTextBox();
-			this.textBoxSpecialty = new System.Windows.Forms.RichTextBox();
-			this.textBoxWounds = new System.Windows.Forms.RichTextBox();
 			this.textBoxName = new System.Windows.Forms.RichTextBox();
-			this.textBoxDescription = new System.Windows.Forms.RichTextBox();
-			this.textBoxDemeanor = new System.Windows.Forms.RichTextBox();
-			this.labelWounds = new System.Windows.Forms.Label();
 			this.labelName = new System.Windows.Forms.Label();
-			this.labelRegiment = new System.Windows.Forms.Label();
-			this.labelSpecialty = new System.Windows.Forms.Label();
-			this.labelDemeanour = new System.Windows.Forms.Label();
-			this.labelDescription = new System.Windows.Forms.Label();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.listBoxTalentDetails = new System.Windows.Forms.ListBox();
 			this.textBoxTalents = new System.Windows.Forms.RichTextBox();
@@ -75,6 +74,16 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.textBoxCharacteristics = new System.Windows.Forms.RichTextBox();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.buttonChangeDescription = new System.Windows.Forms.Button();
+			this.textBoxRegiment = new System.Windows.Forms.RichTextBox();
+			this.textBoxSpecialty = new System.Windows.Forms.RichTextBox();
+			this.textBoxDescription = new System.Windows.Forms.RichTextBox();
+			this.textBoxDemeanor = new System.Windows.Forms.RichTextBox();
+			this.labelRegiment = new System.Windows.Forms.Label();
+			this.labelSpecialty = new System.Windows.Forms.Label();
+			this.labelDemeanour = new System.Windows.Forms.Label();
+			this.labelDescription = new System.Windows.Forms.Label();
 			this.menuStripMain.SuspendLayout();
 			this.tabPageDisplauInLabel.SuspendLayout();
 			this.tabPageMain.SuspendLayout();
@@ -85,6 +94,7 @@
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.tabControl1.SuspendLayout();
+			this.tabPage1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileToolStripMenuItem
@@ -245,49 +255,157 @@
 			// 
 			// groupBox6
 			// 
-			this.groupBox6.Controls.Add(this.buttonChangeDescription);
+			this.groupBox6.Controls.Add(this.textBoxWoundsCurrent);
+			this.groupBox6.Controls.Add(this.labelWoundsMax);
+			this.groupBox6.Controls.Add(this.textBoxFateCurrent);
+			this.groupBox6.Controls.Add(this.labelFateMax);
+			this.groupBox6.Controls.Add(this.labelFate);
+			this.groupBox6.Controls.Add(this.textBoxCorruption);
+			this.groupBox6.Controls.Add(this.labelCorruption);
+			this.groupBox6.Controls.Add(this.textBoxInsanity);
+			this.groupBox6.Controls.Add(this.labelInanity);
+			this.groupBox6.Controls.Add(this.labelXpSpent);
+			this.groupBox6.Controls.Add(this.labelXpLeft);
+			this.groupBox6.Controls.Add(this.labelWounds);
 			this.groupBox6.Controls.Add(this.buttonSpendXp);
 			this.groupBox6.Controls.Add(this.textBoxXpLeft);
 			this.groupBox6.Controls.Add(this.textBoxXpSpent);
-			this.groupBox6.Controls.Add(this.labelXpSpent);
-			this.groupBox6.Controls.Add(this.labelXpLeft);
-			this.groupBox6.Controls.Add(this.textBoxRegiment);
-			this.groupBox6.Controls.Add(this.textBoxSpecialty);
-			this.groupBox6.Controls.Add(this.textBoxWounds);
 			this.groupBox6.Controls.Add(this.textBoxName);
-			this.groupBox6.Controls.Add(this.textBoxDescription);
-			this.groupBox6.Controls.Add(this.textBoxDemeanor);
-			this.groupBox6.Controls.Add(this.labelWounds);
 			this.groupBox6.Controls.Add(this.labelName);
-			this.groupBox6.Controls.Add(this.labelRegiment);
-			this.groupBox6.Controls.Add(this.labelSpecialty);
-			this.groupBox6.Controls.Add(this.labelDemeanour);
-			this.groupBox6.Controls.Add(this.labelDescription);
 			this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.groupBox6.Location = new System.Drawing.Point(8, 13);
 			this.groupBox6.Name = "groupBox6";
-			this.groupBox6.Size = new System.Drawing.Size(263, 404);
+			this.groupBox6.Size = new System.Drawing.Size(263, 173);
 			this.groupBox6.TabIndex = 80;
 			this.groupBox6.TabStop = false;
 			this.groupBox6.Text = "Bio && Info";
 			// 
-			// buttonChangeDescription
+			// textBoxWoundsCurrent
 			// 
-			this.buttonChangeDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonChangeDescription.Location = new System.Drawing.Point(6, 362);
-			this.buttonChangeDescription.Name = "buttonChangeDescription";
-			this.buttonChangeDescription.Size = new System.Drawing.Size(116, 23);
-			this.buttonChangeDescription.TabIndex = 97;
-			this.buttonChangeDescription.Text = "Change Description";
-			this.buttonChangeDescription.UseVisualStyleBackColor = true;
-			this.buttonChangeDescription.Click += new System.EventHandler(this.buttonChangeDescription_Click);
+			this.textBoxWoundsCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxWoundsCurrent.Location = new System.Drawing.Point(146, 117);
+			this.textBoxWoundsCurrent.Name = "textBoxWoundsCurrent";
+			this.textBoxWoundsCurrent.Size = new System.Drawing.Size(26, 20);
+			this.textBoxWoundsCurrent.TabIndex = 89;
+			this.textBoxWoundsCurrent.Text = "";
+			this.textBoxWoundsCurrent.TextChanged += new System.EventHandler(this.textBoxWounds_TextChanged);
+			// 
+			// labelWoundsMax
+			// 
+			this.labelWoundsMax.AutoSize = true;
+			this.labelWoundsMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelWoundsMax.Location = new System.Drawing.Point(169, 120);
+			this.labelWoundsMax.Name = "labelWoundsMax";
+			this.labelWoundsMax.Size = new System.Drawing.Size(12, 13);
+			this.labelWoundsMax.TabIndex = 148;
+			this.labelWoundsMax.Text = "/";
+			// 
+			// textBoxFateCurrent
+			// 
+			this.textBoxFateCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxFateCurrent.Location = new System.Drawing.Point(146, 78);
+			this.textBoxFateCurrent.MaxLength = 2;
+			this.textBoxFateCurrent.Name = "textBoxFateCurrent";
+			this.textBoxFateCurrent.Size = new System.Drawing.Size(26, 20);
+			this.textBoxFateCurrent.TabIndex = 144;
+			this.textBoxFateCurrent.Text = "";
+			// 
+			// labelFateMax
+			// 
+			this.labelFateMax.AutoSize = true;
+			this.labelFateMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelFateMax.Location = new System.Drawing.Point(169, 81);
+			this.labelFateMax.Name = "labelFateMax";
+			this.labelFateMax.Size = new System.Drawing.Size(12, 13);
+			this.labelFateMax.TabIndex = 145;
+			this.labelFateMax.Text = "/";
+			// 
+			// labelFate
+			// 
+			this.labelFate.AutoSize = true;
+			this.labelFate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelFate.Location = new System.Drawing.Point(143, 62);
+			this.labelFate.Name = "labelFate";
+			this.labelFate.Size = new System.Drawing.Size(66, 13);
+			this.labelFate.TabIndex = 143;
+			this.labelFate.Text = "Fate Points :";
+			// 
+			// textBoxCorruption
+			// 
+			this.textBoxCorruption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxCorruption.Location = new System.Drawing.Point(80, 117);
+			this.textBoxCorruption.MaxLength = 2;
+			this.textBoxCorruption.Name = "textBoxCorruption";
+			this.textBoxCorruption.Size = new System.Drawing.Size(57, 20);
+			this.textBoxCorruption.TabIndex = 142;
+			this.textBoxCorruption.Text = "";
+			// 
+			// labelCorruption
+			// 
+			this.labelCorruption.AutoSize = true;
+			this.labelCorruption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelCorruption.Location = new System.Drawing.Point(77, 101);
+			this.labelCorruption.Name = "labelCorruption";
+			this.labelCorruption.Size = new System.Drawing.Size(61, 13);
+			this.labelCorruption.TabIndex = 141;
+			this.labelCorruption.Text = "Corruption :";
+			// 
+			// textBoxInsanity
+			// 
+			this.textBoxInsanity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxInsanity.Location = new System.Drawing.Point(80, 78);
+			this.textBoxInsanity.MaxLength = 2;
+			this.textBoxInsanity.Name = "textBoxInsanity";
+			this.textBoxInsanity.Size = new System.Drawing.Size(57, 20);
+			this.textBoxInsanity.TabIndex = 140;
+			this.textBoxInsanity.Text = "";
+			// 
+			// labelInanity
+			// 
+			this.labelInanity.AutoSize = true;
+			this.labelInanity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelInanity.Location = new System.Drawing.Point(77, 62);
+			this.labelInanity.Name = "labelInanity";
+			this.labelInanity.Size = new System.Drawing.Size(49, 13);
+			this.labelInanity.TabIndex = 139;
+			this.labelInanity.Text = "Insanity :";
+			// 
+			// labelXpSpent
+			// 
+			this.labelXpSpent.AutoSize = true;
+			this.labelXpSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelXpSpent.Location = new System.Drawing.Point(3, 62);
+			this.labelXpSpent.Name = "labelXpSpent";
+			this.labelXpSpent.Size = new System.Drawing.Size(56, 13);
+			this.labelXpSpent.TabIndex = 107;
+			this.labelXpSpent.Text = "Exp Spent";
+			// 
+			// labelXpLeft
+			// 
+			this.labelXpLeft.AutoSize = true;
+			this.labelXpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelXpLeft.Location = new System.Drawing.Point(3, 101);
+			this.labelXpLeft.Name = "labelXpLeft";
+			this.labelXpLeft.Size = new System.Drawing.Size(43, 13);
+			this.labelXpLeft.TabIndex = 106;
+			this.labelXpLeft.Text = "ExpLeft";
+			// 
+			// labelWounds
+			// 
+			this.labelWounds.AutoSize = true;
+			this.labelWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelWounds.Location = new System.Drawing.Point(143, 101);
+			this.labelWounds.Name = "labelWounds";
+			this.labelWounds.Size = new System.Drawing.Size(47, 13);
+			this.labelWounds.TabIndex = 105;
+			this.labelWounds.Text = "Wounds";
 			// 
 			// buttonSpendXp
 			// 
 			this.buttonSpendXp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonSpendXp.Location = new System.Drawing.Point(136, 362);
+			this.buttonSpendXp.Location = new System.Drawing.Point(6, 143);
 			this.buttonSpendXp.Name = "buttonSpendXp";
-			this.buttonSpendXp.Size = new System.Drawing.Size(75, 23);
+			this.buttonSpendXp.Size = new System.Drawing.Size(68, 23);
 			this.buttonSpendXp.TabIndex = 96;
 			this.buttonSpendXp.Text = "Spend XP";
 			this.buttonSpendXp.UseVisualStyleBackColor = true;
@@ -296,72 +414,22 @@
 			// textBoxXpLeft
 			// 
 			this.textBoxXpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxXpLeft.Location = new System.Drawing.Point(136, 336);
+			this.textBoxXpLeft.Location = new System.Drawing.Point(6, 117);
 			this.textBoxXpLeft.Name = "textBoxXpLeft";
 			this.textBoxXpLeft.ReadOnly = true;
-			this.textBoxXpLeft.Size = new System.Drawing.Size(57, 20);
+			this.textBoxXpLeft.Size = new System.Drawing.Size(68, 20);
 			this.textBoxXpLeft.TabIndex = 95;
 			this.textBoxXpLeft.Text = "";
 			// 
 			// textBoxXpSpent
 			// 
 			this.textBoxXpSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxXpSpent.Location = new System.Drawing.Point(65, 336);
+			this.textBoxXpSpent.Location = new System.Drawing.Point(6, 78);
 			this.textBoxXpSpent.Name = "textBoxXpSpent";
 			this.textBoxXpSpent.ReadOnly = true;
-			this.textBoxXpSpent.Size = new System.Drawing.Size(57, 20);
+			this.textBoxXpSpent.Size = new System.Drawing.Size(68, 20);
 			this.textBoxXpSpent.TabIndex = 94;
 			this.textBoxXpSpent.Text = "";
-			// 
-			// labelXpSpent
-			// 
-			this.labelXpSpent.AutoSize = true;
-			this.labelXpSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelXpSpent.Location = new System.Drawing.Point(62, 320);
-			this.labelXpSpent.Name = "labelXpSpent";
-			this.labelXpSpent.Size = new System.Drawing.Size(56, 13);
-			this.labelXpSpent.TabIndex = 93;
-			this.labelXpSpent.Text = "Exp Spent";
-			// 
-			// labelXpLeft
-			// 
-			this.labelXpLeft.AutoSize = true;
-			this.labelXpLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelXpLeft.Location = new System.Drawing.Point(133, 320);
-			this.labelXpLeft.Name = "labelXpLeft";
-			this.labelXpLeft.Size = new System.Drawing.Size(43, 13);
-			this.labelXpLeft.TabIndex = 92;
-			this.labelXpLeft.Text = "ExpLeft";
-			// 
-			// textBoxRegiment
-			// 
-			this.textBoxRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxRegiment.Location = new System.Drawing.Point(125, 77);
-			this.textBoxRegiment.Name = "textBoxRegiment";
-			this.textBoxRegiment.ReadOnly = true;
-			this.textBoxRegiment.Size = new System.Drawing.Size(132, 20);
-			this.textBoxRegiment.TabIndex = 91;
-			this.textBoxRegiment.Text = "";
-			// 
-			// textBoxSpecialty
-			// 
-			this.textBoxSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxSpecialty.Location = new System.Drawing.Point(6, 77);
-			this.textBoxSpecialty.Name = "textBoxSpecialty";
-			this.textBoxSpecialty.ReadOnly = true;
-			this.textBoxSpecialty.Size = new System.Drawing.Size(113, 20);
-			this.textBoxSpecialty.TabIndex = 90;
-			this.textBoxSpecialty.Text = "";
-			// 
-			// textBoxWounds
-			// 
-			this.textBoxWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxWounds.Location = new System.Drawing.Point(6, 336);
-			this.textBoxWounds.Name = "textBoxWounds";
-			this.textBoxWounds.ReadOnly = true;
-			this.textBoxWounds.Size = new System.Drawing.Size(44, 20);
-			this.textBoxWounds.TabIndex = 89;
-			this.textBoxWounds.Text = "";
 			// 
 			// textBoxName
 			// 
@@ -373,36 +441,6 @@
 			this.textBoxName.TabIndex = 88;
 			this.textBoxName.Text = "";
 			// 
-			// textBoxDescription
-			// 
-			this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxDescription.Location = new System.Drawing.Point(6, 221);
-			this.textBoxDescription.Name = "textBoxDescription";
-			this.textBoxDescription.ReadOnly = true;
-			this.textBoxDescription.Size = new System.Drawing.Size(251, 96);
-			this.textBoxDescription.TabIndex = 85;
-			this.textBoxDescription.Text = "";
-			// 
-			// textBoxDemeanor
-			// 
-			this.textBoxDemeanor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxDemeanor.Location = new System.Drawing.Point(6, 116);
-			this.textBoxDemeanor.Name = "textBoxDemeanor";
-			this.textBoxDemeanor.ReadOnly = true;
-			this.textBoxDemeanor.Size = new System.Drawing.Size(251, 85);
-			this.textBoxDemeanor.TabIndex = 86;
-			this.textBoxDemeanor.Text = "";
-			// 
-			// labelWounds
-			// 
-			this.labelWounds.AutoSize = true;
-			this.labelWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelWounds.Location = new System.Drawing.Point(3, 320);
-			this.labelWounds.Name = "labelWounds";
-			this.labelWounds.Size = new System.Drawing.Size(47, 13);
-			this.labelWounds.TabIndex = 87;
-			this.labelWounds.Text = "Wounds";
-			// 
 			// labelName
 			// 
 			this.labelName.AutoSize = true;
@@ -413,54 +451,14 @@
 			this.labelName.TabIndex = 80;
 			this.labelName.Text = "Name";
 			// 
-			// labelRegiment
-			// 
-			this.labelRegiment.AutoSize = true;
-			this.labelRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelRegiment.Location = new System.Drawing.Point(122, 61);
-			this.labelRegiment.Name = "labelRegiment";
-			this.labelRegiment.Size = new System.Drawing.Size(52, 13);
-			this.labelRegiment.TabIndex = 81;
-			this.labelRegiment.Text = "Regiment";
-			// 
-			// labelSpecialty
-			// 
-			this.labelSpecialty.AutoSize = true;
-			this.labelSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelSpecialty.Location = new System.Drawing.Point(3, 61);
-			this.labelSpecialty.Name = "labelSpecialty";
-			this.labelSpecialty.Size = new System.Drawing.Size(50, 13);
-			this.labelSpecialty.TabIndex = 82;
-			this.labelSpecialty.Text = "Specialty";
-			// 
-			// labelDemeanour
-			// 
-			this.labelDemeanour.AutoSize = true;
-			this.labelDemeanour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelDemeanour.Location = new System.Drawing.Point(3, 100);
-			this.labelDemeanour.Name = "labelDemeanour";
-			this.labelDemeanour.Size = new System.Drawing.Size(56, 13);
-			this.labelDemeanour.TabIndex = 83;
-			this.labelDemeanour.Text = "Demeanor";
-			// 
-			// labelDescription
-			// 
-			this.labelDescription.AutoSize = true;
-			this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.labelDescription.Location = new System.Drawing.Point(3, 204);
-			this.labelDescription.Name = "labelDescription";
-			this.labelDescription.Size = new System.Drawing.Size(60, 13);
-			this.labelDescription.TabIndex = 84;
-			this.labelDescription.Text = "Description";
-			// 
 			// groupBox5
 			// 
 			this.groupBox5.Controls.Add(this.listBoxTalentDetails);
 			this.groupBox5.Controls.Add(this.textBoxTalents);
 			this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.groupBox5.Location = new System.Drawing.Point(728, 13);
+			this.groupBox5.Location = new System.Drawing.Point(467, 13);
 			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.Size = new System.Drawing.Size(246, 209);
+			this.groupBox5.Size = new System.Drawing.Size(507, 209);
 			this.groupBox5.TabIndex = 21;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Talents";
@@ -481,7 +479,7 @@
 			this.textBoxTalents.Location = new System.Drawing.Point(6, 81);
 			this.textBoxTalents.Name = "textBoxTalents";
 			this.textBoxTalents.ReadOnly = true;
-			this.textBoxTalents.Size = new System.Drawing.Size(234, 122);
+			this.textBoxTalents.Size = new System.Drawing.Size(495, 122);
 			this.textBoxTalents.TabIndex = 74;
 			this.textBoxTalents.Text = "";
 			// 
@@ -531,9 +529,9 @@
 			// 
 			this.groupBox2.Controls.Add(this.textBoxSkills);
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.groupBox2.Location = new System.Drawing.Point(467, 13);
+			this.groupBox2.Location = new System.Drawing.Point(8, 192);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(255, 209);
+			this.groupBox2.Size = new System.Drawing.Size(263, 225);
 			this.groupBox2.TabIndex = 20;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Skills";
@@ -544,7 +542,7 @@
 			this.textBoxSkills.Location = new System.Drawing.Point(6, 19);
 			this.textBoxSkills.Name = "textBoxSkills";
 			this.textBoxSkills.ReadOnly = true;
-			this.textBoxSkills.Size = new System.Drawing.Size(243, 182);
+			this.textBoxSkills.Size = new System.Drawing.Size(251, 199);
 			this.textBoxSkills.TabIndex = 75;
 			this.textBoxSkills.Text = "";
 			// 
@@ -573,11 +571,121 @@
 			// 
 			this.tabControl1.Controls.Add(this.tabPageMain);
 			this.tabControl1.Controls.Add(this.tabPageDisplauInLabel);
+			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Location = new System.Drawing.Point(0, 27);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(1084, 468);
 			this.tabControl1.TabIndex = 15;
+			// 
+			// tabPage1
+			// 
+			this.tabPage1.Controls.Add(this.buttonChangeDescription);
+			this.tabPage1.Controls.Add(this.textBoxRegiment);
+			this.tabPage1.Controls.Add(this.textBoxSpecialty);
+			this.tabPage1.Controls.Add(this.textBoxDescription);
+			this.tabPage1.Controls.Add(this.textBoxDemeanor);
+			this.tabPage1.Controls.Add(this.labelRegiment);
+			this.tabPage1.Controls.Add(this.labelSpecialty);
+			this.tabPage1.Controls.Add(this.labelDemeanour);
+			this.tabPage1.Controls.Add(this.labelDescription);
+			this.tabPage1.Location = new System.Drawing.Point(4, 22);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(1076, 442);
+			this.tabPage1.TabIndex = 2;
+			this.tabPage1.Text = "Details";
+			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// buttonChangeDescription
+			// 
+			this.buttonChangeDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonChangeDescription.Location = new System.Drawing.Point(8, 298);
+			this.buttonChangeDescription.Name = "buttonChangeDescription";
+			this.buttonChangeDescription.Size = new System.Drawing.Size(116, 23);
+			this.buttonChangeDescription.TabIndex = 103;
+			this.buttonChangeDescription.Text = "Change Description";
+			this.buttonChangeDescription.UseVisualStyleBackColor = true;
+			// 
+			// textBoxRegiment
+			// 
+			this.textBoxRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxRegiment.Location = new System.Drawing.Point(127, 52);
+			this.textBoxRegiment.Name = "textBoxRegiment";
+			this.textBoxRegiment.ReadOnly = true;
+			this.textBoxRegiment.Size = new System.Drawing.Size(132, 20);
+			this.textBoxRegiment.TabIndex = 102;
+			this.textBoxRegiment.Text = "";
+			// 
+			// textBoxSpecialty
+			// 
+			this.textBoxSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxSpecialty.Location = new System.Drawing.Point(8, 52);
+			this.textBoxSpecialty.Name = "textBoxSpecialty";
+			this.textBoxSpecialty.ReadOnly = true;
+			this.textBoxSpecialty.Size = new System.Drawing.Size(113, 20);
+			this.textBoxSpecialty.TabIndex = 101;
+			this.textBoxSpecialty.Text = "";
+			// 
+			// textBoxDescription
+			// 
+			this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxDescription.Location = new System.Drawing.Point(8, 196);
+			this.textBoxDescription.Name = "textBoxDescription";
+			this.textBoxDescription.ReadOnly = true;
+			this.textBoxDescription.Size = new System.Drawing.Size(251, 96);
+			this.textBoxDescription.TabIndex = 98;
+			this.textBoxDescription.Text = "";
+			// 
+			// textBoxDemeanor
+			// 
+			this.textBoxDemeanor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxDemeanor.Location = new System.Drawing.Point(8, 91);
+			this.textBoxDemeanor.Name = "textBoxDemeanor";
+			this.textBoxDemeanor.ReadOnly = true;
+			this.textBoxDemeanor.Size = new System.Drawing.Size(251, 85);
+			this.textBoxDemeanor.TabIndex = 99;
+			this.textBoxDemeanor.Text = "";
+			// 
+			// labelRegiment
+			// 
+			this.labelRegiment.AutoSize = true;
+			this.labelRegiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelRegiment.Location = new System.Drawing.Point(124, 36);
+			this.labelRegiment.Name = "labelRegiment";
+			this.labelRegiment.Size = new System.Drawing.Size(52, 13);
+			this.labelRegiment.TabIndex = 94;
+			this.labelRegiment.Text = "Regiment";
+			// 
+			// labelSpecialty
+			// 
+			this.labelSpecialty.AutoSize = true;
+			this.labelSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelSpecialty.Location = new System.Drawing.Point(5, 36);
+			this.labelSpecialty.Name = "labelSpecialty";
+			this.labelSpecialty.Size = new System.Drawing.Size(50, 13);
+			this.labelSpecialty.TabIndex = 95;
+			this.labelSpecialty.Text = "Specialty";
+			// 
+			// labelDemeanour
+			// 
+			this.labelDemeanour.AutoSize = true;
+			this.labelDemeanour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelDemeanour.Location = new System.Drawing.Point(5, 75);
+			this.labelDemeanour.Name = "labelDemeanour";
+			this.labelDemeanour.Size = new System.Drawing.Size(56, 13);
+			this.labelDemeanour.TabIndex = 96;
+			this.labelDemeanour.Text = "Demeanor";
+			// 
+			// labelDescription
+			// 
+			this.labelDescription.AutoSize = true;
+			this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelDescription.Location = new System.Drawing.Point(5, 179);
+			this.labelDescription.Name = "labelDescription";
+			this.labelDescription.Size = new System.Drawing.Size(60, 13);
+			this.labelDescription.TabIndex = 97;
+			this.labelDescription.Text = "Description";
 			// 
 			// charGenMain
 			// 
@@ -604,6 +712,8 @@
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.tabControl1.ResumeLayout(false);
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -636,27 +746,36 @@
 		private System.Windows.Forms.Button buttonSpendXp;
 		private System.Windows.Forms.RichTextBox textBoxXpLeft;
 		private System.Windows.Forms.RichTextBox textBoxXpSpent;
-		private System.Windows.Forms.Label labelXpSpent;
-		private System.Windows.Forms.Label labelXpLeft;
-		private System.Windows.Forms.RichTextBox textBoxRegiment;
-		private System.Windows.Forms.RichTextBox textBoxSpecialty;
-		private System.Windows.Forms.RichTextBox textBoxWounds;
+		private System.Windows.Forms.RichTextBox textBoxWoundsCurrent;
 		private System.Windows.Forms.RichTextBox textBoxName;
-		private System.Windows.Forms.RichTextBox textBoxDescription;
-		private System.Windows.Forms.RichTextBox textBoxDemeanor;
-		private System.Windows.Forms.Label labelWounds;
 		private System.Windows.Forms.Label labelName;
-		private System.Windows.Forms.Label labelRegiment;
-		private System.Windows.Forms.Label labelSpecialty;
-		private System.Windows.Forms.Label labelDemeanour;
-		private System.Windows.Forms.Label labelDescription;
 		private System.Windows.Forms.GroupBox groupBox5;
 		private System.Windows.Forms.GroupBox groupBox4;
-		private System.Windows.Forms.Button buttonChangeDescription;
 		private System.Windows.Forms.RichTextBox textBoxAptitudes;
 		private System.Windows.Forms.RichTextBox textBoxSkills;
 		private System.Windows.Forms.RichTextBox textBoxCharacteristics;
 		private System.Windows.Forms.ToolStripMenuItem addExpirienceToolStripMenuItem;
+		private System.Windows.Forms.Label labelXpSpent;
+		private System.Windows.Forms.Label labelXpLeft;
+		private System.Windows.Forms.Label labelWounds;
+		private System.Windows.Forms.TabPage tabPage1;
+		private System.Windows.Forms.Button buttonChangeDescription;
+		private System.Windows.Forms.RichTextBox textBoxRegiment;
+		private System.Windows.Forms.RichTextBox textBoxSpecialty;
+		private System.Windows.Forms.RichTextBox textBoxDescription;
+		private System.Windows.Forms.RichTextBox textBoxDemeanor;
+		private System.Windows.Forms.Label labelRegiment;
+		private System.Windows.Forms.Label labelSpecialty;
+		private System.Windows.Forms.Label labelDemeanour;
+		private System.Windows.Forms.Label labelDescription;
+		private System.Windows.Forms.RichTextBox textBoxFateCurrent;
+		private System.Windows.Forms.Label labelFateMax;
+		private System.Windows.Forms.Label labelFate;
+		private System.Windows.Forms.RichTextBox textBoxCorruption;
+		private System.Windows.Forms.Label labelCorruption;
+		private System.Windows.Forms.RichTextBox textBoxInsanity;
+		private System.Windows.Forms.Label labelInanity;
+		private System.Windows.Forms.Label labelWoundsMax;
 	}
 }
 

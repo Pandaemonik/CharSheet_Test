@@ -10,11 +10,13 @@ namespace Char_Generator
 		public string name { get; set; }
 		public string demeanour { get; set; }
 		public string description { get; set; }
-		public int wounds { get; set; }
+		public int woundsMax { get; set; }
+		public int woundsCurrent { get; set; }
 		public int experienceSpent { get; set; }
 		public int experienceLeft { get; set; }
 		public int insanity { get; set; }
-		public int fate { get; set; }
+		public int fateMax { get; set; }
+		public int fateCurrent { get; set; }
 		public int corruption { get; set; }
 		public List<string> specialRules { get; set; }
 		public Characteristics characteristics { get; set; }
@@ -98,7 +100,7 @@ namespace Char_Generator
 				specialty,
 				demeanour,
 				description,
-				wounds,
+				woundsMax,
 				experienceSpent,
 				experienceLeft,
 				characteristics,

@@ -17,6 +17,10 @@ namespace Char_Generator
 
 		async void charGenMain_Shown(object sender, EventArgs e)
 		{
+			var Test = new DiceRoller();
+
+			var test2 = Test.RollDice("20d20+20+10-20+10-10");//Modifier totals to +10
+			Test.ToString();
 			try
 			{
 				var client = new MongoClient("mongodb://localhost:27017");
@@ -77,14 +81,20 @@ namespace Char_Generator
 			textBoxName.Text = selectedCharacter.name;
 			textBoxDemeanor.Text = selectedCharacter.demeanour;
 			textBoxDescription.Text = selectedCharacter.description;
-			textBoxWounds.Text = selectedCharacter.wounds.ToString();
+			textBoxWoundsCurrent.Text = selectedCharacter.woundsCurrent.ToString();
 			textBoxXpLeft.Text = selectedCharacter.experienceLeft.ToString();
 			textBoxXpSpent.Text = selectedCharacter.experienceSpent.ToString();
 			textBoxSpecialRules.Text = selectedCharacter.getSpecialRules();
 			textBoxAptitudes.Text = selectedCharacter.aptitudes.ToString();
 			textBoxCharacteristics.Text = selectedCharacter.characteristics.getDisplayed();
 			textBoxSkills.Text = selectedCharacter.skills.getDisplayed();
+			textBoxInsanity.Text = selectedCharacter.insanity.ToString();
+			textBoxCorruption.Text = selectedCharacter.corruption.ToString();
+			textBoxFateCurrent.Text = selectedCharacter.fateCurrent.ToString();
+			labelFateMax.Text = "/" + selectedCharacter.fateMax;
+			labelWoundsMax.Text = "/" + selectedCharacter.woundsMax;
 		}
+
 		void showSkills_Click(object sender, EventArgs e)
 		{
 			richTextBoxCurrentlyKnown.Text = string.Empty;
@@ -148,6 +158,11 @@ namespace Char_Generator
 		void buttonChangeDescription_Click(object sender, EventArgs e)
 		{
 			selectedCharacter.description = textBoxDescription.Text;
+		}
+
+		private void textBoxWounds_TextChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

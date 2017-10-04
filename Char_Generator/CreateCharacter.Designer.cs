@@ -61,6 +61,14 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.textBoxFellowship = new System.Windows.Forms.RichTextBox();
 			this.label9 = new System.Windows.Forms.Label();
+			this.textBoxWounds = new System.Windows.Forms.RichTextBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.textBoxInsanity = new System.Windows.Forms.RichTextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.textBoxCorruption = new System.Windows.Forms.RichTextBox();
+			this.label12 = new System.Windows.Forms.Label();
+			this.textBoxFatePoints = new System.Windows.Forms.RichTextBox();
+			this.label13 = new System.Windows.Forms.Label();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -164,7 +172,7 @@
 			// 
 			// buttonCreate
 			// 
-			this.buttonCreate.Location = new System.Drawing.Point(903, 447);
+			this.buttonCreate.Location = new System.Drawing.Point(875, 464);
 			this.buttonCreate.Name = "buttonCreate";
 			this.buttonCreate.Size = new System.Drawing.Size(75, 23);
 			this.buttonCreate.TabIndex = 83;
@@ -213,7 +221,7 @@
 			// 
 			// buttonCancel
 			// 
-			this.buttonCancel.Location = new System.Drawing.Point(822, 447);
+			this.buttonCancel.Location = new System.Drawing.Point(794, 464);
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(75, 23);
 			this.buttonCancel.TabIndex = 112;
@@ -224,7 +232,7 @@
 			// textBoxWeaponSkill
 			// 
 			this.textBoxWeaponSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxWeaponSkill.Location = new System.Drawing.Point(948, 164);
+			this.textBoxWeaponSkill.Location = new System.Drawing.Point(875, 227);
 			this.textBoxWeaponSkill.MaxLength = 2;
 			this.textBoxWeaponSkill.Name = "textBoxWeaponSkill";
 			this.textBoxWeaponSkill.Size = new System.Drawing.Size(30, 20);
@@ -236,7 +244,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(866, 167);
+			this.label1.Location = new System.Drawing.Point(793, 230);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(76, 13);
 			this.label1.TabIndex = 113;
@@ -245,7 +253,7 @@
 			// textBoxBallisticSkill
 			// 
 			this.textBoxBallisticSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxBallisticSkill.Location = new System.Drawing.Point(948, 190);
+			this.textBoxBallisticSkill.Location = new System.Drawing.Point(875, 253);
 			this.textBoxBallisticSkill.MaxLength = 2;
 			this.textBoxBallisticSkill.Name = "textBoxBallisticSkill";
 			this.textBoxBallisticSkill.Size = new System.Drawing.Size(30, 20);
@@ -257,7 +265,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(872, 193);
+			this.label2.Location = new System.Drawing.Point(793, 256);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(70, 13);
 			this.label2.TabIndex = 115;
@@ -266,7 +274,7 @@
 			// textBoxStrenght
 			// 
 			this.textBoxStrenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxStrenght.Location = new System.Drawing.Point(948, 216);
+			this.textBoxStrenght.Location = new System.Drawing.Point(875, 279);
 			this.textBoxStrenght.MaxLength = 2;
 			this.textBoxStrenght.Name = "textBoxStrenght";
 			this.textBoxStrenght.Size = new System.Drawing.Size(30, 20);
@@ -278,7 +286,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label3.Location = new System.Drawing.Point(889, 219);
+			this.label3.Location = new System.Drawing.Point(793, 282);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(53, 13);
 			this.label3.TabIndex = 117;
@@ -287,7 +295,7 @@
 			// textBoxToughness
 			// 
 			this.textBoxToughness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxToughness.Location = new System.Drawing.Point(948, 242);
+			this.textBoxToughness.Location = new System.Drawing.Point(875, 305);
 			this.textBoxToughness.MaxLength = 2;
 			this.textBoxToughness.Name = "textBoxToughness";
 			this.textBoxToughness.Size = new System.Drawing.Size(30, 20);
@@ -299,7 +307,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label4.Location = new System.Drawing.Point(876, 245);
+			this.label4.Location = new System.Drawing.Point(793, 308);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(66, 13);
 			this.label4.TabIndex = 119;
@@ -308,7 +316,7 @@
 			// textBoxAgility
 			// 
 			this.textBoxAgility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxAgility.Location = new System.Drawing.Point(948, 268);
+			this.textBoxAgility.Location = new System.Drawing.Point(875, 331);
 			this.textBoxAgility.MaxLength = 2;
 			this.textBoxAgility.Name = "textBoxAgility";
 			this.textBoxAgility.Size = new System.Drawing.Size(30, 20);
@@ -320,7 +328,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label5.Location = new System.Drawing.Point(902, 271);
+			this.label5.Location = new System.Drawing.Point(793, 334);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(40, 13);
 			this.label5.TabIndex = 121;
@@ -329,7 +337,7 @@
 			// textBoxIntelligence
 			// 
 			this.textBoxIntelligence.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxIntelligence.Location = new System.Drawing.Point(948, 294);
+			this.textBoxIntelligence.Location = new System.Drawing.Point(875, 357);
 			this.textBoxIntelligence.MaxLength = 2;
 			this.textBoxIntelligence.Name = "textBoxIntelligence";
 			this.textBoxIntelligence.Size = new System.Drawing.Size(30, 20);
@@ -341,7 +349,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label6.Location = new System.Drawing.Point(875, 297);
+			this.label6.Location = new System.Drawing.Point(793, 360);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(67, 13);
 			this.label6.TabIndex = 123;
@@ -350,7 +358,7 @@
 			// textBoxPerception
 			// 
 			this.textBoxPerception.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxPerception.Location = new System.Drawing.Point(948, 320);
+			this.textBoxPerception.Location = new System.Drawing.Point(875, 383);
 			this.textBoxPerception.MaxLength = 2;
 			this.textBoxPerception.Name = "textBoxPerception";
 			this.textBoxPerception.Size = new System.Drawing.Size(30, 20);
@@ -362,7 +370,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label7.Location = new System.Drawing.Point(878, 323);
+			this.label7.Location = new System.Drawing.Point(793, 386);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(64, 13);
 			this.label7.TabIndex = 125;
@@ -371,7 +379,7 @@
 			// textBoxWillpower
 			// 
 			this.textBoxWillpower.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxWillpower.Location = new System.Drawing.Point(948, 346);
+			this.textBoxWillpower.Location = new System.Drawing.Point(875, 409);
 			this.textBoxWillpower.MaxLength = 2;
 			this.textBoxWillpower.Name = "textBoxWillpower";
 			this.textBoxWillpower.Size = new System.Drawing.Size(30, 20);
@@ -383,7 +391,7 @@
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label8.Location = new System.Drawing.Point(883, 349);
+			this.label8.Location = new System.Drawing.Point(793, 412);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(59, 13);
 			this.label8.TabIndex = 127;
@@ -392,7 +400,7 @@
 			// textBoxFellowship
 			// 
 			this.textBoxFellowship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBoxFellowship.Location = new System.Drawing.Point(948, 372);
+			this.textBoxFellowship.Location = new System.Drawing.Point(875, 435);
 			this.textBoxFellowship.MaxLength = 2;
 			this.textBoxFellowship.Name = "textBoxFellowship";
 			this.textBoxFellowship.Size = new System.Drawing.Size(30, 20);
@@ -404,15 +412,107 @@
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label9.Location = new System.Drawing.Point(880, 375);
+			this.label9.Location = new System.Drawing.Point(793, 442);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(62, 13);
 			this.label9.TabIndex = 129;
 			this.label9.Text = "Fellowship :";
 			// 
+			// textBoxWounds
+			// 
+			this.textBoxWounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxWounds.Location = new System.Drawing.Point(852, 164);
+			this.textBoxWounds.MaxLength = 2;
+			this.textBoxWounds.Name = "textBoxWounds";
+			this.textBoxWounds.ReadOnly = true;
+			this.textBoxWounds.Size = new System.Drawing.Size(30, 20);
+			this.textBoxWounds.TabIndex = 132;
+			this.textBoxWounds.Text = "";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label10.Location = new System.Drawing.Point(793, 167);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(53, 13);
+			this.label10.TabIndex = 131;
+			this.label10.Text = "Wounds :";
+			// 
+			// textBoxInsanity
+			// 
+			this.textBoxInsanity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxInsanity.Location = new System.Drawing.Point(852, 190);
+			this.textBoxInsanity.MaxLength = 2;
+			this.textBoxInsanity.Name = "textBoxInsanity";
+			this.textBoxInsanity.ReadOnly = true;
+			this.textBoxInsanity.Size = new System.Drawing.Size(30, 20);
+			this.textBoxInsanity.TabIndex = 134;
+			this.textBoxInsanity.Text = "";
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label11.Location = new System.Drawing.Point(793, 193);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(49, 13);
+			this.label11.TabIndex = 133;
+			this.label11.Text = "Insanity :";
+			// 
+			// textBoxCorruption
+			// 
+			this.textBoxCorruption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxCorruption.Location = new System.Drawing.Point(948, 164);
+			this.textBoxCorruption.MaxLength = 2;
+			this.textBoxCorruption.Name = "textBoxCorruption";
+			this.textBoxCorruption.ReadOnly = true;
+			this.textBoxCorruption.Size = new System.Drawing.Size(30, 20);
+			this.textBoxCorruption.TabIndex = 136;
+			this.textBoxCorruption.Text = "";
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label12.Location = new System.Drawing.Point(889, 167);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(61, 13);
+			this.label12.TabIndex = 135;
+			this.label12.Text = "Corruption :";
+			// 
+			// textBoxFatePoints
+			// 
+			this.textBoxFatePoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.textBoxFatePoints.Location = new System.Drawing.Point(948, 190);
+			this.textBoxFatePoints.MaxLength = 2;
+			this.textBoxFatePoints.Name = "textBoxFatePoints";
+			this.textBoxFatePoints.ReadOnly = true;
+			this.textBoxFatePoints.Size = new System.Drawing.Size(30, 20);
+			this.textBoxFatePoints.TabIndex = 138;
+			this.textBoxFatePoints.Text = "";
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label13.Location = new System.Drawing.Point(884, 193);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(66, 13);
+			this.label13.TabIndex = 137;
+			this.label13.Text = "Fate Points :";
+			// 
 			// CreateCharacter
 			// 
-			this.ClientSize = new System.Drawing.Size(990, 482);
+			this.ClientSize = new System.Drawing.Size(1002, 499);
+			this.Controls.Add(this.textBoxFatePoints);
+			this.Controls.Add(this.label13);
+			this.Controls.Add(this.textBoxCorruption);
+			this.Controls.Add(this.label12);
+			this.Controls.Add(this.textBoxInsanity);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.textBoxWounds);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.textBoxFellowship);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.textBoxWillpower);
@@ -486,5 +586,13 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.RichTextBox textBoxFellowship;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.RichTextBox textBoxWounds;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.RichTextBox textBoxInsanity;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.RichTextBox textBoxCorruption;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.RichTextBox textBoxFatePoints;
+		private System.Windows.Forms.Label label13;
 	}
 }
